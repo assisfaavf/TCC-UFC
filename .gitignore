@@ -1,0 +1,36 @@
+
+# Arquivos temporários do LaTeX
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+*.bcf
+*.glo
+*.glg
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# Diretórios de compilação
+out/
+build/
+tmp/
+
+# PDF compilado na raiz
+/documento.pdf
+
+# Arquivos locais
+*.bak
+*.tmp
+*.synctex
+
