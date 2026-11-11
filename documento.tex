@@ -1,0 +1,43 @@
+% !TeX program = pdflatex
+% !TeX root = documento.tex
+% Revisão acadêmica — capítulos 2 e 3; modelo ufctex entregue pelo aluno.
+\documentclass[a4paper,12pt,chapter=TITLE,section=Title,subsection=Title,oneside,english,spanish,brazil]{abntex2}
+\input{lib/preambulo}
+\trabalhoacademico{tccgraduacao}
+\ehqualificacao{nao}
+\hypersetup{hidelinks}
+\ies{Universidade Federal do Ceará}
+\iessigla{UFC}
+\centro{Campus de Sobral}
+\departamento{}
+\graduacaoem{Engenharia Elétrica}
+\habilitacao{bacharel}
+\autor{Francisco de Assis Alves Vasconcelos Filho}
+\titulo{Análise comparativa das especificações técnicas CNC-OMBR-MAT-18-0126-EDCE e CNC-NDBR-DBR-25-1580-EDBR aplicadas ao fornecimento de energia elétrica em empreendimentos com múltiplas unidades consumidoras}
+\data{2026}
+\local{Sobral}
+\orientador{Prof. Eber de Castro Diniz}
+\orientadories{Universidade Federal do Ceará (UFC)}
+\orientadorcentro{Campus de Sobral}
+\orientadorfeminino{nao}
+\coorientador{}
+\membrodabancadois{}
+\membrodabancatres{}
+\membrodabancaquatro{}
+\membrodabancacinco{}
+\membrodabancaseis{}
+\begin{document}
+\pretextual
+\imprimircapa
+\imprimirfolhaderosto{}
+% Os elementos seguintes dependem da conclusão do TCC:
+% ficha catalográfica, folha de aprovação, resumo, abstract e listas.
+\imprimirsumario
+\textual
+% Remova o contador abaixo ao incorporar o capítulo 1 (Introdução).
+\setcounter{chapter}{1}
+\input{2-textuais/2-fundamentacao-teorica}
+\input{2-textuais/3-metodologia}
+\postextual
+\bibliography{3-pos-textuais/referencias}
+\end{document}

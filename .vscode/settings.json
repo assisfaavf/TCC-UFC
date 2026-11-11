@@ -1,0 +1,13 @@
+{
+  "latex-workshop.latex.outDir": "out",
+  "latex-workshop.latex.tools": [
+    {"name": "latexmk", "command": "latexmk",
+      "args": ["-pdf", "-interaction=nonstopmode", "-file-line-error", "-synctex=1", "-outdir=%OUTDIR%", "%DOC%"]}
+  ],
+  "latex-workshop.latex.recipes": [
+    {"name": "TCC UFC (latexmk)", "tools": ["latexmk"]}
+  ],
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoBuild.run": "onSave"
+}
