@@ -65,9 +65,11 @@
 %%             Definicoes              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Importa o arquivo com as entradas do glassario
-\input{1-pre-textuais/lista-de-abreviaturas-e-siglas}
-\input{3-pos-textuais/glossario}
+% Importa as entradas apenas quando o recurso opcional estiver carregado.
+\IfPackageLoadedT{glossaries}{%
+  \input{1-pre-textuais/lista-de-abreviaturas-e-siglas}
+  \input{3-pos-textuais/glossario}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -139,7 +141,9 @@
 
 % Remove o ponto final de cada entrada da 
 %lista de abreviaturas e siglas
-\renewcommand{\glspostdescription}{}
+\IfPackageLoadedT{glossaries}{%
+  \renewcommand{\glspostdescription}{}
+}
 
 % Espaçamento entre o texto e a legenda
 %\setlength{\belowcaptionskip}{\onelineskip}
@@ -504,7 +508,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\preambulotccgraduacao}{
-	Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
+	Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem.\par
 }
 
 \newcommand{\preambulotccespecializacao}{
@@ -671,21 +675,19 @@
 	
 	\vspace{4.0cm}
 	
-	%Retira o espaço do paragrafo
-	\hspace*{-2cm}
-	%Adiciona o espaço da margem
-	\hspace*{8cm}
+	% Alinha o bloco à margem direita sem somar espaços entre comandos.
+	\noindent\hfill
 	\begin{minipage}{8cm}
 		\begin{SingleSpace}
-			\imprimirpreambulo	
-			\newline
-			\artigoorientador: \ignorespaces\imprimirorientador \\
+			\imprimirpreambulo\par
+			\medskip
+			\artigoorientador: \ignorespaces\imprimirorientador\par
 			\abntex@ifnotempty{\imprimircoorientador}{
-				\newline
-				\artigocoorientador: \ignorespaces\imprimircoorientador				
+				\medskip
+				\artigocoorientador: \ignorespaces\imprimircoorientador\par
 			}
 		\end{SingleSpace}		
-	\end{minipage}
+	\end{minipage}\par
 	
 	\vfill
 	\centering
@@ -1212,6 +1214,7 @@
 %%    Lista de Abreviaturas e Siglas   %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\IfPackageLoadedT{glossaries}{%
 % Largura da lista de abreviaturas
 \setlength{\glsdescwidth}{\linewidth}
 
@@ -1219,6 +1222,7 @@
 	\printglossary[type=\acronymtype,style=long,nonumberlist,title={Lista de Abreviaturas e Siglas\vspace{-0.3cm}}] %
 	\pagebreak %
 }
+} % glossaries
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%         Lista de Simbolos           %%
@@ -1234,6 +1238,7 @@
 
 %% Glossario desenvolvido para a UFC
 \setlist{nosep}
+\IfPackageLoadedT{glossaries}{%
 \newglossarystyle{glossario-ufc}{%
 	%
 	\renewenvironment{theglossary}%
@@ -1249,16 +1254,17 @@
 	%
 	\renewcommand*{\glsgroupskip}{}%
 	% Depois da palavra, colocar o ":" e no fim o ponto final "."
-	\renewcommand*{\glossaryentryfield}[5]{%
-		\item[\glstarget{##1}{##2}:] ##3.%
+	\renewcommand*{\glossentry}[2]{%
+		\item[\glstarget{##1}{\glossentryname{##1}}:] \glossentrydesc{##1}.%
 	}%
 }
 
 \newcommand{\imprimirglossario}{ %
-	\glossarystyle{glossario-uece} %	
+	\setglossarystyle{glossario-ufc} %
 	\printglossary[title=GLOSSÁRIO,toctitle=GLOSSÁRIO] %
 	\addcontentsline{toc}{chapter}{GLOSSÁRIO}
 }
+} % glossaries
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

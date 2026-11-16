@@ -7,24 +7,22 @@
 Abra a raiz deste repositório no VS Code, abra `documento.tex` e use `Ctrl+Alt+B` com LaTeX Workshop. A receita do projeto executa LaTeX e BibTeX por meio do `latexmk`. No terminal, a partir da raiz, execute o mesmo fluxo:
 
 ```powershell
-latexmk -cd -pdf -interaction=nonstopmode -halt-on-error -file-line-error -synctex=1 -outdir=. documento.tex
+latexmk -cd -pdf -interaction=nonstopmode -halt-on-error -file-line-error -synctex=1 -outdir=out documento.tex
 ```
 
-O PDF atualizado é gerado em `documento.pdf`, na raiz, junto aos arquivos auxiliares ignorados pelo Git. O argumento `-cd` fixa o diretório de trabalho no diretório do documento principal, e `-outdir=.` evita executar o BibTeX em uma pasta diferente da raiz, na qual o caminho relativo `3-pos-textuais/referencias.bib` poderia não ser encontrado. Não utilize a antiga receita com `-outdir=out` para este projeto. No MiKTeX Console, habilite a instalação automática de pacotes ausentes, caso necessário.
+O PDF atualizado e os arquivos auxiliares são gerados em `out/`, ignorado pelo Git. O argumento `-cd` fixa o diretório de trabalho no diretório do documento principal. O `latexmk` configura os caminhos de busca do BibTeX para encontrar `3-pos-textuais/referencias.bib`, mesmo com a saída em `out/`. A configuração do projeto desativa comentários de seleção do motor para garantir o uso da receita completa, com BibTeX e as passagens necessárias. No MiKTeX Console, habilite a instalação automática de pacotes ausentes, caso necessário.
 
 ### Verificação de uma compilação limpa
 
 Feche a visualização do PDF anterior, se necessário. Na raiz do projeto, execute:
 
 ```powershell
-latexmk -cd -C -bibtex -outdir=. documento.tex
-Remove-Item -Path documento.bbl -ErrorAction SilentlyContinue
-latexmk -cd -pdf -interaction=nonstopmode -halt-on-error -file-line-error -synctex=1 -outdir=. documento.tex
+latexmk -cd -gg -pdf -interaction=nonstopmode -halt-on-error -file-line-error -synctex=1 -outdir=out documento.tex
 ```
 
-Confirme que a compilação terminou sem erros, que `documento.bbl` foi gerado e que `documento.pdf` possui a seção REFERÊNCIAS e as citações resolvidas (sem `??`). Consulte `documento.log` e `documento.blg` se houver aviso persistente de referência/citação indefinida ou falha do BibTeX. Um PDF antigo em `out/documento.pdf` não será atualizado por este novo fluxo; utilize apenas o PDF da raiz. Os arquivos de compilação não devem ser adicionados ao Git.
+No VS Code, o mesmo comando está disponível em **LaTeX Workshop: Build with recipe → TCC UFC (compilacao limpa)**. Confirme que a compilação terminou sem erros, que `out/documento.bbl` foi gerado e que `out/documento.pdf` possui a seção REFERÊNCIAS e as citações resolvidas (sem `??`). Consulte `out/documento.log` e `out/documento.blg` se houver aviso persistente de referência/citação indefinida ou falha do BibTeX. Feche a visualização antiga de `documento.pdf` na raiz e use apenas `out/documento.pdf`. Os arquivos de compilação não devem ser adicionados ao Git.
 
-A etapa E-01 foi testada em TeX Live (Linux); a validação do mesmo fluxo no MiKTeX/Windows deve ser realizada antes de encerrar a issue. A normalização bibliográfica de acordo com as normas ABNT e UFC é tratada separadamente na E-16.
+O fluxo com saída em `out/` foi validado no Windows com MiKTeX 25.12 e latexmk 4.88. A normalização bibliográfica de acordo com as normas ABNT e UFC é tratada separadamente na E-16.
 
 ## Alterações feitas conforme as correções do orientador
 

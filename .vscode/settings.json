@@ -1,5 +1,6 @@
 {
-  "latex-workshop.latex.outDir": "%DIR%",
+  "latex-workshop.latex.outDir": "%DIR%/out",
+  "latex-workshop.latex.build.enableMagicComments": false,
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
@@ -11,7 +12,22 @@
         "-halt-on-error",
         "-file-line-error",
         "-synctex=1",
-        "-outdir=.",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk-clean",
+      "command": "latexmk",
+      "args": [
+        "-cd",
+        "-gg",
+        "-pdf",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-synctex=1",
+        "-outdir=%OUTDIR%",
         "%DOC%"
       ]
     }
@@ -22,6 +38,10 @@
       "tools": [
         "latexmk"
       ]
+    },
+    {
+      "name": "TCC UFC (compilacao limpa)",
+      "tools": ["latexmk-clean"]
     }
   ],
   "latex-workshop.latex.recipe.default": "first",
