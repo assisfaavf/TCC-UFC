@@ -17,7 +17,8 @@ O PDF atualizado é gerado em `documento.pdf`, na raiz, junto aos arquivos auxil
 Feche a visualização do PDF anterior, se necessário. Na raiz do projeto, execute:
 
 ```powershell
-latexmk -cd -C -outdir=. documento.tex
+latexmk -cd -C -bibtex -outdir=. documento.tex
+Remove-Item -Path documento.bbl -ErrorAction SilentlyContinue
 latexmk -cd -pdf -interaction=nonstopmode -halt-on-error -file-line-error -synctex=1 -outdir=. documento.tex
 ```
 
