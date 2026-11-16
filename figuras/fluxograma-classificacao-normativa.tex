@@ -1,0 +1,69 @@
+% Incluído pela seção 5.3; requer tikz e as bibliotecas declaradas no preâmbulo.
+% As coordenadas estão em centímetros. As seis categorias são mutuamente
+% exclusivas; os dois caminhos inconclusivos convergem para a mesma saída.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  font=\fontsize{9.5}{11}\selectfont,
+  inicio/.style={draw,rounded corners=3mm,align=center,text width=8.8cm,
+    minimum height=1.2cm,inner sep=2mm,line width=0.6pt},
+  decisao/.style={draw,diamond,aspect=1.8,align=center,text width=3.35cm,
+    inner sep=1mm,line width=0.6pt},
+  resultado/.style={draw,rounded corners=2mm,align=center,text width=2.65cm,
+    minimum height=0.85cm,inner sep=1.5mm,line width=0.6pt,font=\bfseries\fontsize{10}{12}\selectfont},
+  seta/.style={-{Latex[length=2mm,width=1.4mm]},line width=0.6pt},
+  rotulo/.style={font=\fontsize{9}{11}\selectfont,fill=white,inner sep=1.2pt,align=center}
+]
+  \node[inicio] (inicio) at (0,0) {\textbf{Início}\\
+    Identificar e comparar os requisitos\\
+    das especificações 0126 e 1580};
+  \node[decisao] (evidencia) at (0,-2.5)
+    {Há evidências documentais suficientes?};
+  \node[resultado] (inconclusivo) at (5.3,-2.5) {Inconclusivo};
+  \node[decisao] (correspondencia) at (0,-6.5)
+    {Existe requisito funcionalmente correspondente na outra especificação?};
+
+  \node[decisao] (tecnica) at (-4.1,-9.1)
+    {Houve alteração técnica do requisito ou de suas condições de aplicação?};
+  \node[decisao] (demonstracao) at (4.1,-9.1)
+    {A inclusão ou supressão do requisito foi demonstrada?};
+  \node[resultado] (alterado) at (-5.9,-11.3) {Alterado};
+
+  \node[decisao] (reorganizacao) at (-4.1,-13.3)
+    {Houve reorganização relevante da apresentação do requisito?};
+  \node[decisao] (presenca) at (4.1,-13.3)
+    {Em qual especificação está presente o requisito sem correspondente?};
+  \node[resultado] (reorganizado) at (-5.9,-16.8) {Reorganizado};
+  \node[resultado] (mantido) at (-2,-16.8) {Mantido};
+  \node[resultado] (retirado) at (2,-16.8) {Retirado};
+  \node[resultado] (acrescentado) at (5.9,-16.8) {Acrescentado};
+
+  \draw[seta] (inicio.south) -- (evidencia.north);
+  \draw[seta] (evidencia.east) -- node[rotulo,above] {Não} (inconclusivo.west);
+  \draw[seta] (evidencia.south) -- node[rotulo,right] {Sim} (correspondencia.north);
+
+  \draw[seta] (correspondencia.west) -| node[rotulo,pos=0.2,above] {Sim} (tecnica.north);
+  \draw[seta] (correspondencia.east) -| node[rotulo,pos=0.2,above] {Não} (demonstracao.north);
+
+  \draw[seta] (tecnica.west) -- ++(-0.6,0)
+    |- node[rotulo,pos=0.25,left] {Sim} (alterado.west);
+  \draw[seta] (tecnica.south) -- node[rotulo,right] {Não} (reorganizacao.north);
+
+  % Rota externa: não atravessa os demais nós nem os rótulos das decisões.
+  \draw[seta] (demonstracao.east) -- (7.6,-9.1)
+    node[rotulo,midway,above] {Não}
+    -- (7.6,-2.5) -- (inconclusivo.east);
+  \draw[seta] (demonstracao.south) -- node[rotulo,right] {Sim} (presenca.north);
+
+  \draw[seta] (reorganizacao.south west) -- ++(0,-0.45)
+    -| node[rotulo,pos=0.6,left] {Sim} (reorganizado.north);
+  \draw[seta] (reorganizacao.south east) -- ++(0,-0.45)
+    -| node[rotulo,pos=0.6,right] {Não} (mantido.north);
+  \draw[seta] (presenca.south west) -- ++(0,-0.45)
+    -| node[rotulo,pos=0.6,left] {Apenas\\na 0126} (retirado.north);
+  \draw[seta] (presenca.south east) -- ++(0,-0.45)
+    -| node[rotulo,pos=0.6,right] {Apenas\\na 1580} (acrescentado.north);
+
+  \node[align=center,text width=14.5cm,font=\fontsize{9}{11}\selectfont]
+    at (0,-18) {Conferir texto, notas, tabelas, desenhos, anexos e remissões identificáveis.\\
+    A ausência isolada em uma seção não comprova retirada.};
+\end{tikzpicture}
