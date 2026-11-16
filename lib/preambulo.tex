@@ -66,7 +66,13 @@
 %\usepackage{titlesec}                              % Permite alterar os títulos do documento
 \usepackage{tocloft}                                % Permite alterar a formatação do Sumário
 \usepackage{etoolbox}                               % Usado para alterar a fonte da Section no Sumário
-\usepackage[nogroupskip,nonumberlist]{glossaries}   % Permite fazer o glossario
+% Esta versão não imprime glossário ou lista de siglas e não usa \gls.
+% Ativar somente quando esses elementos forem incluídos no documento.
+\newif\ifUFCglossarios
+\UFCglossariosfalse
+\ifUFCglossarios
+  \usepackage[acronym,nogroupskip,nonumberlist]{glossaries}
+\fi
 
 \usepackage[font=singlespacing,format=plain,justification=justified,skip=0pt,singlelinecheck = false]{caption}            % Altera o comportamento da tag caption
 
@@ -95,7 +101,9 @@
 \usepackage{pdfpages}         % Incluir pdf no documento
 \usepackage{amsmath}          % Usar equacoes matematicas
 
-\makeglossaries % Organiza e gera a lista de abreviaturas, simbolos e glossario
-\makeindex      % Gera o Indice do documento         
+\ifUFCglossarios
+  \makeglossaries
+\fi
+% O índice remissivo não é impresso nesta versão; não inicializar \makeindex.
 
 

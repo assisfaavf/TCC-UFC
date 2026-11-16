@@ -12,6 +12,16 @@ latexmk -pdf -interaction=nonstopmode -file-line-error -outdir=out documento.tex
 
 O PDF é gerado em `out/documento.pdf`. No MiKTeX Console, habilite a instalação automática de pacotes ausentes, caso necessário.
 
+Para reconstruir os auxiliares e a bibliografia do zero, selecione **LaTeX Workshop: Build with recipe → TCC UFC (compilacao limpa)** ou execute:
+
+```powershell
+latexmk -gg -pdf -interaction=nonstopmode -file-line-error -synctex=1 -outdir=out documento.tex
+```
+
+O `latexmk` executa o BibTeX e repete o pdfLaTeX até estabilizar as referências e o sumário. Nesta versão não há listas de siglas, glossário ou índice remissivo em uso. O recurso opcional de glossário está desativado por `\UFCglossariosfalse` em `lib/preambulo.tex`.
+
+Consulte [DIAGNOSTICOS_LATEX.md](DIAGNOSTICOS_LATEX.md) para a reprodução dos 13 avisos, as versões testadas, a validação visual e os dois avisos remanescentes das dependências. A receita mantém os diagnósticos ativos e usa `out/documento.pdf`; feche uma eventual visualização do PDF antigo da raiz.
+
 ## Alterações feitas conforme as correções do orientador
 
 - Texto dos capítulos 2 e 3 reescrito em estilo técnico-acadêmico, sem tom de conversa nem passagens que se dirigem ao leitor.
