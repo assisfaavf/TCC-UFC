@@ -24,20 +24,97 @@ A especificação 1580 utiliza a denominação \emph{conexão coletiva} e abrang
 \section{Carga instalada e demanda no dimensionamento da entrada}
 \label{sec:demandas}
 
-A carga instalada corresponde à soma das potências nominais dos equipamentos previstos ou existentes na instalação, de acordo com os critérios aplicáveis a cada categoria de consumidor. A demanda expressa a solicitação de potência em determinada condição de operação. Em empreendimentos com várias unidades consumidoras, a simultaneidade de utilização dos equipamentos constitui parâmetro essencial do dimensionamento da entrada geral, uma vez que a soma aritmética das cargas individuais não representa, necessariamente, a maior potência requerida ao sistema. Conforme \citeonline[seções~1.8.1.1 e~1.8.1.4]{mamede2017}, o fator de demanda relaciona a demanda máxima à potência da carga conectada, enquanto o fator de simultaneidade relaciona a demanda máxima do conjunto à soma das demandas máximas individuais, consideradas no mesmo intervalo de observação. A utilização desses conceitos não implica a adoção direta dos coeficientes de instalações industriais no dimensionamento de empreendimentos residenciais, cujos critérios dependem das características das cargas e das especificações aplicáveis.
+\subsection{Carga instalada e demanda}
+
+A carga instalada caracteriza o conjunto de equipamentos elétricos aptos a operar em uma unidade consumidora. O art.~2º, inciso~III, da Resolução Normativa ANEEL nº~1.000/2021 a define em termos da soma das potências nominais desses equipamentos, expressa em quilowatts. A especificação 0126 adota a mesma definição \cite[art.~2º, inciso~III]{aneel1000}\cite[item~7.1.3]{enel0126}. Para fins de projeto, a carga instalada prevista é obtida a partir do levantamento das potências nominais elétricas das cargas a serem alimentadas:
+\begin{equation}
+ P_{\mathrm{inst}} = \sum_{i=1}^{n} P_{\mathrm{n},i},
+ \label{eq:carga-instalada}
+\end{equation}
+em que $P_{\mathrm{inst}}$ é a carga ativa instalada, $P_{\mathrm{n},i}$ é a potência ativa nominal elétrica da carga $i$, ambas em quilowatts (kW), e $n$ é a quantidade de cargas consideradas. A potência nominal mecânica de um motor, por exemplo, não deve ser confundida com a potência elétrica absorvida.
+
+A demanda, por sua vez, representa a potência média solicitada ou injetada no sistema elétrico durante um intervalo especificado, podendo referir-se à potência ativa ou à reativa, conforme o art.~2º, inciso~XI, da regulamentação \cite{aneel1000}. Para uma instalação consumidora, a demanda ativa média em um intervalo de duração $\Delta t$ pode ser expressa por
+\begin{equation}
+ D_P(t)=\frac{1}{\Delta t}\int_{t}^{t+\Delta t}P(\tau)\,\mathrm{d}\tau,
+ \label{eq:demanda-media}
+\end{equation}
+em que $P(\tau)$ representa a potência ativa requerida ao longo do tempo e $D_P(t)$ é a demanda ativa no intervalo iniciado em $t$. A demanda máxima é o maior valor de demanda observado entre os intervalos considerados, e não necessariamente o valor instantâneo máximo da potência. Em particular, a definição regulatória de demanda medida corresponde ao maior valor de demanda ativa integralizada em intervalos de 15 minutos durante o período de faturamento; a demanda contratada, quando aplicável, é a potência ativa disponibilizada segundo as condições contratuais \cite[art.~2º, incisos~XII e~XIII]{aneel1000}.
+
+Em empreendimentos de múltiplas unidades consumidoras, os horários de utilização das cargas e suas condições de operação podem ser distintos. Por essa razão, a soma das potências nominais instaladas não representa necessariamente a potência requerida simultaneamente na entrada coletiva. A demanda provável utilizada no dimensionamento constitui uma estimativa de projeto, obtida por procedimentos técnicos compatíveis com as características das cargas e com os requisitos aplicáveis. A especificação 0126, por exemplo, utiliza valores de demanda em quilovolt-ampères para o dimensionamento da entrada geral \cite[item~7.11.2]{enel0126}. Esses valores de demanda aparente prevista não se confundem com a demanda ativa medida ou contratada definida pela ANEEL.
+
+\subsection{Potências elétricas, fator de potência e corrente de projeto}
+
+Em sistemas de corrente alternada, a potência ativa $P$, expressa em watts (W), representa a taxa líquida de transferência de energia que pode ser convertida em trabalho, calor ou outras formas de energia. A potência reativa $Q$, expressa em var, está associada à troca periódica de energia com elementos reativos. A potência aparente $S$, expressa em volt-ampères (VA), está relacionada aos valores eficazes de tensão e corrente e à capacidade requerida dos componentes do sistema.
+
+Em condições senoidais, as três grandezas relacionam-se pelo triângulo de potências, conforme o conceito apresentado por \citeonline[seção~4.2.1 e Figura~4.1]{mamede2017}:
+\begin{equation}
+ S = \sqrt{P^2+Q^2}.
+ \label{eq:potencia-aparente}
+\end{equation}
+
+O fator de potência ($FP$) corresponde à razão entre a potência ativa e a potência aparente. Para uma carga em regime senoidal, essa razão coincide com o cosseno do ângulo de defasagem $\varphi$ entre tensão e corrente:
+\begin{equation}
+ FP=\frac{P}{S}=\cos\varphi.
+ \label{eq:fator-potencia}
+\end{equation}
+Na presença de distorções harmônicas, a relação $P/S$ não deve ser identificada diretamente com o cosseno do ângulo de defasagem da componente fundamental \cite[seção~4.2.1]{mamede2017}. Por essa razão, o triângulo de potências apresentado considera o regime senoidal.
+
+Para uma alimentação trifásica equilibrada, a potência aparente e a corrente de linha relacionam-se por $S=\sqrt{3}\,V_{LL}I$. A corrente correspondente à demanda aparente de projeto é, portanto,
+\begin{equation}
+ I = \frac{S}{\sqrt{3}\,V_{LL}},
+ \label{eq:corrente-trifasica}
+\end{equation}
+na qual $I$ representa a corrente de linha, em ampères (A); $S$, a potência aparente trifásica, em volt-ampères (VA); e $V_{LL}$, a tensão entre fases, em volts (V). Se a demanda aparente for dada em kVA, é necessário convertê-la em VA antes de aplicar a equação. Para uma mesma potência ativa e tensão de alimentação, a redução do fator de potência implica aumento da potência aparente e da corrente requerida.
+
+A corrente de projeto constitui um dos parâmetros para a seleção dos condutores e dispositivos de proteção. O dimensionamento não se limita à obtenção desse valor: a ABNT NBR 5410 estabelece critérios relativos à capacidade de condução de corrente, às condições de instalação, à queda de tensão e à proteção contra sobrecorrentes \cite[itens~5.3, 6.2.5 a~6.2.7]{abnt5410}. As condições de desequilíbrio, de harmônicas e de correntes de falta devem ser consideradas quando pertinentes à instalação.
+
+\subsection{Fatores empregados na estimativa de demanda}
+
+O fator de demanda expressa a relação entre a demanda máxima e a carga instalada. Para grandezas ativas referidas ao mesmo conjunto de cargas, a definição do art.~2º, inciso~XX, da Resolução Normativa ANEEL nº~1.000/2021 e do item~7.1.11 da especificação 0126 pode ser expressa por
+\begin{equation}
+ F_d=\frac{D_{\max}}{P_{\mathrm{inst}}},
+ \label{eq:fator-demanda}
+\end{equation}
+em que $D_{\max}$ é a demanda ativa máxima e $P_{\mathrm{inst}}$ é a carga instalada, expressas na mesma unidade. Trata-se de um fator adimensional que, nas condições usuais de estimativa de demanda, é inferior ou igual à unidade. A adoção de fatores menores que a unidade considera que nem todos os equipamentos operam simultaneamente em sua potência nominal \cite[seção~1.8.1.1]{mamede2017}.
+
+O fator de utilização representa a relação entre a potência média absorvida por um equipamento nas condições de utilização consideradas e sua potência nominal elétrica \cite[seção~1.8.1.5]{mamede2017}:
+\begin{equation}
+ F_u=\frac{P_{\mathrm{util}}}{P_{\mathrm{n}}},
+ \label{eq:fator-utilizacao}
+\end{equation}
+em que $P_{\mathrm{util}}$ é a potência média absorvida nas condições de utilização adotadas e $P_{\mathrm{n}}$ é a potência nominal elétrica do equipamento. Esse fator caracteriza o nível de utilização da capacidade nominal do equipamento, distinguindo-se da coincidência temporal entre as solicitações de diferentes cargas.
+
+O fator de simultaneidade considera a coincidência das demandas individuais máximas de um conjunto de cargas. Conforme \citeonline[seção~1.8.1.4]{mamede2017}, relaciona a demanda máxima do conjunto à soma das demandas máximas individuais:
+\begin{equation}
+ F_s=\frac{D_{\max,\mathrm{conj}}}{\displaystyle\sum_{i=1}^{n}D_{\max,i}},
+ \label{eq:fator-simultaneidade}
+\end{equation}
+em que $D_{\max,\mathrm{conj}}$ representa a demanda máxima do conjunto e $D_{\max,i}$ a demanda máxima individual da carga $i$. As grandezas devem ser da mesma natureza, obtidas com intervalos de integração e período de observação compatíveis. Considerando demandas ativas de cargas consumidoras e denominador não nulo, $F_s$ é menor ou igual à unidade, atingindo-a quando as demandas máximas individuais ocorrem no mesmo intervalo.
+
+O fator de diversidade, na definição geral apresentada por \citeonline[seção~1.8.1.4]{mamede2017}, corresponde ao inverso do fator de simultaneidade:
+\begin{equation}
+ F_{\mathrm{div}}=\frac{1}{F_s}=
+ \frac{\displaystyle\sum_{i=1}^{n}D_{\max,i}}{D_{\max,\mathrm{conj}}},
+ \label{eq:fator-diversidade}
+\end{equation}
+para demanda máxima do conjunto positiva. Seu valor, nessas condições, é maior ou igual à unidade. A diversidade das cargas permite que a demanda máxima do conjunto seja inferior à soma das demandas máximas individuais. Esses fatores descrevem relações distintas e não devem ser aplicados cumulativamente sem que o método de cálculo estabeleça essa combinação, pois um fator de demanda pode já incorporar efeitos de utilização e simultaneidade.
+
+\subsection{Critérios de estimativa da demanda em empreendimentos de conexão coletiva}
 
 No âmbito das normas históricas da distribuidora do Ceará, a NT-003/2012 da Coelce apresentava uma expressão empírica para a demanda provável, com fatores definidos segundo a natureza das cargas, como iluminação, tomadas, elevadores e climatização. A própria norma admitia a proposição de outros métodos de cálculo pelo projetista, sujeitos à avaliação da distribuidora \cite[itens~14.1 e~14.3]{coelce0032012}. A NT-002/2011, destinada ao fornecimento em tensão primária, também distinguia os fatores de utilização e de simultaneidade no cálculo da demanda de motores, apresentando valores tabelados conforme a potência e a quantidade de equipamentos \cite[tabelas~9 e~10]{coelce0022011}. Esses documentos ilustram o emprego dos fatores em procedimentos de dimensionamento, sem que seus coeficientes históricos sejam automaticamente aplicáveis às instalações atuais.
 
 A NT-C 003/2016 da Enel Distribuição Ceará estabelecia, para edifícios residenciais de uso coletivo, um método de estimativa da demanda em função da área útil dos apartamentos e da quantidade de unidades. A demanda associada à área era obtida pela equação correspondente ou pela Tabela 15, enquanto a Tabela 16 fornecia um fator de diversificação de carga em função do número de apartamentos. O método também considerava um fator de segurança aplicado à demanda dos apartamentos e a contribuição das cargas do condomínio \cite[item~14.2, tabelas~15 e~16]{enel0032016}. O fator tabelado de diversificação desse procedimento não deve ser confundido com o fator de simultaneidade definido a partir das demandas máximas individuais. A descrição dessas normas históricas fundamenta a compreensão dos métodos de cálculo, sem ampliar o objeto da comparação normativa para além das especificações 0126 e 1580.
 
-A especificação 0126 apresenta, em sua seção 7.11, critérios de estimativa de demanda associados à área útil das unidades residenciais e procedimentos destinados a outras categorias de carga. A aplicação desses critérios depende da configuração das unidades e das características das cargas previstas. Na especificação 1580, a determinação da demanda continua vinculada ao profissional habilitado, com referência às metodologias recomendadas pela distribuidora e aos documentos técnicos associados. Os dispositivos correspondentes estão apresentados na seção~7.11 da especificação 0126 e no item~7.3.2 da especificação 1580, conforme \citeonline{enel0126} e \citeonline{enel1580}.
-
-A distinção entre carga instalada, demanda aparente e corrente de projeto é necessária para evitar equivalências indevidas entre grandezas. Potências expressas em quilowatts (kW) e quilovolt-ampères (kVA) não correspondem à mesma grandeza, assim como a corrente de projeto, em ampères (A), depende da potência aparente e do nível de tensão. Para uma alimentação trifásica equilibrada, a relação entre essas grandezas pode ser expressa por
+A especificação 0126 também apresenta critérios específicos para a estimativa de demanda em empreendimentos residenciais de uso coletivo, na seção~7.11. O método da área útil estabelece a demanda do conjunto de apartamentos a partir da expressão
 \begin{equation}
- I = \frac{S}{\sqrt{3}\,V_{LL}},
- \label{eq:corrente-trifasica}
+ D_{\mathrm{ap}}=d_{\mathrm{area}}\,C_{\mathrm{div}}(n),
+ \label{eq:demanda-apartamentos}
 \end{equation}
-na qual $I$ representa a corrente de linha, em ampères; $S$, a potência aparente trifásica, em volt-ampères; e $V_{LL}$, a tensão entre fases, em volts. Essa relação não substitui os procedimentos de dimensionamento de condutores e dispositivos de proteção. A ABNT NBR 5410 estabelece critérios de capacidade de condução de corrente e de seção dos condutores que consideram as condições de instalação e a coordenação com as proteções, além dos limites de queda de tensão e da proteção contra correntes de curto-circuito \cite[itens~5.3, 6.2.5 a~6.2.7]{abnt5410}.
+em que $D_{\mathrm{ap}}$ é a demanda estimada do conjunto de apartamentos, em kVA; $d_{\mathrm{area}}$ é a demanda associada à área útil do apartamento, em kVA; e $C_{\mathrm{div}}(n)$ é o fator de diversificação de carga associado à quantidade $n$ de apartamentos, denominado $F_{\mathrm{div}}$ na especificação. Utiliza-se aqui a notação $C_{\mathrm{div}}$ para distingui-lo do fator de diversidade da Equação~\ref{eq:fator-diversidade}. A demanda em função da área útil é estabelecida pela equação ou tabela indicada na 0126, e o coeficiente de diversificação é obtido em sua Tabela~16, observadas as condições de aplicação do método \cite[item~7.11.2, equações~3 a~5 e tabelas~15 e~16]{enel0126}.
+
+A demanda da entrada geral nesse procedimento considera também a margem de segurança prevista para os apartamentos e a contribuição das cargas do condomínio, calculadas segundo o critério da carga instalada. Trata-se de um método específico da distribuidora, e não da aplicação direta das relações gerais entre fatores de utilização, demanda, simultaneidade e diversidade apresentadas anteriormente.
+
+Na especificação 1580, o item~7.3.2 exige a apresentação do memorial detalhado de cálculo da demanda prevista. As notas do item~7.3.2 e da seção~7.11 atribuem sua determinação ao responsável técnico pelo projeto e mencionam metodologias recomendadas pelas distribuidoras \cite[itens~7.3.2 e~7.11]{enel1580}. A seleção do procedimento de estimativa deve considerar as condições de aplicação e as características das cargas do empreendimento, sem transpor automaticamente coeficientes de instalações industriais ou de documentos históricos para o dimensionamento residencial.
 
 \section{Componentes da entrada coletiva e critérios técnicos}
 \label{sec:componentes}
