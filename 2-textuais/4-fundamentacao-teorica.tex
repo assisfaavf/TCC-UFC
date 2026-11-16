@@ -31,7 +31,7 @@ A carga instalada caracteriza o conjunto de equipamentos elétricos aptos a oper
  P_{\mathrm{inst}} = \sum_{i=1}^{n} P_{\mathrm{n},i},
  \label{eq:carga-instalada}
 \end{equation}
-em que $P_{\mathrm{inst}}$ é a carga ativa instalada, $P_{\mathrm{n},i}$ é a potência ativa nominal elétrica da carga $i$, ambas em quilowatts (kW), e $n$ é a quantidade de cargas consideradas. A potência nominal mecânica de um motor, por exemplo, não deve ser confundida com a potência elétrica absorvida.
+em que $P_{\mathrm{inst}}$ é a carga ativa instalada, $P_{\mathrm{n},i}$ é a potência ativa nominal elétrica da carga $i$, ambas em quilowatts (kW), e $n$ é a quantidade de cargas consideradas. A potência nominal mecânica de um motor, por exemplo, não deve ser confundida com a potência elétrica absorvida, cuja determinação considera o rendimento do equipamento \cite[seção~1.8.2]{mamede2017}. No levantamento de projeto, as cargas de iluminação e tomadas também devem ser previstas conforme os critérios aplicáveis a cada ambiente \cite[seção~1.8.2.2]{mamede2017}.
 
 A demanda, por sua vez, representa a potência média solicitada ou injetada no sistema elétrico durante um intervalo especificado, podendo referir-se à potência ativa ou à reativa, conforme o art.~2º, inciso~XI, da regulamentação \cite{aneel1000}. Para uma instalação consumidora, a demanda ativa média em um intervalo de duração $\Delta t$ pode ser expressa por
 \begin{equation}
@@ -70,7 +70,7 @@ A corrente de projeto constitui um dos parâmetros para a seleção dos condutor
 
 \subsection{Fatores empregados na estimativa de demanda}
 
-O fator de demanda expressa a relação entre a demanda máxima e a carga instalada. Para grandezas ativas referidas ao mesmo conjunto de cargas, a definição do art.~2º, inciso~XX, da Resolução Normativa ANEEL nº~1.000/2021 e do item~7.1.11 da especificação 0126 pode ser expressa por
+O fator de demanda expressa a relação entre a demanda máxima e a carga instalada. Para grandezas ativas referidas ao mesmo conjunto de cargas, a definição do art.~2º, inciso~XX, da Resolução Normativa ANEEL nº~1.000/2021 e do item~7.1.11 da especificação 0126 \cite[art.~2º, inciso~XX]{aneel1000}\cite[item~7.1.11]{enel0126} pode ser expressa por
 \begin{equation}
  F_d=\frac{D_{\max}}{P_{\mathrm{inst}}},
  \label{eq:fator-demanda}
@@ -114,7 +114,7 @@ em que $D_{\mathrm{ap}}$ é a demanda estimada do conjunto de apartamentos, em k
 
 A demanda da entrada geral nesse procedimento considera também a margem de segurança prevista para os apartamentos e a contribuição das cargas do condomínio, calculadas segundo o critério da carga instalada. Trata-se de um método específico da distribuidora, e não da aplicação direta das relações gerais entre fatores de utilização, demanda, simultaneidade e diversidade apresentadas anteriormente.
 
-Na especificação 1580, o item~7.3.2 exige a apresentação do memorial detalhado de cálculo da demanda prevista. As notas do item~7.3.2 e da seção~7.11 atribuem sua determinação ao responsável técnico pelo projeto e mencionam metodologias recomendadas pelas distribuidoras \cite[itens~7.3.2 e~7.11]{enel1580}. A seleção do procedimento de estimativa deve considerar as condições de aplicação e as características das cargas do empreendimento, sem transpor automaticamente coeficientes de instalações industriais ou de documentos históricos para o dimensionamento residencial.
+Na especificação 1580, o item~7.3.2, alínea~k, exige a apresentação do memorial detalhado de cálculo da demanda prevista, em kVA. As notas do item~7.3.2 e da seção~7.11 atribuem sua determinação ao responsável técnico pelo projeto e mencionam metodologias recomendadas pelas distribuidoras \cite[itens~7.3.2 e~7.11]{enel1580}. A seleção do procedimento de estimativa deve considerar as condições de aplicação e as características das cargas do empreendimento, sem transpor automaticamente coeficientes de instalações industriais ou de documentos históricos para o dimensionamento residencial.
 
 \section{Componentes da entrada coletiva e critérios técnicos}
 \label{sec:componentes}
