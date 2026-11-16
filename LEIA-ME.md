@@ -4,13 +4,26 @@
 
 ## Compilação no VS Code (MiKTeX + Strawberry Perl)
 
-Abra esta pasta no VS Code, abra `documento.tex` e use `Ctrl+Alt+B` com LaTeX Workshop. No terminal, pode executar:
+Abra a raiz deste repositório no VS Code, abra `documento.tex` e use `Ctrl+Alt+B` com LaTeX Workshop. A receita do projeto executa LaTeX e BibTeX por meio do `latexmk`. No terminal, a partir da raiz, execute o mesmo fluxo:
 
 ```powershell
-latexmk -pdf -interaction=nonstopmode -file-line-error -outdir=out documento.tex
+latexmk -cd -pdf -interaction=nonstopmode -halt-on-error -file-line-error -synctex=1 -outdir=. documento.tex
 ```
 
-O PDF é gerado em `out/documento.pdf`. No MiKTeX Console, habilite a instalação automática de pacotes ausentes, caso necessário.
+O PDF atualizado é gerado em `documento.pdf`, na raiz, junto aos arquivos auxiliares ignorados pelo Git. O argumento `-cd` fixa o diretório de trabalho no diretório do documento principal, e `-outdir=.` evita executar o BibTeX em uma pasta diferente da raiz, na qual o caminho relativo `3-pos-textuais/referencias.bib` poderia não ser encontrado. Não utilize a antiga receita com `-outdir=out` para este projeto. No MiKTeX Console, habilite a instalação automática de pacotes ausentes, caso necessário.
+
+### Verificação de uma compilação limpa
+
+Feche a visualização do PDF anterior, se necessário. Na raiz do projeto, execute:
+
+```powershell
+latexmk -cd -C -outdir=. documento.tex
+latexmk -cd -pdf -interaction=nonstopmode -halt-on-error -file-line-error -synctex=1 -outdir=. documento.tex
+```
+
+Confirme que a compilação terminou sem erros, que `documento.bbl` foi gerado e que `documento.pdf` possui a seção REFERÊNCIAS e as citações resolvidas (sem `??`). Consulte `documento.log` e `documento.blg` se houver aviso persistente de referência/citação indefinida ou falha do BibTeX. Um PDF antigo em `out/documento.pdf` não será atualizado por este novo fluxo; utilize apenas o PDF da raiz. Os arquivos de compilação não devem ser adicionados ao Git.
+
+A etapa E-01 foi testada em TeX Live (Linux); a validação do mesmo fluxo no MiKTeX/Windows deve ser realizada antes de encerrar a issue. A normalização bibliográfica de acordo com as normas ABNT e UFC é tratada separadamente na E-16.
 
 ## Alterações feitas conforme as correções do orientador
 
