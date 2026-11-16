@@ -24,6 +24,8 @@ A aplicação prática utiliza a documentação do projeto elétrico do Edifíci
 
 O levantamento será realizado em etapas sucessivas. Inicialmente, serão identificados objeto, área de aplicação e elementos técnicos equivalentes nas duas especificações. Em seguida, as prescrições serão agrupadas conforme os temas: enquadramento e limites de atendimento, cálculo de demanda, formas de conexão, ramais, padrão de entrada, medição, proteção, aterramento e exigências de apresentação de projeto.
 
+O levantamento abrangerá os requisitos técnicos e documentais pertinentes à conexão coletiva na área de concessão do Ceará, independentemente de sua incidência sobre o Edifício Palatium. Serão incluídas as prescrições gerais aplicáveis ao Ceará, as disposições específicas dessa área de concessão e as condições de atendimento pertinentes, inclusive quando um requisito estiver presente em apenas uma das especificações. Requisitos exclusivos de outras áreas de concessão serão excluídos, com registro do fundamento da exclusão. Quando a aplicabilidade territorial não puder ser estabelecida com segurança, a dúvida será registrada separadamente, sem presumir sua aplicação ao Ceará.
+
 Para cada tema, serão registrados os dispositivos correspondentes em cada documento, com indicação da seção, item, tabela ou desenho, quando aplicável. A comparação será efetuada entre prescrições funcionalmente equivalentes, inclusive quando inseridas em partes distintas das especificações. Quando o documento de 2025 remeter a outra norma, serão examinadas a referência e suas condições de aplicação antes de caracterizar eventual supressão ou modificação de requisito.
 
 A unidade de classificação será o requisito técnico ou documental, considerado em suas condições de aplicação. Quando um mesmo dispositivo contiver prescrições independentes, estas serão analisadas separadamente, de modo que cada comparação receba uma única categoria. O Quadro~\ref{qua:classificacao-normativa} estabelece as definições operacionais e apresenta exemplos hipotéticos, que não constituem resultados da comparação das especificações.
@@ -73,7 +75,41 @@ A justificativa de cada classificação será registrada juntamente com os dispo
 
 Os impactos serão avaliados segundo a possibilidade de interferência em decisões de engenharia documentadas. Serão considerados a modalidade de alimentação, a localização e a configuração do padrão de entrada, o dimensionamento de condutores e dispositivos de proteção, a disposição dos centros de medição e os requisitos de documentação e aprovação.
 
-A classificação de determinada exigência como alterada não implicará, por si só, a necessidade de reformular o projeto utilizado como referência. Para estabelecer uma consequência técnica, será necessário identificar a solução registrada na documentação, o requisito correspondente na especificação 1580 e as condições de aplicação. Os resultados serão classificados como solução compatível com o requisito examinado, adequação potencialmente necessária, situação condicionada à avaliação da distribuidora ou informação documental insuficiente.
+A seleção dos requisitos para o estudo de caso constituirá uma segunda etapa, posterior à comparação normativa. Para inclusão na avaliação dos impactos, deverão ser atendidos cumulativamente os seguintes critérios:
+
+\begin{enumerate}
+  \item aplicabilidade do requisito à área de concessão do Ceará;
+  \item identificação de mudança de conteúdo técnico ou documental entre as especificações, inclusive alteração, inclusão ou supressão demonstrada;
+  \item correspondência entre a mudança e uma característica, componente ou solução identificável na documentação do projeto do Edifício Palatium.
+\end{enumerate}
+
+Os requisitos mantidos ou apenas reorganizados, sem alteração técnica demonstrada, não serão selecionados para essa avaliação. As diferenças que não incidirem sobre o empreendimento permanecerão registradas na comparação normativa geral, com a justificativa de sua não seleção. Quando a mudança normativa ou sua incidência sobre o empreendimento não puder ser estabelecida, a limitação será registrada na etapa correspondente, sem presumir ausência de impacto.
+
+A seleção de um requisito não implica, por si só, necessidade de reformulação do projeto. Para cada requisito selecionado, serão confrontadas a solução documentada, as condições de aplicação e a exigência da especificação 1580 ou, no caso de supressão demonstrada, as consequências da ausência da exigência anterior. O Quadro~\ref{qua:classificacao-impactos} estabelece os critérios para a classificação dos resultados dessa avaliação.
+
+\begin{quadro}[htbp]
+  \centering
+  \begin{Spacing}{1.}
+    \caption{Classificação dos impactos técnicos no estudo de caso}
+    \label{qua:classificacao-impactos}
+  \end{Spacing}
+  {\small
+  \renewcommand{\arraystretch}{1.2}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.29\linewidth}|>{\raggedright\arraybackslash}p{0.63\linewidth}|}
+    \hline
+    \textbf{Categoria de impacto} & \textbf{Critério de classificação} \\\hline
+    Solução compatível & A solução documentada atende à exigência examinada, nas condições consideradas, ou a supressão demonstrada não requer modificação da solução para o atendimento à especificação 1580. \\\hline
+    Adequação potencialmente necessária & A mudança normativa indica necessidade de modificar uma solução, parâmetro de dimensionamento, componente ou documento de projeto para atendimento à especificação 1580, nas condições analisadas. \\\hline
+    Situação condicionada à avaliação da distribuidora & A conclusão depende de avaliação, estudo de viabilidade ou decisão da distribuidora expressamente prevista no requisito, não sendo possível determinar o atendimento apenas pela documentação disponível. \\\hline
+    Informação documental insuficiente & O requisito e sua pertinência ao caso estão estabelecidos, mas faltam dados do projeto ou parâmetros indispensáveis para determinar a consequência técnica. \\\hline
+  \end{tabular}}
+  \Fonte{Elaborado pelo autor.}
+\end{quadro}
+
+A categoria informação documental insuficiente distingue-se da classificação normativa inconclusivo: nesta última, as evidências não permitem determinar a natureza da diferença entre as especificações; naquela, a mudança normativa e sua pertinência ao empreendimento foram identificadas, mas a consequência técnica não pode ser determinada com os dados disponíveis. Quando a insuficiência documental impedir a própria seleção do requisito, será registrada como limitação da seleção, sem atribuição de categoria de impacto.
+
+Cada consequência será classificada separadamente. Quando for possível concluir a compatibilidade ou identificar uma adequação potencialmente necessária, será adotada a categoria correspondente. Caso a conclusão dependa de decisão expressamente reservada à distribuidora, será registrada a condição de avaliação, inclusive eventuais dados faltantes. Nos demais casos em que os dados não permitirem conclusão, será adotada a categoria informação documental insuficiente.
 
 Quando disponíveis os parâmetros necessários, serão realizados cálculos demonstrativos com identificação das grandezas, hipóteses e fontes empregadas. Esses cálculos terão finalidade analítica e não substituirão os memoriais nem a responsabilidade técnica dos profissionais responsáveis pelo projeto original.
 
@@ -82,14 +118,14 @@ Quando disponíveis os parâmetros necessários, serão realizados cálculos dem
 
 A aplicação prática será conduzida sobre as soluções de entrada coletiva representadas no projeto aprovado do Edifício Palatium. A documentação existente será adotada como configuração de referência para verificar os possíveis efeitos das exigências selecionadas da especificação 1580 sobre um mesmo empreendimento. A especificação 0126 será considerada como referência normativa anterior, em conformidade com a delimitação da pesquisa.
 
-A avaliação ficará restrita aos elementos presentes no memorial e nas pranchas do projeto. Para cada tema identificado como relevante na comparação normativa, será estabelecida uma relação entre a solução projetada, o requisito correspondente e a consequência técnica potencial. A pesquisa não promoverá alterações nos documentos originais nem atribuirá desconformidade ao projeto sem a confirmação das condições normativas pertinentes.
+A avaliação ficará restrita aos elementos presentes no memorial e nas pranchas do projeto. Para cada requisito selecionado segundo os critérios da Seção~\ref{sec:impactos}, será estabelecida uma relação entre a solução projetada, a evidência documental correspondente, a mudança normativa e a consequência técnica potencial. Serão registradas a justificativa da seleção, as hipóteses adotadas, a categoria atribuída e as limitações da avaliação. A pesquisa não promoverá alterações nos documentos originais nem constituirá laudo de conformidade ou reavaliação da aprovação do projeto.
 
 A carta de aprovação da concessionária comprova o deferimento do projeto apresentado, mas não discrimina os dispositivos normativos empregados na análise. O contexto de transição será examinado à luz das datas documentadas e do art. 20 da Resolução Normativa ANEEL nº 1.000/2021. Não serão presumidas a data efetiva de comunicação da especificação 1580 ou a incidência de hipóteses excepcionais sem suporte documental.
 
 \section{Tratamento dos resultados e limitações}
 \label{sec:limitacoes}
 
-Os resultados da comparação serão sistematizados em quadros contendo os temas examinados, os dispositivos correspondentes das especificações 0126 e 1580, a natureza da alteração e a repercussão técnica identificada. Os resultados do estudo de caso serão apresentados separadamente, com indicação da solução documentada e das condições necessárias para cada avaliação.
+Os resultados da comparação serão sistematizados em quadros contendo os temas examinados, os dispositivos correspondentes das especificações 0126 e 1580, a natureza da alteração e a repercussão técnica identificada. Serão registradas as justificativas de exclusão e as incertezas de aplicabilidade territorial, bem como as diferenças não selecionadas para o estudo de caso. Os resultados do estudo de caso serão apresentados separadamente, com indicação da solução documentada, da categoria de impacto e das condições necessárias para cada avaliação.
 
 A pesquisa limita-se às versões documentais selecionadas e aos critérios aplicáveis à área de concessão do Ceará. Não serão investigados os requisitos exclusivos de outras distribuidoras, o histórico de revisões internas do projeto, as instalações efetivamente executadas, os procedimentos de vistoria ou a energização do empreendimento. A análise não constitui laudo de conformidade nem substitui a avaliação técnica da concessionária em situações sujeitas a estudos de viabilidade.
 
