@@ -9,13 +9,13 @@ Uma linha por requisito técnico ou documental comparado, ou por exclusão/dúvi
 | Campo | Preenchimento |
 |---|---|
 | id_requisito | Código único e permanente. |
-| tema | Tema técnico da seção 5.3. |
+| tema | Tema técnico da seção 5.4. |
 | dispositivo_0126 / dispositivo_1580 | Localizadores exatos do documento/versão, seção, item, alínea, nota, tabela, desenho, anexo e página quando necessária. Em caso de ausência, indicar que não foi identificado correspondente e os trechos consultados; não inventar item. |
 | requisito_0126 / requisito_1580 | Descrição fiel da prescrição e suas condições de aplicação; registrar ausência ou impossibilidade de descrição, quando pertinente. |
 | categoria_normativa | Mantido; Alterado; Acrescentado; Retirado; Reorganizado; Inconclusivo — exatamente uma categoria para cada requisito comparado. Exclusão territorial ou aplicabilidade não determinada: deixar sem categoria caso a comparação não tenha sido realizada, com justificativa. |
 | aplicabilidade_ceara | Sim; Não; Não determinada. Separar exclusões e dúvidas da base de requisitos aplicáveis, inclusive nas contagens. |
 | justificativa_normativa_ou_exclusao | Explicação da categoria, condição regional e motivo de exclusão ou dúvida. Distinguir interpretação de evidência. Quando demonstrada origem regulatória anterior, identificar ato, dispositivo e relação com o requisito em cada versão. Não criar categoria adicional nem tratar a origem regulatória como prova de manutenção ou novidade documental. |
-| selecao_palatium | Sim; Não; Não determinada. Sim somente quando os três critérios da seção 5.4 forem atendidos. |
+| selecao_palatium | Sim; Não; Não determinada. Sim somente quando os três critérios da seção 5.5 forem atendidos. |
 | justificativa_selecao | Demonstrar aplicabilidade ao Ceará, mudança técnica/documental e correspondência documental, ou indicar a razão da não seleção/limitação. Preservar as diferenças sem efeito no caso. |
 | ids_impactos_palatium | Códigos dos impactos vinculados, separados por vírgula; deixar vazio para requisitos não selecionados. |
 | evidencias_normativas | Identificação das passagens, desenhos ou tabelas examinados que sustentam a comparação; verificar equivalentes em outras partes e remissões identificáveis. |
