@@ -1,6 +1,6 @@
 # Matriz comparativa — instrumento de registro (E-14)
 
-Os dois CSV constituem um único instrumento relacional de registro; são modelos inicialmente vazios, não resultados. Utilizar UTF-8 e delimitador ponto e vírgula. No Excel, importar por Dados > De Texto/CSV, mantendo códigos e localizadores como texto. Preservar cabeçalhos, usar aspas duplas para conteúdo com ponto e vírgula, aspas ou quebra de linha, e exportar novamente em UTF-8 com o mesmo delimitador.
+Os dois CSV constituem um único instrumento relacional de registro da comparação normativa e dos impactos técnicos. Os registros inseridos correspondem a análises de requisitos efetivamente examinados; o levantamento é progressivo. Utilizar UTF-8 e delimitador ponto e vírgula. No Excel, importar por Dados > De Texto/CSV, mantendo códigos e localizadores como texto. Preservar cabeçalhos, usar aspas duplas para conteúdo com ponto e vírgula, aspas ou quebra de linha, e exportar novamente em UTF-8 com o mesmo delimitador.
 
 ## Registro principal: matriz-comparativa.csv
 
@@ -47,4 +47,4 @@ Uma linha por consequência técnica de um requisito selecionado, com código pr
 5. Antes da síntese, verificar códigos únicos, vínculos entre os CSV, classificação única por requisito, seleção cumulativa, registros de impacto somente para requisitos selecionados, justificativas e estados de conferência. Separar requisitos excluídos e de aplicabilidade incerta das contagens de requisitos aplicáveis.
 6. Apresentar os principais achados no Capítulo 6, com os códigos de rastreio. Ao concluir a análise, apresentar integralmente os requisitos comparados e os impactos associados em quadros vinculados pelo código do requisito no Apêndice A, preservando as evidências, justificativas, hipóteses, incertezas e a legibilidade conforme o modelo UFC. Os campos estado_conferencia e registro_conferencia são controles internos de pesquisa: não compõem o quadro acadêmico nem precisam ser reproduzidos no apêndice. A matriz é apresentada em dois conjuntos vinculados para evitar um quadro excessivamente largo. Não inserir registros fictícios para preencher o apêndice, nem declarar o levantamento concluído enquanto ainda estiver em execução.
 
-A preparação do instrumento e do procedimento de conferência não significa que a comparação ou a avaliação de impactos já foram realizadas. O apêndice será incorporado ao documento principal quando houver resultados efetivos.
+A existência de registros no instrumento não significa que a comparação integral ou a avaliação de todos os impactos já foi concluída. O Apêndice A será incorporado ao documento principal após a consolidação dos registros e a conferência prevista no procedimento.
