@@ -24,7 +24,7 @@ No VS Code, o mesmo comando está disponível em **LaTeX Workshop: Build with re
 
 O fluxo com saída em `out/` foi validado no Windows com MiKTeX 25.12 e latexmk 4.88. A normalização bibliográfica de acordo com as normas ABNT e UFC é tratada separadamente na E-16.
 
-Nesta versão não há listas de siglas, glossário ou índice remissivo em uso. O recurso opcional de glossário está desativado por `\UFCglossariosfalse` em `lib/preambulo.tex`.
+As listas de abreviaturas e siglas e de símbolos são elementos pré-textuais estáticos, incluídos antes do sumário (E-22). O glossário automático e o índice remissivo continuam desativados. A opção `\UFCglossariosfalse` em `lib/preambulo.tex` deve ser preservada enquanto se utilizarem as listas estáticas.
 
 Consulte [DIAGNOSTICOS_LATEX.md](DIAGNOSTICOS_LATEX.md) para a reprodução dos 13 avisos, as versões testadas, a validação visual e os dois avisos remanescentes das dependências.
 
