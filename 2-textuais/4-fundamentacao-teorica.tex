@@ -10,7 +10,7 @@ As condições gerais de prestação do serviço público de distribuição são
 
 Os Grupos A e B correspondem a agrupamentos regulatórios das unidades consumidoras. O Grupo A compreende as unidades conectadas em tensão igual ou superior a 2,3~kV e contempla também o subgrupo AS, associado ao atendimento por sistema subterrâneo em tensão inferior a 2,3~kV. O Grupo B abrange, em regra, as unidades conectadas em tensão inferior a 2,3~kV, classificadas em subgrupos conforme a atividade ou classe de consumo \cite[art.~2º, incisos XXIII e XXIV]{aneel1000}. A previsão do subgrupo AS demonstra que o grupo tarifário não é determinado exclusivamente pelo nível de tensão.
 
-A tensão de conexão corresponde ao nível de tensão no qual se estabelece a interligação da unidade consumidora ao sistema de distribuição. Nos termos do art.~23, inciso~I, da Resolução Normativa ANEEL nº~1.000/2021, a regra geral para conexão ao Grupo B em rede aérea, em tensão inferior a 2,3~kV, considera carga e potência de geração instaladas na unidade consumidora de até 75~kW. Em sistema subterrâneo, o limite de potência instalada depende do padrão de atendimento da distribuidora, observado o direito de opção pelo subgrupo AS nas condições do §~3º. Para o Grupo A, a alínea~c prevê conexão de 2,3~kV a menos de 69~kV quando a carga ou a potência instalada de geração supera 75~kW e a maior demanda a contratar é de até 2.500~kW; a alínea~d prevê tensão igual ou superior a 69~kV para demanda contratada superior a esse limite \cite[art.~23, inciso~I]{aneel1000}.
+A tensão de conexão corresponde ao nível de tensão no qual se estabelece a interligação da unidade consumidora ao sistema de distribuição. Nos termos do art.~23, inciso~I, da Resolução Normativa ANEEL nº~1.000/2021, a regra geral para conexão ao Grupo B em rede aérea, em tensão inferior a 2,3~kV, considera carga e potência de geração instaladas na unidade consumidora de até 75~kW. Em sistema subterrâneo, o limite de potência instalada depende do padrão de atendimento da distribuidora, observado o direito de opção pelo subgrupo AS nas condições do §~3º. Para o Grupo A, a alínea~c prevê conexão de 2,3~kV a menos de 69~kV quando a carga ou a potência instalada de geração supera 75~kW e a maior demanda a contratar é de até 2\,500~kW; a alínea~d prevê tensão igual ou superior a 69~kV para demanda contratada superior a esse limite \cite[art.~23, inciso~I]{aneel1000}.
 
 O §~1º do art.~23, com redação dada pela REN ANEEL nº~1.059/2023, admite o enquadramento no Grupo A de unidades com carga e/ou geração superior a 50~kW e de até 75~kW quando houver potencial de prejuízo ao serviço prestado a outros usuários, justificado em estudo da distribuidora. O §~2º admite o enquadramento no Grupo B das instalações de uso coletivo de edificações com múltiplas unidades consumidoras cuja carga seja superior a 75~kW, desde que mais da metade das unidades pertença ao Grupo B, haja solicitação ou concordância do consumidor e a distribuidora avalie a viabilidade mediante estudo. Os §§~4º e~5º também disciplinam a definição de tensão distinta da regra geral, mediante estudo e observância das condições regulamentares; o §~6º estabelece disposição específica para a minigeração distribuída \cite[art.~23, §§~1º a~6º]{aneel1000}\cite{aneel1059}.
 
@@ -55,16 +55,16 @@ em que $P_{\mathrm{inst}}$ é a carga ativa instalada, $P_{\mathrm{n},i}$ é a p
 
 A demanda, por sua vez, representa a potência média solicitada ou injetada no sistema elétrico durante um intervalo especificado, podendo referir-se à potência ativa ou à reativa, conforme o art.~2º, inciso~XI, da regulamentação \cite{aneel1000}. Para uma instalação consumidora, a demanda ativa média em um intervalo de duração $\Delta t$ pode ser expressa por
 \begin{equation}
- D_P(t)=\frac{1}{\Delta t}\int_{t}^{t+\Delta t}P(\tau)\,\mathrm{d}\tau,
+ D_{\mathrm{P}}(t)=\frac{1}{\Delta t}\int_{t}^{t+\Delta t}P(\tau)\,\mathrm{d}\tau,
  \label{eq:demanda-media}
 \end{equation}
-em que $P(\tau)$ representa a potência ativa requerida ao longo do tempo e $D_P(t)$ é a demanda ativa no intervalo iniciado em $t$. A demanda máxima é o maior valor de demanda observado entre os intervalos considerados, e não necessariamente o valor instantâneo máximo da potência. Em particular, a definição regulatória de demanda medida corresponde ao maior valor de demanda ativa integralizada em intervalos de 15 minutos durante o período de faturamento; a demanda contratada, quando aplicável, é a potência ativa disponibilizada segundo as condições contratuais \cite[art.~2º, incisos~XII e~XIII]{aneel1000}.
+em que $P(\tau)$ representa a potência ativa instantânea requerida ao longo do tempo, $\tau$ é a variável de integração temporal, $t$ é o instante inicial, $\Delta t$ é a duração do intervalo e $D_{\mathrm{P}}(t)$ é a demanda ativa média nesse intervalo. As variáveis temporais são expressas na mesma unidade de tempo, e a demanda resulta na unidade adotada para a potência. A demanda máxima é o maior valor de demanda observado entre os intervalos considerados, e não necessariamente o valor instantâneo máximo da potência. Em particular, a definição regulatória de demanda medida corresponde ao maior valor de demanda ativa integralizada em intervalos de 15 minutos durante o período de faturamento; a demanda contratada, quando aplicável, é a potência ativa disponibilizada segundo as condições contratuais \cite[art.~2º, incisos~XII e~XIII]{aneel1000}.
 
-Em empreendimentos de múltiplas unidades consumidoras, os horários de utilização das cargas e suas condições de operação podem ser distintos. Por essa razão, a soma das potências nominais instaladas não representa necessariamente a potência requerida simultaneamente na entrada coletiva. A demanda provável utilizada no dimensionamento constitui uma estimativa de projeto, obtida por procedimentos técnicos compatíveis com as características das cargas e com os requisitos aplicáveis. A especificação 0126, por exemplo, utiliza valores de demanda em quilovolt-ampères para o dimensionamento da entrada geral \cite[item~7.11.2]{enel0126}. Esses valores de demanda aparente prevista não se confundem com a demanda ativa medida ou contratada definida pela ANEEL.
+Em empreendimentos de múltiplas unidades consumidoras, os horários de utilização das cargas e suas condições de operação podem ser distintos. Por essa razão, a soma das potências nominais instaladas não representa necessariamente a potência requerida simultaneamente na entrada coletiva. A demanda provável utilizada no dimensionamento constitui uma estimativa de projeto, obtida por procedimentos técnicos compatíveis com as características das cargas e com os requisitos aplicáveis. A especificação 0126, por exemplo, utiliza valores de demanda em quilovolts-amperes (kVA) para o dimensionamento da entrada geral \cite[item~7.11.2]{enel0126}. Esses valores de demanda aparente prevista não se confundem com a demanda ativa medida ou contratada definida pela ANEEL.
 
 \subsection{Potências elétricas, fator de potência e corrente de projeto}
 
-Em sistemas de corrente alternada, a potência ativa $P$, expressa em watts (W), representa a taxa líquida de transferência de energia que pode ser convertida em trabalho, calor ou outras formas de energia. A potência reativa $Q$, expressa em var, está associada à troca periódica de energia com elementos reativos. A potência aparente $S$, expressa em volt-ampères (VA), está relacionada aos valores eficazes de tensão e corrente e à capacidade requerida dos componentes do sistema.
+Em sistemas de corrente alternada, a potência ativa $P$, expressa em watts (W), representa a taxa líquida de transferência de energia que pode ser convertida em trabalho, calor ou outras formas de energia. A potência reativa $Q$, expressa em var, está associada à troca periódica de energia com elementos reativos. A potência aparente $S$, expressa em volts-amperes (VA), está relacionada aos valores eficazes de tensão e corrente e à capacidade requerida dos componentes do sistema.
 
 Em condições senoidais, as três grandezas relacionam-se pelo triângulo de potências, conforme o conceito apresentado por \citeonline[seção~4.2.1 e Figura~4.1]{mamede2017}:
 \begin{equation}
@@ -72,19 +72,19 @@ Em condições senoidais, as três grandezas relacionam-se pelo triângulo de po
  \label{eq:potencia-aparente}
 \end{equation}
 
-O fator de potência ($FP$) corresponde à razão entre a potência ativa e a potência aparente. Para uma carga em regime senoidal, essa razão coincide com o cosseno do ângulo de defasagem $\varphi$ entre tensão e corrente:
+O fator de potência ($\mathrm{FP}$) corresponde à razão entre a potência ativa e a potência aparente. Para uma carga em regime senoidal, essa razão coincide com o cosseno do ângulo de defasagem $\varphi$ entre tensão e corrente:
 \begin{equation}
- FP=\frac{P}{S}=\cos\varphi.
+ \mathrm{FP}=\frac{P}{S}=\cos\varphi.
  \label{eq:fator-potencia}
 \end{equation}
 Na presença de distorções harmônicas, a relação $P/S$ não deve ser identificada diretamente com o cosseno do ângulo de defasagem da componente fundamental \cite[seção~4.2.1]{mamede2017}. Por essa razão, o triângulo de potências apresentado considera o regime senoidal.
 
-Para uma alimentação trifásica equilibrada, a potência aparente e a corrente de linha relacionam-se por $S=\sqrt{3}\,V_{LL}I$. A corrente correspondente à demanda aparente de projeto é, portanto,
+Para uma alimentação trifásica equilibrada, a potência aparente e a corrente de linha relacionam-se por $S=\sqrt{3}\,V_{\mathrm{LL}}I$. A corrente correspondente à demanda aparente de projeto é, portanto,
 \begin{equation}
- I = \frac{S}{\sqrt{3}\,V_{LL}},
+ I = \frac{S}{\sqrt{3}\,V_{\mathrm{LL}}},
  \label{eq:corrente-trifasica}
 \end{equation}
-na qual $I$ representa a corrente de linha, em ampères (A); $S$, a potência aparente trifásica, em volt-ampères (VA); e $V_{LL}$, a tensão entre fases, em volts (V). Se a demanda aparente for dada em kVA, é necessário convertê-la em VA antes de aplicar a equação. Para uma mesma potência ativa e tensão de alimentação, a redução do fator de potência implica aumento da potência aparente e da corrente requerida.
+na qual $I$ representa a corrente de linha, em amperes (A); $S$, a potência aparente trifásica, em volts-amperes (VA); e $V_{\mathrm{LL}}$, a tensão entre fases, em volts (V). Se a demanda aparente for dada em kVA, é necessário convertê-la em VA antes de aplicar a equação. Para uma mesma potência ativa e tensão de alimentação, a redução do fator de potência implica aumento da potência aparente e da corrente requerida.
 
 A corrente de projeto constitui um dos parâmetros para a seleção dos condutores e dispositivos de proteção. O dimensionamento não se limita à obtenção desse valor: a ABNT NBR 5410 estabelece critérios relativos à capacidade de condução de corrente, às condições de instalação, à queda de tensão e à proteção contra sobrecorrentes \cite[itens~5.3, 6.2.5 a~6.2.7]{abnt5410}. As condições de desequilíbrio, de harmônicas e de correntes de falta devem ser consideradas quando pertinentes à instalação.
 
@@ -95,21 +95,21 @@ O fator de demanda expressa a relação entre a demanda máxima e a carga instal
  F_d=\frac{D_{\max}}{P_{\mathrm{inst}}},
  \label{eq:fator-demanda}
 \end{equation}
-em que $D_{\max}$ é a demanda ativa máxima e $P_{\mathrm{inst}}$ é a carga instalada, expressas na mesma unidade. Trata-se de um fator adimensional que, nas condições usuais de estimativa de demanda, é inferior ou igual à unidade. A adoção de fatores menores que a unidade considera que nem todos os equipamentos operam simultaneamente em sua potência nominal \cite[seção~1.8.1.1]{mamede2017}.
+em que $F_d$ é o fator de demanda, $D_{\max}$ é a demanda ativa máxima e $P_{\mathrm{inst}}$ é a carga instalada, expressas na mesma unidade. Trata-se de um fator adimensional que, nas condições usuais de estimativa de demanda, é inferior ou igual à unidade. A adoção de fatores menores que a unidade considera que nem todos os equipamentos operam simultaneamente em sua potência nominal \cite[seção~1.8.1.1]{mamede2017}.
 
 O fator de utilização representa a relação entre a potência média absorvida por um equipamento nas condições de utilização consideradas e sua potência nominal elétrica \cite[seção~1.8.1.5]{mamede2017}:
 \begin{equation}
  F_u=\frac{P_{\mathrm{util}}}{P_{\mathrm{n}}},
  \label{eq:fator-utilizacao}
 \end{equation}
-em que $P_{\mathrm{util}}$ é a potência média absorvida nas condições de utilização adotadas e $P_{\mathrm{n}}$ é a potência nominal elétrica do equipamento. Esse fator caracteriza o nível de utilização da capacidade nominal do equipamento, distinguindo-se da coincidência temporal entre as solicitações de diferentes cargas.
+em que $F_u$ é o fator de utilização, $P_{\mathrm{util}}$ é a potência média absorvida nas condições de utilização adotadas e $P_{\mathrm{n}}$ é a potência nominal elétrica do equipamento. Esse fator caracteriza o nível de utilização da capacidade nominal do equipamento, distinguindo-se da coincidência temporal entre as solicitações de diferentes cargas.
 
 O fator de simultaneidade considera a coincidência das demandas individuais máximas de um conjunto de cargas. Conforme \citeonline[seção~1.8.1.4]{mamede2017}, relaciona a demanda máxima do conjunto à soma das demandas máximas individuais:
 \begin{equation}
  F_s=\frac{D_{\max,\mathrm{conj}}}{\displaystyle\sum_{i=1}^{n}D_{\max,i}},
  \label{eq:fator-simultaneidade}
 \end{equation}
-em que $D_{\max,\mathrm{conj}}$ representa a demanda máxima do conjunto e $D_{\max,i}$ a demanda máxima individual da carga $i$. As grandezas devem ser da mesma natureza, obtidas com intervalos de integração e período de observação compatíveis. Considerando demandas ativas de cargas consumidoras e denominador não nulo, $F_s$ é menor ou igual à unidade, atingindo-a quando as demandas máximas individuais ocorrem no mesmo intervalo.
+em que $F_s$ é o fator de simultaneidade, $D_{\max,\mathrm{conj}}$ representa a demanda máxima do conjunto e $D_{\max,i}$ a demanda máxima individual da carga $i$. As grandezas devem ser da mesma natureza, obtidas com intervalos de integração e período de observação compatíveis. Considerando demandas ativas de cargas consumidoras e denominador não nulo, $F_s$ é menor ou igual à unidade, atingindo-a quando as demandas máximas individuais ocorrem no mesmo intervalo.
 
 O fator de diversidade, na definição geral apresentada por \citeonline[seção~1.8.1.4]{mamede2017}, corresponde ao inverso do fator de simultaneidade:
 \begin{equation}
@@ -117,7 +117,7 @@ O fator de diversidade, na definição geral apresentada por \citeonline[seção
  \frac{\displaystyle\sum_{i=1}^{n}D_{\max,i}}{D_{\max,\mathrm{conj}}},
  \label{eq:fator-diversidade}
 \end{equation}
-para demanda máxima do conjunto positiva. Seu valor, nessas condições, é maior ou igual à unidade. A diversidade das cargas permite que a demanda máxima do conjunto seja inferior à soma das demandas máximas individuais. Esses fatores descrevem relações distintas e não devem ser aplicados cumulativamente sem que o método de cálculo estabeleça essa combinação, pois um fator de demanda pode já incorporar efeitos de utilização e simultaneidade.
+em que $F_{\mathrm{div}}$ é o fator de diversidade, adimensional, definido para demanda máxima do conjunto positiva. Seu valor, nessas condições, é maior ou igual à unidade. A diversidade das cargas permite que a demanda máxima do conjunto seja inferior à soma das demandas máximas individuais. Esses fatores descrevem relações distintas e não devem ser aplicados cumulativamente sem que o método de cálculo estabeleça essa combinação, pois um fator de demanda pode já incorporar efeitos de utilização e simultaneidade.
 
 \subsection{Critérios de estimativa da demanda em empreendimentos de conexão coletiva}
 
@@ -129,10 +129,10 @@ A especificação 0126 estabelece, na seção~7.11, o critério da área útil p
 
 No critério da área útil, considera-se apenas a área interna dos apartamentos. Para grupos de apartamentos de áreas distintas, emprega-se a média das áreas ponderada pelas respectivas quantidades de unidades. A relação entre a demanda estimada por apartamento e a área útil é expressa pela Equação~3 da 0126:
 \begin{equation}
- d_{\mathrm{area}}=0{,}034939\,A^{0{,}895075},
+ d_{\mathrm{area}}=0{,}034939\,A_{\mathrm{util}}^{0{,}895075},
  \label{eq:demanda-area}
 \end{equation}
-em que $A$ é o valor numérico da área útil, em metros quadrados (m$^2$), e $d_{\mathrm{area}}$ é a demanda estimada por apartamento, em kVA. A Tabela~15 da especificação apresenta valores calculados para áreas de até 400~m$^2$. Para áreas superiores a 400~m$^2$, o item~7.11.2.5 determina o cálculo pela fórmula; para áreas entre 20 e 42~m$^2$, o item~7.11.2.6 estabelece a adoção de 1,0~kVA por apartamento \cite[itens~7.11.2.3 a~7.11.2.6]{enel0126}.
+em que $A_{\mathrm{util}}$ é o valor numérico da área útil, em metros quadrados (\(\mathrm{m}^2\)), e $d_{\mathrm{area}}$ é a demanda estimada por apartamento, em kVA. A Tabela~15 da especificação apresenta valores calculados para áreas de até 400~\(\mathrm{m}^2\). Para áreas superiores a 400~\(\mathrm{m}^2\), o item~7.11.2.5 determina o cálculo pela fórmula; para áreas entre 20 e 42~\(\mathrm{m}^2\), o item~7.11.2.6 estabelece a adoção de 1,0~kVA por apartamento \cite[itens~7.11.2.3 a~7.11.2.6]{enel0126}.
 
 A demanda do conjunto de apartamentos, correspondente à Equação~5 da especificação, é dada por
 \begin{equation}
@@ -143,10 +143,10 @@ em que $D_{\mathrm{ap}}$ é a demanda estimada do conjunto, em kVA, e $C_{\mathr
 
 A demanda total da instalação residencial coletiva é determinada pela Equação~4 da especificação:
 \begin{equation}
- D_T=D_{\mathrm{ap}}\,F_{\mathrm{seg}}+D_{\mathrm{cond}},
+ D_{\mathrm{T}}=D_{\mathrm{ap}}\,F_{\mathrm{seg}}+D_{\mathrm{cond}},
  \label{eq:demanda-total-0126}
 \end{equation}
-em que $D_T$ é a demanda total, $D_{\mathrm{cond}}$ é a demanda das instalações do condomínio, ambas em kVA, e $F_{\mathrm{seg}}$ é o multiplicador de segurança aplicado à demanda dos apartamentos. A margem mínima de segurança estabelecida é de 40\%, correspondente a $F_{\mathrm{seg}}=1{,}4$, conforme os exemplos do Anexo G. Margens superiores podem ser adotadas mediante decisão e justificativa do projetista \cite[seção~7.11.2, p.~39--40, e Anexo G]{enel0126}.
+em que $D_{\mathrm{T}}$ é a demanda total, $D_{\mathrm{cond}}$ é a demanda das instalações do condomínio, ambas em kVA, e $F_{\mathrm{seg}}$ é o multiplicador de segurança aplicado à demanda dos apartamentos. A margem mínima de segurança estabelecida é de 40~\%, correspondente a $F_{\mathrm{seg}}=1{,}4$, conforme os exemplos do Anexo G. Margens superiores podem ser adotadas mediante decisão e justificativa do projetista \cite[seção~7.11.2, p.~39--40, e Anexo G]{enel0126}.
 
 A demanda das instalações do condomínio e a dos empreendimentos não residenciais de uso coletivo são estimadas pelo critério da carga instalada, cuja fórmula empírica corresponde à Equação~6 da especificação:
 \begin{equation}
