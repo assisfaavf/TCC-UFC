@@ -35,7 +35,7 @@ Consulte [DIAGNOSTICOS_LATEX.md](DIAGNOSTICOS_LATEX.md) para a reprodução dos 
 - Denominação uniforme: códigos completos na primeira referência e «especificação 0126» / «especificação 1580» nas demais.
 - Termo «recorte» substituído por «delimitação» ou «área de aplicação».
 - Edifício Palatium apresentado como empreendimento residencial localizado em Sobral, sem identificadores privados desnecessários.
-- Documento do projeto descrito como «memorial de cálculo elétrico, revisão 04».
+- Documento do projeto identificado pelo título e pelos localizadores das evidências, sem divulgar a revisão interna nem a empresa projetista.
 - Metodologia concentrada nos procedimentos de pesquisa, sem descrever a organização dos capítulos.
 - Citações associadas ao arquivo `.bib`, não lançadas apenas como texto livre.
 - Não foi desenvolvido o Capítulo 4.
@@ -49,3 +49,7 @@ A Biblioteca da UFC informa que seu modelo LaTeX está em atualização. Consult
 O PDF foi preparado como entrega de **capítulos parciais**. A numeração inicia em 2 por `\setcounter{chapter}{1}`; quando for adicionada a Introdução, remova esse comando e inclua o capítulo 1. Elementos pré-textuais ainda não finalizados (resumos, folha de aprovação e ficha catalográfica) foram intencionalmente omitidos nesta versão para evitar dados fictícios.
 
 A aprovação do projeto Palatium está documentada, mas a carta não enumera os dispositivos normativos efetivamente empregados pela concessionária. A hipótese de comparação com o referencial anterior é mantida sem extrapolar o teor da carta.
+
+## Tratamento de fontes particulares
+
+Os documentos originais do estudo de caso e os comprovantes de autorização devem permanecer fora do repositório público. Aplicar as orientações de [controle de divulgação documental](dados/CONTROLE-DIVULGACAO.md) ao texto, às referências, à matriz e às figuras antes de publicar ou entregar o TCC. A presença de uma fonte no acervo de pesquisa não implica autorização para a sua reprodução ou divulgação.
