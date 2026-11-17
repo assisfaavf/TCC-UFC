@@ -42,7 +42,7 @@ Consulte [DIAGNOSTICOS_LATEX.md](DIAGNOSTICOS_LATEX.md) para a reprodução dos 
 
 ## Limitações de normalização
 
-O modelo `ufctex` fornecido possui últimas alterações documentadas em 2019 e carrega `abntex2cite`, que antecede a ABNT NBR 10520:2023. Neste rascunho as citações no texto foram preferencialmente integradas à oração (`\citeonline`), mas **as referências devem ser verificadas na revisão final**, inclusive quanto a capitalização e demais alterações da ABNT NBR 6023:2025.
+O modelo `ufctex` fornecido possui últimas alterações documentadas em 2019 e carrega `abntex2cite`, que antecede a ABNT NBR 10520:2023. A revisão E-16 introduz a opção local `ufc-citacao-2023` para adequar a capitalização das chamadas autor-data, mantendo o fluxo BibTeX e o modelo fornecido. **A lista de referências e o PDF integral ainda exigem conferência**, sobretudo as entradas institucionais, as fontes particulares e os requisitos da ABNT NBR 6023:2025. Ver [NORMALIZACAO_BIBLIOGRAFICA.md](NORMALIZACAO_BIBLIOGRAFICA.md).
 
 A Biblioteca da UFC informa que seu modelo LaTeX está em atualização. Consulte os guias oficiais de normalização da UFC e, antes da entrega definitiva, submeta o PDF à revisão de normalização bibliográfica.
 
