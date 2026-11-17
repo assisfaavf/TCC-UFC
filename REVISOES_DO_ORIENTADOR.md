@@ -9,7 +9,7 @@ Foi considerado o arquivo `TCC_1 correcao ver 1.docx` enviado pelo orientador e 
 | Uso impreciso de «recorte» | Emprego de «delimitação», «área de aplicação» e expressões técnicas equivalentes. |
 | Empreendimento sem apresentação prévia | Identificação do Edifício Palatium como residencial situado em Sobral na seção 3.2. |
 | Códigos das normas ora longos, ora abreviados | Primeira identificação integral e, depois, «especificação 0126» e «especificação 1580». |
-| Revisão R04 não explicada | Padronização «memorial de cálculo elétrico, revisão 04». |
+| Identificação da versão do memorial | Identificação do documento pelo título, ano e páginas, sem divulgar a numeração de revisão interna. |
 | Excesso de códigos e informações privadas | Remoção dos números de protocolo, ART e outros identificadores do corpo da metodologia. |
 | Referência excessiva a documento não publicado | Corpus documental descrito no método; registros privados não usados como fundamentação normativa. |
 | Descrição dos capítulos na metodologia | Removida. A apresentação da organização do trabalho pertence à Introdução, a ser elaborada depois. |

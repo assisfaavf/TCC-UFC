@@ -33,3 +33,7 @@ tmp/
 *.bak
 *.tmp
 *.synctex
+
+# Fontes particulares e autorizações: manter fora do Git
+/fontes-privadas/
+/autorizacoes-privadas/
