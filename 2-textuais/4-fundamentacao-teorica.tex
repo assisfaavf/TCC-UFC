@@ -95,21 +95,21 @@ O fator de demanda expressa a relação entre a demanda máxima e a carga instal
  F_d=\frac{D_{\max}}{P_{\mathrm{inst}}},
  \label{eq:fator-demanda}
 \end{equation}
-em que $D_{\max}$ é a demanda ativa máxima e $P_{\mathrm{inst}}$ é a carga instalada, expressas na mesma unidade. Trata-se de um fator adimensional que, nas condições usuais de estimativa de demanda, é inferior ou igual à unidade. A adoção de fatores menores que a unidade considera que nem todos os equipamentos operam simultaneamente em sua potência nominal \cite[seção~1.8.1.1]{mamede2017}.
+em que $F_d$ é o fator de demanda, $D_{\max}$ é a demanda ativa máxima e $P_{\mathrm{inst}}$ é a carga instalada, expressas na mesma unidade. Trata-se de um fator adimensional que, nas condições usuais de estimativa de demanda, é inferior ou igual à unidade. A adoção de fatores menores que a unidade considera que nem todos os equipamentos operam simultaneamente em sua potência nominal \cite[seção~1.8.1.1]{mamede2017}.
 
 O fator de utilização representa a relação entre a potência média absorvida por um equipamento nas condições de utilização consideradas e sua potência nominal elétrica \cite[seção~1.8.1.5]{mamede2017}:
 \begin{equation}
  F_u=\frac{P_{\mathrm{util}}}{P_{\mathrm{n}}},
  \label{eq:fator-utilizacao}
 \end{equation}
-em que $P_{\mathrm{util}}$ é a potência média absorvida nas condições de utilização adotadas e $P_{\mathrm{n}}$ é a potência nominal elétrica do equipamento. Esse fator caracteriza o nível de utilização da capacidade nominal do equipamento, distinguindo-se da coincidência temporal entre as solicitações de diferentes cargas.
+em que $F_u$ é o fator de utilização, $P_{\mathrm{util}}$ é a potência média absorvida nas condições de utilização adotadas e $P_{\mathrm{n}}$ é a potência nominal elétrica do equipamento. Esse fator caracteriza o nível de utilização da capacidade nominal do equipamento, distinguindo-se da coincidência temporal entre as solicitações de diferentes cargas.
 
 O fator de simultaneidade considera a coincidência das demandas individuais máximas de um conjunto de cargas. Conforme \citeonline[seção~1.8.1.4]{mamede2017}, relaciona a demanda máxima do conjunto à soma das demandas máximas individuais:
 \begin{equation}
  F_s=\frac{D_{\max,\mathrm{conj}}}{\displaystyle\sum_{i=1}^{n}D_{\max,i}},
  \label{eq:fator-simultaneidade}
 \end{equation}
-em que $D_{\max,\mathrm{conj}}$ representa a demanda máxima do conjunto e $D_{\max,i}$ a demanda máxima individual da carga $i$. As grandezas devem ser da mesma natureza, obtidas com intervalos de integração e período de observação compatíveis. Considerando demandas ativas de cargas consumidoras e denominador não nulo, $F_s$ é menor ou igual à unidade, atingindo-a quando as demandas máximas individuais ocorrem no mesmo intervalo.
+em que $F_s$ é o fator de simultaneidade, $D_{\max,\mathrm{conj}}$ representa a demanda máxima do conjunto e $D_{\max,i}$ a demanda máxima individual da carga $i$. As grandezas devem ser da mesma natureza, obtidas com intervalos de integração e período de observação compatíveis. Considerando demandas ativas de cargas consumidoras e denominador não nulo, $F_s$ é menor ou igual à unidade, atingindo-a quando as demandas máximas individuais ocorrem no mesmo intervalo.
 
 O fator de diversidade, na definição geral apresentada por \citeonline[seção~1.8.1.4]{mamede2017}, corresponde ao inverso do fator de simultaneidade:
 \begin{equation}
@@ -129,10 +129,10 @@ A especificação 0126 estabelece, na seção~7.11, o critério da área útil p
 
 No critério da área útil, considera-se apenas a área interna dos apartamentos. Para grupos de apartamentos de áreas distintas, emprega-se a média das áreas ponderada pelas respectivas quantidades de unidades. A relação entre a demanda estimada por apartamento e a área útil é expressa pela Equação~3 da 0126:
 \begin{equation}
- d_{\mathrm{area}}=0{,}034939\,A^{0{,}895075},
+ d_{\mathrm{area}}=0{,}034939\,A_{\mathrm{util}}^{0{,}895075},
  \label{eq:demanda-area}
 \end{equation}
-em que $A$ é o valor numérico da área útil, em metros quadrados (\(\mathrm{m}^2\)), e $d_{\mathrm{area}}$ é a demanda estimada por apartamento, em kVA. A Tabela~15 da especificação apresenta valores calculados para áreas de até 400~\(\mathrm{m}^2\). Para áreas superiores a 400~\(\mathrm{m}^2\), o item~7.11.2.5 determina o cálculo pela fórmula; para áreas entre 20 e 42~\(\mathrm{m}^2\), o item~7.11.2.6 estabelece a adoção de 1,0~kVA por apartamento \cite[itens~7.11.2.3 a~7.11.2.6]{enel0126}.
+em que $A_{\mathrm{util}}$ é o valor numérico da área útil, em metros quadrados (\(\mathrm{m}^2\)), e $d_{\mathrm{area}}$ é a demanda estimada por apartamento, em kVA. A Tabela~15 da especificação apresenta valores calculados para áreas de até 400~\(\mathrm{m}^2\). Para áreas superiores a 400~\(\mathrm{m}^2\), o item~7.11.2.5 determina o cálculo pela fórmula; para áreas entre 20 e 42~\(\mathrm{m}^2\), o item~7.11.2.6 estabelece a adoção de 1,0~kVA por apartamento \cite[itens~7.11.2.3 a~7.11.2.6]{enel0126}.
 
 A demanda do conjunto de apartamentos, correspondente à Equação~5 da especificação, é dada por
 \begin{equation}
