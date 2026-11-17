@@ -23,4 +23,55 @@ Trata-se, portanto, de uma possibilidade de enquadramento de origem regulatória
 
 O memorial de cálculo elétrico do Palatium registra 95,713~kW de carga instalada nas instalações comuns do condomínio (p.~6), distintos da carga instalada total do empreendimento. A regra geral de enquadramento é, assim, pertinente à configuração estudada, mas, por não apresentar alteração técnica demonstrada em relação à 0126, não é selecionada isoladamente para a avaliação dos impactos. A análise não confirma o atendimento a todas as condições de enquadramento nem substitui o estudo de viabilidade da distribuidora.
 
+\subsection{Critérios de cálculo de demanda (REVISAR)}
+\label{subsec:resultado-demanda}
+
+A seção~7.11 da especificação 0126 estabelece os métodos da área útil e da carga instalada, cujas expressões estão apresentadas nas Equações~\ref{eq:demanda-area} a~\ref{eq:demanda-carga-instalada-0126}. Os itens~7.11.1 a~7.11.3, as Tabelas~1, 2, 4, 5, 6, 15 e~16 e os exemplos do Anexo G permitem identificar, no próprio documento, os dados necessários, os coeficientes de cálculo, os critérios de composição da demanda e as condições de aplicação. Entre essas condições está a margem de segurança mínima de 40\% aplicada à demanda dos apartamentos, admitindo-se valor superior justificado pelo projetista. A possibilidade de propor outro método no contexto do critério da carga instalada consta do item~7.11.3.5. A determinação da demanda já era de responsabilidade do responsável técnico pelo projeto, conforme o item~7.11.1.5 \cite[seção~7.11, p.~38--41, e Anexo G]{enel0126}.
+
+Na especificação 1580, a alínea~k do item~7.3.2 (p.~21) exige o memorial detalhado da demanda da entrada geral, dos ramais de distribuição principal, dos ramais alimentadores das unidades, dos barramentos blindados e dos centros de medição, em kVA. A nota ao final desse item (p.~22) atribui a determinação da demanda prevista ao responsável técnico, empregando a expressão \emph{utilizando de metodologias recomendadas pelas distribuidoras em documentos específicos}. A nota após o item~7.11.9 (p.~43) reafirma a responsabilidade, mas emprega a expressão \emph{podendo ser utilizada metodologias recomendadas pelas distribuidoras em documentos específicos} \cite[item~7.3.2 e nota após o item~7.11.9]{enel1580}. A primeira redação aponta para o emprego de metodologias recomendadas; a segunda apresenta esse emprego em termos de possibilidade. Nenhuma das duas notas identifica os títulos ou códigos desses documentos. Essa diferença de redação, isoladamente, não permite concluir que haja liberdade irrestrita de escolha do método nem que determinada metodologia seja obrigatória ou proibida.
+
+O Quadro~\ref{qua:demanda-comparacao} sistematiza as diferenças entre o tratamento metodológico, a responsabilidade técnica e a documentação dos cálculos.
+
+\begin{quadro}[htbp]
+  \centering
+  \begin{Spacing}{1.}
+    \caption{Comparação do tratamento do cálculo de demanda}
+    \label{qua:demanda-comparacao}
+  \end{Spacing}
+  {\small
+  \renewcommand{\arraystretch}{1.2}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.21\linewidth}|>{\raggedright\arraybackslash}p{0.33\linewidth}|>{\raggedright\arraybackslash}p{0.34\linewidth}|}
+    \hline
+    \textbf{Aspecto} & \textbf{Especificação 0126} & \textbf{Especificação 1580} \\\hline
+    Método geral (RN-0003) & Seção 7.11, tabelas e Anexo G: procedimentos, equações e exemplos. & Remissões genéricas a metodologias recomendadas nas notas das p. 22 e 43; não reproduz o procedimento geral da 0126. \\\hline
+    Responsabilidade (RN-0004) & Item 7.11.1.5: atribuição ao responsável técnico pelo projeto. & Notas das p. 22 e 43: preservação da atribuição ao responsável técnico. \\\hline
+    Memorial (RN-0005) & Item 7.12.2.3, alínea c: cálculo de demanda e justificativa do dimensionamento. & Item 7.3.2, alínea k: discriminação dos elementos cujo cálculo detalhado da demanda deve ser apresentado. \\\hline
+  \end{tabular}}
+  \Fonte{Elaborado pelo autor com base nas especificações 0126 e 1580 \cite[seções~7.11 e~7.12, Anexo G]{enel0126}\cite[p.~21--22 e~43]{enel1580}.}
+\end{quadro}
+
+O tratamento geral dos métodos é classificado como alterado (RN-0003), pois a 1580 substitui a exposição de procedimentos, coeficientes e exemplos por referências genéricas a metodologias recomendadas. Não se trata de supressão demonstrada de um método no conjunto de documentos da distribuidora. A responsabilidade pela determinação da demanda é classificada como reorganizado (RN-0004), porque já constava da 0126 e passa a ser apresentada em notas na 1580. A explicitação documental dos elementos a que se deve referir o memorial detalhado é classificada como alterado (RN-0005), considerando que a apresentação do cálculo e a justificativa dos dimensionamentos já eram exigidas, mas com organização e discriminação distintas.
+
+A redução do detalhamento do método geral não significa ausência de prescrições de demanda na 1580. O item~7.11.9 estabelece condições específicas para o tratamento da demanda dos sistemas de prevenção e combate a incêndio. O item~7.19.6 estabelece critérios de seleção dos condutores e das proteções em função da corrente de demanda calculada e da queda de tensão. A seção~7.11 apresenta, ainda, limites de demanda associados a concepções de atendimento e transformação \cite[itens~7.11.1 a~7.11.7, 7.11.9 e~7.19.6]{enel1580}. Tais prescrições não equivalem a uma reprodução do método geral da área útil ou da carga instalada.
+
+A comparação dos métodos restringe-se ao conteúdo efetivamente apresentado nas especificações 0126 e 1580, sem investigação das metodologias externas mencionadas nas notas. Dessa delimitação decorre a impossibilidade de estabelecer, apenas pelos documentos comparados, um método substitutivo completo ou uma nova demanda numérica obrigatória. Também não se demonstra a proibição do método anterior.
+
 \section{Estudo de caso: Edifício Palatium}
+
+\subsection{Implicações dos critérios de cálculo de demanda (REVISAR)}
+\label{subsec:impacto-demanda}
+
+O memorial de cálculo elétrico do empreendimento (p.~7) adota o critério da área útil para o dimensionamento do centro de proteção geral. A área útil informada é de 163~m$^2$ por apartamento, e o conjunto possui 26 apartamentos. O memorial remete às Tabelas~15 e~16 da NT~003/2016 e utiliza, respectivamente, 3,34~kVA por apartamento e o fator de diversificação 21,06. Esses valores correspondem também aos registros das Tabelas~15 e~16 da especificação 0126 para a área e a quantidade de apartamentos informadas \cite[tabelas~15 e~16]{enel0126}.
+
+A aplicação da Equação~\ref{eq:demanda-apartamentos} aos valores documentados resulta em $D_{\mathrm{ap}}=3{,}34\times21{,}06\cong70{,}34$~kVA. O memorial adota multiplicador de segurança de 3,2, demanda do condomínio de 58,88~kVA e parcela de 7,36~kVA para o quadro de transferência automática do sistema de incêndio. A seguinte expressão reproduz a composição registrada no projeto, com a parcela de incêndio discriminada separadamente:
+\begin{equation}
+ D_T=70{,}34\times3{,}2+58{,}88+7{,}36
+ \cong291{,}33~\mathrm{kVA}.
+ \label{eq:demanda-palatium-documentada}
+\end{equation}
+Essa reprodução tem por finalidade explicitar os parâmetros empregados no projeto original, não arbitrar outro fator de segurança ou validar todas as hipóteses adotadas no memorial. O multiplicador 3,2 supera o mínimo 1,4 estabelecido pela 0126, e a diferença entre ambos não constitui, por si só, indicação de sobredimensionamento. O memorial também registra corrente de projeto de 442,76~A, proteção geral de 500~A e condutores do ramal de entrada dimensionados para a solução adotada (p.~7).
+
+A alteração do tratamento metodológico (RN-0003) é pertinente ao estudo de caso porque o memorial se baseia em procedimento e coeficientes que não são reproduzidos na 1580. Não é possível, contudo, determinar se o valor de 291,33~kVA seria mantido, aumentado ou reduzido, pois as notas da 1580 não identificam o método de cálculo recomendado nem fornecem parâmetros suficientes para essa determinação. A consequência relativa ao eventual redimensionamento da entrada geral é classificada como informação documental insuficiente (IP-0001), pela ausência de parâmetros metodológicos indispensáveis à comparação numérica. A categoria não indica inadequação do cálculo original. Caso seja necessário verificar a solução sob a 1580, será necessário identificar e justificar o procedimento de estimativa adotado, sem presumir a incompatibilidade do método da área útil.
+
+A responsabilidade do projetista (RN-0004) não é selecionada para avaliação de impactos, pois não apresenta alteração técnica demonstrada. Quanto ao memorial (RN-0005), o projeto já apresenta o cálculo da demanda da entrada geral e do condomínio e o dimensionamento dos condutores e das proteções (memorial, p.~7--9 e~12--13). A verificação da exigência documental da 1580 depende de confirmar a apresentação individualizada dos cálculos para todos os elementos aplicáveis, especialmente ramais alimentadores e centro de medição. Os dados apresentados não permitem concluir, apenas nesta análise, se a documentação satisfaz integralmente a discriminação requerida pela alínea~k do item~7.3.2. A consequência documental é classificada como informação documental insuficiente (IP-0002), sem pressupor a necessidade de alteração física da entrada.
