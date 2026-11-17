@@ -105,14 +105,45 @@ No âmbito das normas históricas da distribuidora do Ceará, a NT-003/2012 da C
 
 A NT-C 003/2016 da Enel Distribuição Ceará estabelecia, para edifícios residenciais de uso coletivo, um método de estimativa da demanda em função da área útil dos apartamentos e da quantidade de unidades. A demanda associada à área era obtida pela equação correspondente ou pela Tabela 15, enquanto a Tabela 16 fornecia um fator de diversificação de carga em função do número de apartamentos. O método também considerava um fator de segurança aplicado à demanda dos apartamentos e a contribuição das cargas do condomínio \cite[item~14.2, tabelas~15 e~16]{enel0032016}. O fator tabelado de diversificação desse procedimento não deve ser confundido com o fator de simultaneidade definido a partir das demandas máximas individuais. A descrição dessas normas históricas fundamenta a compreensão dos métodos de cálculo, sem ampliar o objeto da comparação normativa para além das especificações 0126 e 1580.
 
-A especificação 0126 também apresenta critérios específicos para a estimativa de demanda em empreendimentos residenciais de uso coletivo, na seção~7.11. O método da área útil estabelece a demanda do conjunto de apartamentos a partir da expressão
+A especificação 0126 estabelece, na seção~7.11, o critério da área útil para edifícios residenciais de uso coletivo e o critério da carga instalada para os demais empreendimentos. Segundo o item~7.11.1.2, o primeiro foi elaborado com base na Recomendação Técnica de Distribuição RTD~27 do CODI \cite[itens~7.11.1 e~7.11.2]{enel0126}.
+
+No critério da área útil, considera-se apenas a área interna dos apartamentos. Para grupos de apartamentos de áreas distintas, emprega-se a média das áreas ponderada pelas respectivas quantidades de unidades. A relação entre a demanda estimada por apartamento e a área útil é expressa pela Equação~3 da 0126:
+\begin{equation}
+ d_{\mathrm{area}}=0{,}034939\,A^{0{,}895075},
+ \label{eq:demanda-area}
+\end{equation}
+em que $A$ é o valor numérico da área útil, em metros quadrados (m$^2$), e $d_{\mathrm{area}}$ é a demanda estimada por apartamento, em kVA. A Tabela~15 do Anexo H (seção~7.8) apresenta valores calculados para áreas de até 400~m$^2$. Para áreas superiores a 400~m$^2$, o item~7.11.2.5 determina o cálculo pela fórmula; para áreas entre 20 e 42~m$^2$, o item~7.11.2.6 estabelece a adoção de 1,0~kVA por apartamento \cite[itens~7.11.2.3 a~7.11.2.6]{enel0126}.
+
+A demanda do conjunto de apartamentos, correspondente à Equação~5 da especificação, é dada por
 \begin{equation}
  D_{\mathrm{ap}}=d_{\mathrm{area}}\,C_{\mathrm{div}}(n),
  \label{eq:demanda-apartamentos}
 \end{equation}
-em que $D_{\mathrm{ap}}$ é a demanda estimada do conjunto de apartamentos, em kVA; $d_{\mathrm{area}}$ é a demanda associada à área útil do apartamento, em kVA; e $C_{\mathrm{div}}(n)$ é o fator de diversificação de carga associado à quantidade $n$ de apartamentos, denominado $F_{\mathrm{div}}$ na especificação. Utiliza-se aqui a notação $C_{\mathrm{div}}$ para distingui-lo do fator de diversidade da Equação~\ref{eq:fator-diversidade}. A demanda em função da área útil é estabelecida pela equação ou tabela indicada na 0126, e o coeficiente de diversificação é obtido em sua Tabela~16, observadas as condições de aplicação do método \cite[item~7.11.2, equações~3 a~5 e tabelas~15 e~16]{enel0126}.
+em que $D_{\mathrm{ap}}$ é a demanda estimada do conjunto, em kVA, e $C_{\mathrm{div}}(n)$ é o fator de diversificação de carga associado à quantidade $n$ de apartamentos, obtido na Tabela~16 do Anexo H, aplicável a edifícios com até 300 apartamentos. Adota-se a notação $C_{\mathrm{div}}$ para distinguir esse coeficiente, denominado $F_{\mathrm{div}}$ na 0126, do fator de diversidade da Equação~\ref{eq:fator-diversidade} \cite[itens~7.11.2.7 e~7.11.2.8]{enel0126}.
 
-A demanda da entrada geral nesse procedimento considera também a margem de segurança prevista para os apartamentos e a contribuição das cargas do condomínio, calculadas segundo o critério da carga instalada. Trata-se de um método específico da distribuidora, e não da aplicação direta das relações gerais entre fatores de utilização, demanda, simultaneidade e diversidade apresentadas anteriormente.
+A demanda total da instalação residencial coletiva é determinada pela Equação~4 da especificação:
+\begin{equation}
+ D_T=D_{\mathrm{ap}}\,F_{\mathrm{seg}}+D_{\mathrm{cond}},
+ \label{eq:demanda-total-0126}
+\end{equation}
+em que $D_T$ é a demanda total, $D_{\mathrm{cond}}$ é a demanda das instalações do condomínio, ambas em kVA, e $F_{\mathrm{seg}}$ é o multiplicador de segurança aplicado à demanda dos apartamentos. A margem mínima de segurança estabelecida é de 40\%, correspondente a $F_{\mathrm{seg}}=1{,}4$, conforme os exemplos do Anexo G. Margens superiores podem ser adotadas mediante decisão e justificativa do projetista \cite[seção~7.11.2, p.~39--40, e Anexo G]{enel0126}.
+
+A demanda das instalações do condomínio e a dos empreendimentos não residenciais de uso coletivo são estimadas pelo critério da carga instalada, cuja fórmula empírica corresponde à Equação~6 da especificação:
+\begin{equation}
+ D=0{,}77a+0{,}7b+0{,}75c+0{,}59d+1{,}2e+f,
+ \label{eq:demanda-carga-instalada-0126}
+\end{equation}
+com resultado $D$ em kVA e os seguintes termos, definidos no item~7.11.3.3 da 0126 \cite[p.~40--41]{enel0126}:
+\begin{itemize}
+ \item $a$: demanda de iluminação e tomadas de uso geral, em kVA, calculada conforme a Tabela~1, considerando as potências da iluminação incandescente e das tomadas em kVA e a potência da iluminação de descarga em kW dividida pelo respectivo fator de potência;
+ \item $b$: demanda dos aparelhos de aquecimento, em kVA, calculada conforme a Tabela~6, com fator de potência unitário;
+ \item $c$: demanda dos aparelhos de ar-condicionado, em kW, conforme as Tabelas~4 e~5;
+ \item $d$: potência nominal das bombas de água do sistema de serviço, em kW, excluída a bomba de reserva;
+ \item $e$: demanda dos elevadores, em kW, conforme a Tabela~2;
+ \item $f$: demanda das demais cargas, em kVA, considerando os fatores de demanda definidos pelo projetista para essas cargas.
+\end{itemize}
+
+Os coeficientes e as unidades de entrada da Equação~\ref{eq:demanda-carga-instalada-0126} seguem a formulação empírica da distribuidora; não constituem uma soma direta de potências ativas e aparentes sem conversão. As cargas de reserva não são computadas. Em edificações com atividades distintas, calculam-se separadamente as demandas correspondentes e somam-se os resultados. A 0126 admite, ainda, que o projetista proponha métodos distintos do critério da carga instalada, sujeitos à avaliação da distribuidora \cite[itens~7.11.3.2, 7.11.3.4 e~7.11.3.5]{enel0126}.
 
 Na especificação 1580, o item~7.3.2, alínea~k, exige a apresentação do memorial detalhado de cálculo da demanda prevista, em kVA. As notas do item~7.3.2 e da seção~7.11 atribuem sua determinação ao responsável técnico pelo projeto e mencionam metodologias recomendadas pelas distribuidoras \cite[itens~7.3.2 e~7.11]{enel1580}. A seleção do procedimento de estimativa deve considerar as condições de aplicação e as características das cargas do empreendimento, sem transpor automaticamente coeficientes de instalações industriais ou de documentos históricos para o dimensionamento residencial.
 
