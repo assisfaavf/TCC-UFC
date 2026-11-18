@@ -1,2 +1,85 @@
 \chapter{Trabalhos relacionados}
 \label{cap:trabalhos-relacionados}
+
+Os trabalhos relacionados a esta pesquisa abrangem a estimativa da demanda elétrica de edificações coletivas, os procedimentos de elaboração de projetos de entrada de energia e a atualização dos requisitos técnicos das distribuidoras. A discussão é organizada segundo esses três temas, de modo a identificar contribuições metodológicas e resultados que auxiliem a análise da transição entre as especificações 0126 e 1580. Ao final, são sintetizadas as relações entre as pesquisas consultadas e a proposta deste trabalho.
+
+\section{Estudos sobre métodos de cálculo de demanda}
+\label{sec:trabalhos-demanda}
+
+\citeonline{souza2020demanda} investigou a influência dos métodos da carga instalada e da área útil sobre a estimativa de demanda em edificações com múltiplas unidades consumidoras. O autor aplicou os procedimentos de diferentes concessionárias brasileiras a uma mesma edificação fictícia, permitindo confrontar os resultados sem alterar as características do empreendimento. A comparação evidenciou diferenças entre os critérios de cálculo, inclusive quanto à natureza da potência considerada e ao emprego de fatores de segurança.
+
+Na Figura~5.1 do trabalho, os resultados expressos em kW variam de 30,45 a 95,48~kW. Os dois maiores valores correspondem aos procedimentos da Companhia de Eletricidade do Amapá e do grupo CPFL Energia que empregaram a carga instalada na estimativa da demanda dos apartamentos \cite[capítulo~5, Figura~5.1, e capítulo~6]{souza2020demanda}. Por se tratar de uma edificação hipotética, esses resultados demonstram a sensibilidade da estimativa aos métodos escolhidos, mas não estabelecem qual procedimento representa melhor a demanda efetiva.
+
+Em estudo mais diretamente associado às especificações da Enel, \citeonline{santo2023demanda} compararam os procedimentos de cálculo adotados no Ceará e no Rio de Janeiro, aplicando-os a três configurações de edificações residenciais de portes distintos. A análise contemplou a demanda das unidades habitacionais, dos serviços comuns e da entrada coletiva. Segundo os autores, a diferença entre as demandas totais tornou-se mais expressiva nas edificações maiores, sendo relacionada ao critério de margem de segurança da especificação cearense. Também foram identificadas diferenças na seleção dos condutores dos ramais de ligação.
+
+O artigo constitui um precedente de comparação entre documentos da própria Enel. Entretanto, a identificação numérica da instrução de trabalho do Rio de Janeiro não é uniforme ao longo do texto: a referência bibliográfica indica o código 0263, enquanto a discussão dos resultados também apresenta a numeração 283 \cite[seções~5 e~6]{santo2023demanda}. Assim, seus resultados devem ser interpretados considerando essa limitação documental. A presente pesquisa utiliza as especificações originais como fonte das exigências técnicas, distinguindo as prescrições de cada documento das interpretações encontradas na literatura.
+
+Uma abordagem experimental complementar é apresentada na dissertação de Ricardo Thomaz da \citeonline{silva2026demanda}. A pesquisa confronta a demanda máxima prevista, associada à proteção geral instalada, com a potência aparente trifásica registrada em 28 edifícios residenciais da região de Curitiba e do litoral paranaense. A grandeza medida corresponde ao maior valor das médias de potência aparente em intervalos de dez minutos; a ocupação dos apartamentos é considerada na comparação.
+
+Conforme o resumo da dissertação, as estimativas superaram as medições em todos os edifícios investigados \cite{silva2026demanda}. O resultado reforça a importância de distinguir uma estimativa de projeto de uma demanda observada em operação. Contudo, não autoriza a redução automática do dimensionamento existente, nem pode ser transferido diretamente às instalações de outra área de concessão. O estudo do Edifício Palatium limita-se aos dados de projeto, sem medições de demanda em operação.
+
+Os três trabalhos apresentam abordagens complementares: a comparação de diferentes métodos em condições equivalentes, a avaliação de critérios de distribuidoras do mesmo grupo empresarial e a comparação com dados medidos. Essas contribuições fundamentam a discussão sobre as consequências de alterações nos critérios de demanda, sem implicar a adoção de um método de estimativa não identificado na especificação 1580.
+
+\section{Estudos sobre projetos elétricos de múltiplas unidades consumidoras}
+\label{sec:trabalhos-projetos}
+
+\citeonline{bento2021fornecimento} analisou alternativas de fornecimento de energia para três condomínios residenciais fictícios com demanda inferior a 300~kVA. Segundo o resumo do trabalho, foram elaborados projetos de entrada de energia com diferentes configurações de alimentação e distribuição, considerando inclusive transformadores em pedestal próximos aos blocos. A pesquisa comparou aspectos técnicos, físicos e econômicos das soluções, incluindo as diferenças entre redes aéreas e subterrâneas.
+
+Esse estudo evidencia que a definição da forma de atendimento repercute sobre a organização da infraestrutura elétrica do empreendimento. A relação com a presente pesquisa reside na comparação dos arranjos previstos nas especificações 0126 e 1580. Os limites de atendimento e as conclusões econômicas do trabalho de Bento, entretanto, estão vinculados aos cenários e às normas considerados pelo autor, não constituindo prescrições para o Ceará.
+
+No contexto da Enel Distribuição Ceará, \citeonline{fontenele2022subestacao} desenvolveu uma metodologia de dimensionamento de uma subestação aérea de 300~kVA para um hospital, fundamentada nas especificações 0942 e 0126 e na Resolução Normativa ANEEL nº~1.000/2021. O trabalho aborda o levantamento das cargas, o dimensionamento de componentes de proteção, a demanda contratada e os documentos necessários à análise pela concessionária.
+
+Embora o objeto seja uma subestação de atendimento a um hospital, o trabalho é pertinente pela abordagem das prescrições técnicas e documentais da distribuidora cearense. A relação com o presente estudo está na identificação das decisões de projeto condicionadas pelos documentos normativos, e não na transferência direta dos critérios de dimensionamento daquela subestação ao Edifício Palatium.
+
+Uesley Ribeiro \citeonline{silva2023projetos} propôs um procedimento organizado para a elaboração de projetos elétricos internos e de empreendimentos coletivos, com base nas normas da ABNT e da Equatorial Goiás. A metodologia inclui um fluxograma de desenvolvimento do projeto e considera o cálculo de demanda, a distribuição dos circuitos, a seleção de materiais, a medição e o emprego de ferramentas computacionais. O trabalho também aborda a aplicação do procedimento em dois programas de projeto.
+
+A organização das etapas proposta pelo autor contribui para compreender a interdependência entre o cálculo de demanda, a escolha dos componentes e a documentação de engenharia. Enquanto Silva estrutura o processo de elaboração de projetos, esta pesquisa organiza a comparação entre requisitos e avalia sua incidência sobre soluções de um projeto existente.
+
+\section{Estudos sobre a evolução dos requisitos normativos}
+\label{sec:trabalhos-evolucao}
+
+\citeonline{santiago2011regulamentacao} analisou as mudanças introduzidas pela Resolução Normativa ANEEL nº~414/2010 em relação à Resolução nº~456/2000, examinando também a adaptação dos documentos técnicos e comerciais da então Companhia Energética do Ceará (Coelce). Na seção~4.1 da monografia, o autor descreve a atualização da NT-003/2000, revisão 01, para a proposta NT-003/2011, revisão 02. À época da elaboração do trabalho, a revisão ainda estava em andamento.
+
+Entre os temas descritos na proposta estavam as condições de conexão à rede, as responsabilidades das partes envolvidas, a entrada de serviço, a medição, a proteção e a estimativa de demanda \cite[seção~4.1]{santiago2011regulamentacao}. O trabalho documenta, portanto, um momento anterior de revisão das regras de fornecimento para edificações coletivas no Ceará. Não se deve interpretar a descrição da proposta como comprovação da publicação ou da vigência da revisão de 2011.
+
+A pesquisa de Santiago aproxima-se deste trabalho pela análise de uma transição normativa vinculada à mesma área de concessão. Distingue-se, porém, quanto à unidade de análise: Santiago parte da alteração da regulamentação federal e de seus reflexos nos documentos da Coelce, enquanto esta pesquisa compara duas especificações da distribuidora e examina suas repercussões em um projeto de conexão coletiva.
+
+Sob outra perspectiva histórica, \citeonline{oliveira2023evolucao} analisaram os cálculos de demanda de 131 empreendimentos residenciais de São Paulo, projetados entre 1998 e 2021. O estudo relacionou os parâmetros adotados nos projetos com a ABNT NBR 5410:2004, as edições de 2007 e 2014 do Livro de Instruções Gerais de Baixa Tensão (LIG BT) e a evolução das características de equipamentos de uso residencial.
+
+Os autores avaliaram, ainda, o efeito de modificar parâmetros de potência utilizados nos cálculos. Nos cenários examinados, as mudanças repercutiram na seleção de condutores e proteções de alguns circuitos, embora o próprio estudo reconheça a magnitude limitada de parte dessas reduções \cite[p.~110--111]{oliveira2023evolucao}. A pesquisa relaciona a atualização dos parâmetros de projeto ao dimensionamento dos componentes, oferecendo uma perspectiva distinta da comparação entre textos normativos. Seu conjunto documental e suas condições regionais não permitem concluir que o mesmo comportamento ocorra no Ceará.
+
+\section{Síntese dos trabalhos relacionados e delimitação da contribuição da pesquisa}
+\label{sec:sintese-trabalhos}
+
+O Quadro~\ref{qua:trabalhos-relacionados} sintetiza os objetos, as bases de análise e as contribuições dos estudos discutidos. A classificação distingue estudos com cenários hipotéticos, medições em operação, projetos documentados e análises de requisitos normativos.
+
+\begin{quadro}[htbp]
+  \centering
+  \begin{Spacing}{1.}
+    \caption{Síntese dos trabalhos relacionados}
+    \label{qua:trabalhos-relacionados}
+  \end{Spacing}
+  {\small
+  \renewcommand{\arraystretch}{1.2}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.23\linewidth}|>{\raggedright\arraybackslash}p{0.33\linewidth}|>{\raggedright\arraybackslash}p{0.36\linewidth}|}
+    \hline
+    \textbf{Trabalho} & \textbf{Objeto e base da análise} & \textbf{Contribuição para a pesquisa} \\\hline
+    \citeonline{souza2020demanda} & Edificação coletiva fictícia; critérios de diferentes distribuidoras. & Comparação dos métodos de demanda. \\\hline
+    \citeonline{santo2023demanda} & Edificações residenciais de três portes; Enel Ceará e Rio de Janeiro. & Diferenças de demanda e dimensionamento entre documentos da Enel. \\\hline
+    \citeonline{silva2026demanda} & Medições em 28 edifícios residenciais. & Distinção entre demanda prevista e observada. \\\hline
+    \citeonline{bento2021fornecimento} & Três condomínios fictícios; alternativas de alimentação. & Relação entre forma de atendimento e infraestrutura. \\\hline
+    \citeonline{fontenele2022subestacao} & Projeto de subestação para hospital no Ceará. & Aplicação das especificações e requisitos documentais. \\\hline
+    \citeonline{silva2023projetos} & Procedimentos de elaboração de projetos coletivos. & Estruturação das etapas e decisões de projeto. \\\hline
+    \citeonline{santiago2011regulamentacao} & Transição regulatória e atualização documental da Coelce. & Contexto histórico da revisão da NT-003. \\\hline
+    \citeonline{oliveira2023evolucao} & Histórico de 131 projetos residenciais em São Paulo. & Relação entre parâmetros técnicos e dimensionamento. \\\hline
+    Presente pesquisa & Comparação 0126 e 1580; projeto aprovado do Edifício Palatium. & Classificação das alterações e avaliação de seus possíveis impactos. \\\hline
+  \end{tabular}}
+  \Fonte{Elaborado pelo autor com base nos trabalhos discutidos neste capítulo.}
+\end{quadro}
+
+Considerando o conjunto de estudos selecionados, observa-se que a comparação de requisitos, a determinação da demanda e a organização dos projetos constituem linhas de investigação pertinentes à conexão coletiva. Nenhum dos oito trabalhos discutidos tem como objeto a comparação direta entre as especificações 0126 e 1580. Essa constatação está restrita ao levantamento realizado e não constitui afirmação de ineditismo absoluto.
+
+A contribuição da presente pesquisa consiste em sistematizar as diferenças entre as duas especificações aplicáveis à área de concessão da Enel Distribuição Ceará e examinar quais delas incidem sobre as soluções documentadas no projeto elétrico do Edifício Palatium. A análise compreende, além dos critérios de demanda, as condições de atendimento e os requisitos de entrada de energia, proteção, medição, aterramento e documentação.
+
+A utilização de um projeto aprovado permite relacionar alterações normativas a soluções concretas de engenharia. A avaliação, entretanto, não equivale ao redimensionamento integral das instalações, à determinação da demanda efetiva ou à revisão da aprovação anterior. Os resultados são interpretados segundo os procedimentos e as limitações estabelecidos no Capítulo~\ref{cap:metodologia}.
