@@ -3,29 +3,75 @@
 
 Este trabalho combina a análise documental e a comparação técnica dos requisitos de conexão coletiva com a avaliação de seus impactos sobre o projeto elétrico aprovado do Edifício Palatium. A unidade de análise normativa corresponde às exigências relativas a empreendimentos com múltiplas unidades consumidoras na área de concessão da Enel Distribuição Ceará. O estudo de caso permite examinar as implicações das mudanças nos requisitos normativos sobre soluções de engenharia documentadas, sem constituir avaliação de conformidade integral do empreendimento.
 
+A Figura~\ref{fig:fluxograma-metodologia} apresenta as etapas da comparação normativa e da avaliação dos impactos no projeto.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{figure}{Etapas da análise documental e do estudo de caso}
+  \label{fig:fluxograma-metodologia}
+  \vspace{0.7\baselineskip}
+  {\centering\input{figuras/fluxograma-metodologia}\par}
+  \Fonte{Elaborado pelo autor.}
+\end{minipage}
+\par
+
 \section{Natureza e abordagem do trabalho}
 \label{sec:tipo-pesquisa}
 
-A pesquisa é classificada quanto à natureza, aos objetivos, à abordagem e aos procedimentos, conforme \citeonline[p.~31--39]{silveiracordova2009}. Quanto à natureza, trata-se de pesquisa aplicada, destinada a subsidiar decisões de projeto relacionadas à atualização das especificações de conexão coletiva. Quanto aos objetivos, caracteriza-se como descritiva, pois identifica e sistematiza as diferenças entre os requisitos das especificações 0126 e 1580 e examina suas repercussões técnicas.
+O trabalho foi caracterizado quanto à natureza, aos objetivos, à abordagem e aos procedimentos segundo a classificação de pesquisas apresentada por \citeonline[p.~31--39]{silveiracordova2009}. Quanto à natureza, é aplicado, pois examina os efeitos de mudanças normativas sobre decisões de projeto. Quanto aos objetivos, é descritivo, pois identifica e sistematiza as diferenças entre as especificações 0126 e 1580. A abordagem é predominantemente qualitativa, com apoio de dados e cálculos quando a comparação exige a verificação de parâmetros técnicos. Os procedimentos combinam análise documental e estudo de caso único.
 
-A abordagem é predominantemente qualitativa, uma vez que a classificação das diferenças depende da interpretação do conteúdo dos requisitos e de suas condições de aplicação. A análise é complementada por dados e cálculos quantitativos quando a avaliação dos impactos exige a comparação de limites de potência, demanda, corrente, dimensões ou características nominais dos equipamentos.
-
-Quanto aos procedimentos, o trabalho combina análise documental e estudo de caso único. A análise documental permite examinar as especificações técnicas e a documentação do projeto como fontes primárias, enquanto a comparação constitui o procedimento analítico utilizado para identificar as diferenças entre os requisitos \cite[p.~37]{silveiracordova2009}. A segunda etapa consiste na avaliação dessas diferenças em relação ao projeto elétrico do empreendimento. A delimitação do caso permite aprofundar a análise de um objeto específico, em conformidade com a discussão de \citeonline[p.~219 e 222]{miguel2007} sobre o estudo de caso em engenharia. Os resultados relativos ao empreendimento não são tomados como representativos de todos os projetos de conexão coletiva, embora a comparação normativa abranja os requisitos aplicáveis à área de concessão do Ceará.
-
-A ausência de determinado requisito em uma seção não será interpretada, isoladamente, como sua eliminação, sendo necessária a verificação de remissões a outras seções, tabelas, anexos e documentos complementares.
+O estudo de caso aprofunda a análise das soluções documentadas no Palatium, conforme a aplicação do método em engenharia discutida por \citeonline[p.~219 e 222]{miguel2007}. As conclusões sobre os impactos técnicos restringem-se ao projeto estudado.
 
 \section{Conjunto documental}
 \label{sec:documentos}
 
-As fontes normativas principais são a especificação 0126, versão 03, de 31 de março de 2022, adotada como referência anterior do estudo de caso, e a especificação 1580, versão 2, de 8 de setembro de 2025, adotada como documento de comparação. A seleção fundamenta-se na indicação expressa de substituição da 0126 pelo novo documento corporativo. Conforme seu histórico de versões, a emissão inicial da 1580 ocorreu em 18 de agosto de 2025 (versão 1), e a versão 2 registra ajustes de formatação \cite[item~2, p.~3--4]{enel1580}. Adota-se a versão 2 por corresponder à revisão disponibilizada no catálogo de normas técnicas da Enel Distribuição Ceará na data da consulta \cite{enelnormasce}. Os documentos complementares serão consultados quando necessários à interpretação dos requisitos.
+O Quadro~\ref{qua:fontes-normativas} resume as fontes da comparação e a função de cada documento.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Documentos normativos e regulatórios}
+  \label{qua:fontes-normativas}
+  \vspace{0.7\baselineskip}
+  \centering
+  {\small
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.32\linewidth}|>{\raggedright\arraybackslash}p{0.62\linewidth}|}
+    \hline
+    \textbf{Documento} & \textbf{Função no trabalho} \\\hline
+    Especificação 0126, versão 03, de 31 de março de 2022 & Referência anterior para a comparação e para o estudo de caso \cite{enel0126}. \\\hline
+    Especificação 1580, versão 2, de 8 de setembro de 2025 & Documento de comparação que substitui a 0126. A versão 2 é a revisão identificada no catálogo de normas técnicas da Enel Ceará na data da consulta \cite[item~2, p.~3--4]{enel1580}\cite{enelnormasce}. \\\hline
+    Resolução Normativa ANEEL nº~1.000/2021 & Referencial regulatório para interpretar as condições de atendimento e os períodos de transição \cite{aneel1000}. \\\hline
+    Documentos complementares & Desenhos, anexos e outras referências consultadas conforme o requisito analisado. \\\hline
+  \end{tabular}
+  \Fonte{Elaborado pelo autor.}}
+\end{minipage}
+\par
 
 O histórico da 1580 menciona a transição normativa com remissão ao art.~19, §~2º, da Resolução Normativa ANEEL nº~1.000/2021 \cite[item~2, p.~4]{enel1580}. Entretanto, é o art.~20, §~2º, dessa resolução que estabelece, como regra geral, o prazo mínimo de 120 dias entre a comunicação das normas técnicas aos interessados e sua entrada em vigor, ressalvadas as hipóteses excepcionais previstas no próprio dispositivo \cite[art.~20, §~2º]{aneel1000}.
 
 Considerando que a versão 1 da especificação 1580 foi emitida em 18 de agosto de 2025 e que a versão 2 apresentou apenas ajustes de formatação, estima-se que sua entrada em vigor tenha ocorrido em 16 de dezembro de 2025, correspondente ao término do prazo de 120 dias contado a partir da emissão inicial. Essa estimativa pressupõe que a comunicação oficial tenha coincidido com a emissão da primeira versão e que a distribuidora tenha adotado o prazo mínimo regulamentar. No entanto, a própria especificação 1580 não informa uma data específica de entrada em vigor, e o catálogo da distribuidora apresenta apenas a data de revisão de 8 de setembro de 2025 \cite[item~2, p.~3--4]{enel1580}\cite{enelnormasce}. Assim, adota-se 16 de dezembro de 2025 como referência temporal para a pesquisa, sem tratá-la como data de vigência oficialmente comprovada.
 
-A Resolução Normativa ANEEL nº 1.000/2021 e suas alterações pertinentes compõem o referencial regulatório para interpretação das condições de atendimento, das normas técnicas da distribuidora e dos períodos de transição. Também integram o conjunto documental os desenhos e anexos das especificações quando contiverem exigências que complementem o texto principal.
+O Quadro~\ref{qua:fontes-palatium} reúne os documentos do empreendimento. A análise técnica utiliza o memorial e as pranchas com carimbos de aprovação de 25 de outubro de 2025.
 
-O estudo de caso utiliza quatro documentos primários do empreendimento: o \emph{Memorial de cálculo elétrico dos apartamentos e condomínio}, composto por 13 páginas; o conjunto de cinco pranchas do projeto elétrico executivo, relacionadas na página~4 do memorial; a Anotação de Responsabilidade Técnica (ART) de obra/serviço, registrada em 7 de outubro de 2025, relativa ao projeto de instalações elétricas em baixa tensão e ao gerador de 81~kVA; e a carta da Enel Distribuição Ceará, com o assunto \emph{Carta resposta de análise em atenção a sua solicitação}, datada de 25 de outubro de 2025 \cite{palatiummemorial2025,palatiumpranchas2025,palatiumart2025,enelaprovacao2025}. O memorial e as pranchas apresentam carimbos de aprovação datados de 25 de outubro de 2025. A documentação aprovada constitui a base técnica da comparação; a ART identifica a atividade de elaboração do projeto, não constituindo, por si só, comprovação de responsabilidade técnica pela execução das instalações \cite[p.~1, item~4]{palatiumart2025}, e a carta formaliza a aprovação do projeto.
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Documentos do Edifício Palatium}
+  \label{qua:fontes-palatium}
+  \vspace{0.7\baselineskip}
+  \centering
+  {\small
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.32\linewidth}|>{\raggedright\arraybackslash}p{0.62\linewidth}|}
+    \hline
+    \textbf{Documento} & \textbf{Função no trabalho} \\\hline
+    Memorial de cálculo elétrico dos apartamentos e condomínio & Reúne os dados, critérios e cálculos do projeto em 13 páginas \cite{palatiummemorial2025}. \\\hline
+    Cinco pranchas do projeto elétrico executivo & Permitem localizar as soluções projetadas nas plantas, nos diagramas unifilares e no esquema vertical de alimentação \cite[p.~4]{palatiummemorial2025}\cite[pranchas~001--005]{palatiumpranchas2025}. \\\hline
+    Anotação de Responsabilidade Técnica (ART) de obra/serviço & Identifica a responsabilidade técnica pela elaboração do projeto elétrico em baixa tensão e do projeto do gerador de 81~kVA. O registro é de 7 de outubro de 2025 \cite[p.~1, item~4]{palatiumart2025}. \\\hline
+    Carta de resposta da Enel Distribuição Ceará & Formaliza a aprovação do projeto em 25 de outubro de 2025 \cite{enelaprovacao2025}. \\\hline
+  \end{tabular}
+  \Fonte{Elaborado pelo autor.}}
+\end{minipage}
+\par
 
 As pranchas 001 e 002 apresentam as plantas de alimentação do térreo e do subsolo, respectivamente; a prancha 003 apresenta o diagrama unifilar geral do centro de proteção geral, do centro de medição e dos apartamentos; a prancha 004 apresenta o diagrama unifilar do condomínio e do gerador; e a prancha 005 apresenta o esquema vertical de alimentação \cite[p.~4]{palatiummemorial2025}\cite[pranchas~001--005]{palatiumpranchas2025}. A identificação das evidências utiliza a página do memorial ou o número da prancha e o detalhe correspondente, conforme a natureza do dado analisado.
 
@@ -43,11 +89,24 @@ A carta da Enel Distribuição Ceará e os carimbos de aprovação do memorial e
 \section{Procedimentos de comparação normativa}
 \label{sec:procedimento}
 
-O levantamento será realizado em etapas sucessivas. Inicialmente, serão identificados objeto, área de aplicação e elementos técnicos equivalentes nas duas especificações. Em seguida, os requisitos serão agrupados conforme os temas: enquadramento e limites de atendimento, cálculo de demanda, formas de conexão, ramais, padrão de entrada, medição, proteção, aterramento e exigências de apresentação de projeto.
 
-O levantamento abrangerá os requisitos técnicos e documentais pertinentes à conexão coletiva na área de concessão do Ceará, independentemente de sua incidência sobre o empreendimento. Serão incluídos os requisitos gerais aplicáveis ao Ceará, as disposições específicas dessa área de concessão e as condições de atendimento pertinentes, inclusive quando um requisito estiver presente em apenas uma das especificações. Requisitos exclusivos de outras áreas de concessão serão excluídos, com registro do fundamento da exclusão. Quando a aplicabilidade territorial não puder ser estabelecida com segurança, a dúvida será registrada separadamente, sem presumir sua aplicação ao Ceará.
+O levantamento reúne os requisitos técnicos e documentais de conexão coletiva aplicáveis ao Ceará. Os requisitos são agrupados por tema, incluindo enquadramento, demanda, formas de conexão, ramais, padrão de entrada, medição, proteção, aterramento e apresentação do projeto. A Figura~\ref{fig:levantamento-requisitos} apresenta as etapas dessa conferência.
 
-Para cada tema, serão registrados os dispositivos correspondentes em cada documento, com indicação da seção, item, tabela ou desenho, quando aplicável. A comparação será efetuada entre requisitos funcionalmente equivalentes, inclusive quando inseridos em partes distintas das especificações. Quando a 1580 remeter a outra norma, serão examinadas a referência e suas condições de aplicação antes de caracterizar eventual supressão ou modificação do requisito.
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{figure}{Levantamento dos requisitos para a comparação}
+  \label{fig:levantamento-requisitos}
+  \vspace{0.7\baselineskip}
+  {\centering\input{figuras/fluxograma-levantamento-requisitos}\par}
+  \Fonte{Elaborado pelo autor.}
+\end{minipage}
+\par
+
+O levantamento inclui disposições gerais e específicas aplicáveis ao Ceará, inclusive requisitos presentes em apenas uma das especificações. As exclusões de requisitos de outras áreas de concessão são justificadas. Quando a abrangência territorial é indeterminada, a dúvida é registrada como limitação.
+
+A comparação confronta requisitos funcionalmente equivalentes, ainda que dispostos em seções distintas, e registra a seção, o item, a tabela ou o desenho que sustenta cada leitura. Notas, anexos e remissões são conferidos antes de concluir pela alteração ou supressão de um requisito.
+
+Para esclarecer se havia documento complementar específico para o Ceará e em que condições os critérios do item~7.11 da especificação 0126 poderiam ser utilizados, foi realizada consulta escrita à Enel Distribuição Ceará. A resposta foi recebida em 23 de novembro de 2026, pelo setor Loja Clientes Corporativos (CE).\footnote{O registro consultado é a captura da resposta por correio eletrônico.}
 
 A unidade de classificação será o requisito técnico ou documental, considerado em suas condições de aplicação. Quando um mesmo dispositivo contiver requisitos independentes, estes serão analisados separadamente, de modo que cada comparação receba uma única categoria. O Quadro~\ref{qua:classificacao-normativa} estabelece as definições operacionais e apresenta exemplos hipotéticos, que não constituem resultados da comparação das especificações.
 
@@ -73,9 +132,7 @@ A unidade de classificação será o requisito técnico ou documental, considera
   \Fonte{Elaborado pelo autor.}
 \end{quadro}
 
-A classificação seguirá a seguinte lógica: inicialmente, serão confrontados os requisitos e suas condições de aplicação, considerando o texto, as notas, as tabelas, os desenhos, os anexos e as remissões identificáveis. Quando houver correspondência e for constatada mudança técnica, será adotada a categoria alterado. Se a equivalência for demonstrada, será adotada a categoria reorganizado quando houver mudança relevante na apresentação do requisito, ou mantido nos demais casos. Na ausência de correspondente, a categoria acrescentado ou retirado dependerá da demonstração da inclusão ou da supressão, respectivamente. Se a evidência não permitir a distinção, será adotada a categoria inconclusivo; a simples ausência de um requisito em determinada seção não será suficiente para classificá-lo como retirado.
-
-A Figura~\ref{fig:fluxograma-classificacao-normativa} sintetiza essa sequência decisória e complementa as definições operacionais do Quadro~\ref{qua:classificacao-normativa}. A verificação dos dispositivos e das remissões precederá a classificação, de modo que cada requisito receba uma única categoria e que a ausência em uma seção, isoladamente, não seja tomada como evidência de supressão.
+A Figura~\ref{fig:fluxograma-classificacao-normativa} apresenta a sequência de decisões para atribuir cada categoria definida no Quadro~\ref{qua:classificacao-normativa}.
 
 A classificação refere-se exclusivamente às diferenças entre os requisitos das especificações 0126 e 1580, e não à data de constituição de obrigações no ordenamento regulatório. Um requisito incluído na 1580, sem equivalente na 0126 após a verificação dos dispositivos e das remissões aplicáveis, será classificado como acrescentado mesmo quando decorrer de obrigação regulatória anterior. Se o requisito já constar das duas especificações, será classificado conforme sua equivalência e organização, ou conforme eventual alteração das exigências e condições de aplicação. A existência de disposição regulatória anterior não determina, por si só, a categoria de classificação.
 
@@ -98,13 +155,18 @@ A justificativa de cada classificação será registrada juntamente com os dispo
 
 Os impactos serão avaliados segundo a possibilidade de interferência em decisões de engenharia documentadas. Serão considerados a modalidade de alimentação, a localização e a configuração do padrão de entrada, o dimensionamento de condutores e dispositivos de proteção, a disposição dos centros de medição e os requisitos de documentação e aprovação.
 
-A seleção dos requisitos para o estudo de caso constituirá uma segunda etapa, posterior à comparação normativa. Para inclusão na avaliação dos impactos, deverão ser atendidos cumulativamente os seguintes critérios:
 
-\begin{enumerate}
-  \item aplicabilidade do requisito à área de concessão do Ceará;
-  \item identificação de mudança de conteúdo técnico ou documental entre as especificações, inclusive alteração, inclusão ou supressão demonstrada;
-  \item correspondência entre a mudança e uma característica, componente ou solução identificável na documentação do projeto do empreendimento.
-\end{enumerate}
+Após a comparação normativa, um requisito é selecionado para o estudo de caso quando atende a três critérios cumulativos. O requisito deve ser aplicável ao Ceará, apresentar uma mudança técnica ou documental demonstrada e ter relação com uma característica ou solução identificada na documentação do empreendimento. A análise confronta a exigência com a solução documentada e registra a consequência técnica ou a informação necessária para determiná-la. A Figura~\ref{fig:selecao-requisitos} sintetiza esses critérios.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{figure}{Seleção dos requisitos para o estudo de caso}
+  \label{fig:selecao-requisitos}
+  \vspace{0.7\baselineskip}
+  {\centering\input{figuras/fluxograma-selecao-requisitos}\par}
+  \Fonte{Elaborado pelo autor.}
+\end{minipage}
+\par
 
 Os requisitos mantidos ou apenas reorganizados, sem alteração técnica demonstrada, não serão selecionados para essa avaliação. As diferenças que não incidirem sobre o empreendimento permanecerão registradas na comparação normativa geral, com a justificativa de sua não seleção. Quando a mudança normativa ou sua incidência sobre o empreendimento não puder ser estabelecida, a limitação será registrada na etapa correspondente, sem presumir ausência de impacto.
 
@@ -131,6 +193,8 @@ A seleção de um requisito não implica, por si só, necessidade de reformulaç
 \end{quadro}
 
 A categoria informação documental insuficiente distingue-se da classificação normativa inconclusivo: nesta última, as evidências não permitem determinar a natureza da diferença entre as especificações; naquela, a mudança normativa e sua pertinência ao empreendimento foram identificadas, mas a consequência técnica não pode ser determinada com os dados disponíveis. Quando a insuficiência documental impedir a própria seleção do requisito, será registrada como limitação da seleção, sem atribuição de categoria de impacto.
+
+Por exemplo, para o ramal aéreo derivado da rede secundária, a redução do vão máximo de 40~m para 30~m é classificada como alteração normativa \cite[item~7.6.1.3, alínea~b]{enel0126}\cite[item~7.16.3, alínea~c]{enel1580}. Como o comprimento do vão do Palatium não foi identificado na documentação consultada, a repercussão no projeto é classificada como informação documental insuficiente.
 
 Cada consequência será classificada separadamente. Quando for possível concluir a compatibilidade ou identificar uma adequação potencialmente necessária, será adotada a categoria correspondente. Caso a conclusão dependa de decisão expressamente reservada à distribuidora, será registrada a condição de avaliação, inclusive eventuais dados faltantes. Nos demais casos em que os dados não permitirem conclusão, será adotada a categoria informação documental insuficiente.
 
