@@ -21,11 +21,45 @@ A tensão de conexão corresponde ao nível de tensão no qual se estabelece a i
 
 Os Grupos A e B correspondem a agrupamentos regulatórios das unidades consumidoras. O Grupo A compreende as unidades conectadas em tensão igual ou superior a 2,3~kV e contempla também o subgrupo AS, associado ao atendimento por sistema subterrâneo em tensão inferior a 2,3~kV. O Grupo B abrange, em regra, as unidades conectadas em tensão inferior a 2,3~kV, classificadas em subgrupos conforme a atividade ou classe de consumo \cite[art.~2º, incisos XXIII e XXIV]{aneel1000}. A previsão do subgrupo AS demonstra que o grupo tarifário não é determinado exclusivamente pelo nível de tensão.
 
-Nos termos do art.~23, inciso~I, da Resolução Normativa ANEEL nº~1.000/2021, a regra geral para conexão ao Grupo B em rede aérea, em tensão inferior a 2,3~kV, considera carga e potência de geração instaladas na unidade consumidora de até 75~kW. Em sistema subterrâneo, o limite de potência instalada depende do padrão de atendimento da distribuidora, observado o direito de opção pelo subgrupo AS nas condições do §~3º. Para o Grupo A, a alínea~c prevê conexão de 2,3~kV a menos de 69~kV quando a carga ou a potência instalada de geração supera 75~kW e a maior demanda a contratar é de até 2\,500~kW; a alínea~d prevê tensão igual ou superior a 69~kV para demanda contratada superior a esse limite \cite[art.~23, inciso~I]{aneel1000}.
+O Quadro~\ref{qua:enquadramento-grupos} sintetiza os critérios de enquadramento aplicáveis às unidades consumidoras, incluindo as condições específicas para as instalações de uso coletivo.
 
-O §~1º do art.~23, com redação dada pela REN ANEEL nº~1.059/2023, admite o enquadramento no Grupo A de unidades com carga e/ou geração superior a 50~kW e de até 75~kW quando houver potencial de prejuízo ao serviço prestado a outros usuários, justificado em estudo da distribuidora. O §~2º admite o enquadramento no Grupo B das instalações de uso coletivo de edificações com múltiplas unidades consumidoras cuja carga seja superior a 75~kW, desde que mais da metade das unidades pertença ao Grupo B, haja solicitação ou concordância do consumidor e a distribuidora avalie a viabilidade mediante estudo. Os §§~4º e~5º também disciplinam a definição de tensão distinta da regra geral, mediante estudo e observância das condições regulamentares; o §~6º estabelece disposição específica para a minigeração distribuída \cite[art.~23, §§~1º a~6º]{aneel1000}\cite{aneel1059}.
+\begin{quadro}[!htbp]
+  \centering
+  \begin{Spacing}{1.}
+    \caption{Critérios de enquadramento nos Grupos A e B}
+    \label{qua:enquadramento-grupos}
+  \end{Spacing}
+  {\small
+  \renewcommand{\arraystretch}{1.2}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.22\linewidth}|>{\raggedright\arraybackslash}p{0.55\linewidth}|>{\raggedright\arraybackslash}p{0.13\linewidth}|}
+    \hline
+    \textbf{Situação} & \textbf{Critério de enquadramento} & \textbf{Art. 23} \\\hline
+    Grupo B em rede aérea &
+    Tensão inferior a 2,3~kV, com carga e potência de geração instalada de até 75~kW cada. &
+    Inciso I, alínea a \\\hline
+    Grupo B em rede subterrânea &
+    Tensão inferior a 2,3~kV, com limite de potência instalada definido pelo padrão de atendimento da distribuidora, observada a opção pelo subgrupo AS. &
+    Inciso I, alínea b \\\hline
+    Grupo A pela regra geral &
+    De 2,3~kV a menos de 69~kV quando a carga ou a geração instalada supera 75~kW e a maior demanda a contratar é de até 2\,500~kW. A partir de 69~kV quando essa demanda supera 2\,500~kW. &
+    Inciso I, alíneas c e d \\\hline
+    Grupo A entre 50 e 75~kW &
+    Admite-se o enquadramento quando a carga ou a geração supera 50~kW e é de até 75~kW, se estudo da distribuidora justificar o potencial de prejuízo ao serviço prestado a outros usuários. &
+    §~1º \\\hline
+    Subgrupo AS do Grupo A &
+    O consumidor pode optar por esse subgrupo se a unidade tiver carga instalada superior a 75~kW e for atendida por rede subterrânea em tensão inferior a 2,3~kV. &
+    §~3º \\\hline
+    Grupo B para instalações de uso coletivo acima de 75~kW &
+    Exige que mais da metade das unidades da edificação esteja no Grupo B, que o consumidor solicite ou concorde com o enquadramento e que a distribuidora avalie a viabilidade por meio de estudo. &
+    §~2º \\\hline
+  \end{tabular}}
+  \Fonte{Elaborado pelo autor com base no art.~23 da Resolução Normativa ANEEL nº~1.000/2021, com a redação do §~1º dada pela Resolução Normativa ANEEL nº~1.059/2023 \cite{aneel1000,aneel1059}.}
+\end{quadro}
 
-A referência de 75~kW diz respeito à carga ou à potência de geração instalada na unidade consumidora, não à soma das cargas do empreendimento nem à demanda aparente da entrada coletiva. A carga instalada e a demanda são definidas no art.~2º, incisos~III e~XI, enquanto a demanda contratada, definida no inciso~XII, corresponde à potência ativa disponibilizada conforme o contrato, em kW. A demanda aparente de projeto da entrada coletiva, em kVA, é outra grandeza, empregada no dimensionamento da alimentação e da transformação, conforme a Seção~\ref{sec:demandas}. O art.~24 atribui à distribuidora a definição das condições de conexão monofásica, bifásica ou trifásica \cite[arts.~2º, 23 e~24]{aneel1000}.
+Os §§~4º e~5º também disciplinam a definição de tensão distinta da regra geral, mediante estudo e observância das condições regulamentares; o §~6º estabelece disposição específica para a minigeração distribuída \cite[art.~23, §§~4º a~6º]{aneel1000}.
+
+Nas regras de enquadramento individual, o limite de 75~kW diz respeito à carga ou à potência de geração instalada na unidade consumidora, conforme o critério aplicável. A carga instalada e a demanda são definidas no art.~2º, incisos~III e~XI, enquanto a demanda contratada, definida no inciso~XII, corresponde à potência ativa disponibilizada conforme o contrato, em kW. A demanda aparente de projeto da entrada coletiva, em kVA, é outra grandeza, empregada no dimensionamento da alimentação e da transformação, conforme a Seção~\ref{sec:demandas}. O art.~24 atribui à distribuidora a definição das condições de conexão monofásica, bifásica ou trifásica \cite[arts.~2º, 23 e~24]{aneel1000}.
 
 \subsection{Requisitos de segurança}
 
