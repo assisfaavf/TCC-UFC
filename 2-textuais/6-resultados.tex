@@ -213,6 +213,63 @@ Para a conexão ao medidor, a 1580 exige comprimento mínimo de 300~mm. Na hipó
 
 O seccionamento simultâneo das fases e o dimensionamento da proteção em função da corrente permanecem nos aspectos comparáveis (RN-0045). Para disjuntores trifásicos, o mínimo de 5~kA consta do item~7.7.8.1.5 da 0126 e do item~7.25.2 da 1580 nas condições da proteção individual até 100~A (RN-0046). A nota~5 da Tabela~12 da 0126 traz 3~kA como referência própria da tabela. Para o confronto com a 1580, considerou-se o mínimo de 5~kA expresso para proteção trifásica no corpo da 0126 \cite[item~7.7.8.1.5 e tabela~12, nota~5]{enel0126}\cite[itens~7.25.1--7.25.2]{enel1580}.
 
+\subsection{Tipologias do centro de medição}
+\label{subsec:resultado-tipologias-cm}
+
+Na 0126, o centro de medição é composto por módulos que acomodam medidores, barramentos e proteções. O Desenho~003.23 apresenta a organização do conjunto convencional, incluindo módulos de medição, distribuição e passagem. A especificação admite outros modelos submetidos à análise e à aprovação da distribuidora. Na 1580, o item~7.19.3 e a Tabela~22 distinguem os componentes e as tecnologias por área de concessão. A identificação do perímetro de aplicação e das condições por família foi classificada como alteração (RN-0047) \cite[itens~7.7.4--7.7.6 e Desenho~003.23]{enel0126}\cite[item~7.19.3 e tabela~22]{enel1580}.
+
+O Quadro~\ref{qua:tipologias-cm-ce} reúne as referências pertinentes ao Ceará. A Tabela~22 da 1580 indica os códigos 195.10 e 195.04 entre as caixas convencionais destinadas a essa área. A Tabela~8 da especificação de conexão individual 1569 identifica a função de cada uma. Essa consulta complementar fundamenta a identificação dos componentes, enquanto a 1580 orienta o confronto dos arranjos de medição coletiva \cite[tabela~22]{enel1580}\cite[tabela~8]{enel1569}.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Tipologias de medição coletiva com aplicação no Ceará}
+  \label{qua:tipologias-cm-ce}
+  \vspace{0.7\baselineskip}
+  \centering
+  {\small
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.25\linewidth}|>{\raggedright\arraybackslash}p{0.63\linewidth}|}
+    \hline
+    \textbf{Tipologia} & \textbf{Referência e condição de uso} \\\hline
+    Convencional & Família 195 da Tabela~22. O código 195.10 identifica caixa de medição polifásica e o 195.04, caixa de proteção trifásica separada, conforme a configuração. \\\hline
+    Agrupamento tipo P & Desenho~23 e itens~7.19.3 e~7.20.1. Medição direta monofásica ou bifásica, até 30 medições e proteção geral de até 300~A conforme a montagem. \\\hline
+    Medição eletrônica centralizada em aço & Famílias MEC-I a MEC-XVI, Desenhos~60 a~66 e item~7.21. Modalidade opcional com distribuição por barramento blindado e componentes próprios de medição. \\\hline
+    Medição eletrônica centralizada em policarbonato & Famílias MEC-P-II a MEC-P-XII e referência~8.22 na Tabela~22. Alternativa opcional sujeita às condições de montagem do item~7.21. \\\hline
+  \end{tabular}
+  \Fonte{Elaborado pelo autor com base na Tabela~22 da 1580 e na Tabela~8 da 1569 \cite[tabela~22]{enel1580}\cite[tabela~8]{enel1569}.}}
+\end{minipage}
+\par
+
+A coluna de aplicação da Tabela~22 reserva o quadro de medição agrupada (QMA) do Desenho~31 ao Rio de Janeiro e as caixas de barramento dos tipos A e B do Desenho~32 a São Paulo. A 1580 detalha a montagem modular tipo P (RN-0048). A 0126 já previa a medição eletrônica centralizada (MEC) como opção, com remissão à especificação SER-OMBR-MAT-18-0075-INBR \cite[item~7.7.2]{enel0126}. A 1580 explicita a opção formal do interessado e detalha a distribuição por barramento blindado e a ligação das caixas (RN-0049) \cite[tabela~22 e itens~7.20.1 e~7.21--7.21.2]{enel1580}.
+
+\subsection{Barramentos e distribuição interna do centro de medição}
+\label{subsec:resultado-barramentos-cm}
+
+A 0126 vincula a montagem modular ao Desenho~003.23 e fornece valores de capacidade de corrente de barras de cobre na Tabela~10, para elevação máxima de temperatura de 30~\(^\circ\)C em relação ao ambiente. A 1580 organiza parte desse detalhamento por tipo de conjunto e área de concessão. A mudança de abrangência e de referência de dimensionamento foi classificada como alterada (RN-0050). A proteção geral a montante do barramento e das derivações é mantida (RN-0051) \cite[itens~7.7.4 e~7.7.8.1.1, Desenho~003.23 e tabela~10]{enel0126}\cite[itens~7.19.4, 7.20.1 e~7.22.6]{enel1580}.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Abrangência dos critérios de barramentos na especificação 1580}
+  \label{qua:abrangencia-barramentos-1580}
+  \vspace{0.7\baselineskip}
+  \centering
+  {\small
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.31\linewidth}|>{\raggedright\arraybackslash}p{0.57\linewidth}|}
+    \hline
+    \textbf{Arranjo} & \textbf{Escopo e critério} \\\hline
+    Caixas de barramento da Enel São Paulo & Item~7.19.4 e Tabela~23. Detalham a montagem e a capacidade de condução de barras de cobre pintadas e nuas. O escopo do item é São Paulo. \\\hline
+    Agrupamentos tipo P & Item~7.20.1 e Tabela~28. Dimensionam barras e módulos do agrupamento conforme a montagem, cuja proteção geral alcança até 300~A. \\\hline
+    Centro convencional trifásico de 500~A no Ceará & A Tabela~22 relaciona componentes convencionais admitidos no Ceará. Os dispositivos comparados não oferecem tabela dimensional equivalente diretamente aplicável ao barramento dessa configuração. \\\hline
+  \end{tabular}
+  \Fonte{Elaborado pelo autor com base nos itens~7.19.3--7.19.4 e~7.20.1 e nas Tabelas~22, 23 e~28 da 1580 \cite{enel1580}.}}
+\end{minipage}
+\par
+
+Essa diferença deixa uma lacuna no detalhamento da solução convencional examinada. Na elaboração do projeto, dimensionamento e especificação das barras dependem das condições reais de instalação, dos critérios técnicos complementares aplicáveis e da documentação dos componentes e da montagem. Isso inclui capacidade de corrente, aquecimento, suportabilidade ao curto-circuito, proteção contra contato e condições de aprovação da solução. A seleção demanda justificativa técnica própria para o conjunto do Ceará \cite{abnt5410}\cite[itens~7.18.3 e~7.22.6]{enel1580}.
+
 \section{Estudo de caso: Edifício Palatium}
 
 \subsection{Carga instalada e previsão de recarga veicular}
@@ -392,3 +449,16 @@ Os 26 apartamentos têm alimentadores trifásicos de 10~mm\textsuperscript{2} po
 \par
 
 A capacidade de interrupção indicada no diagrama para as proteções individuais é superior a 10~kA, acima do mínimo de referência de 5~kA comparado. No conjunto de medição direta, as adequações de especificação e montagem são a reserva de 300~mm para conexão e os terminais ilhós quando adotados os condutores flexíveis previstos (IP-0019), o padrão DIN dos disjuntores individuais (IP-0020) e a proteção IPXXB ou IP2X das partes energizadas dentro das respectivas caixas (IP-0021). Os registros dizem respeito à conexão e à montagem do conjunto de medição. O cubículo constitui a adequação de localização e infraestrutura tratada na Seção~\ref{subsec:impacto-cpg-cm} \cite[prancha~003]{palatiumpranchas2025}\cite[itens~7.17.1 e~7.25.1--7.25.2]{enel1580}.
+
+\subsection{Centro de medição e barramentos no Palatium}
+\label{subsec:impacto-tipologias-barramentos}
+
+A configuração original apresenta 28 medições trifásicas, correspondentes a 26 apartamentos, à administração do condomínio e ao sistema de prevenção e combate a incêndio. O memorial e o diagrama unifilar identificam como trifásico o circuito do quadro de transferência automática do incêndio. O detalhe genérico de módulo monofásico na prancha é distinto da representação desse circuito. A configuração de referência neste confronto preserva a medição convencional trifásica e o total de unidades consumidoras \cite[p.~5 e~7]{palatiummemorial2025}\cite[prancha~003]{palatiumpranchas2025}.
+
+O modelo 195.10 serve de referência para as caixas de medição polifásica e o 195.04 para proteção individual trifásica separada, quando pertinente. A consequência de RN-0047 é especificar componentes aplicáveis ao Ceará e justificar sua integração no arranjo completo (IP-0022). A aprovação dos componentes identificados na tabela tem escopo próprio. A avaliação da montagem completa considera também o conjunto de distribuição, proteção e medição. O cubículo exclusivo integra a adequação já registrada na Seção~\ref{subsec:impacto-cpg-cm} \cite[tabela~22 e item~7.18.3]{enel1580}\cite[tabela~8]{enel1569}.
+
+O tipo P é incompatível com a configuração trifásica de 500~A analisada, tanto pela modalidade das unidades consumidoras quanto pelo limite de proteção geral do agrupamento. A MEC é alternativa tecnológica. A aplicação da 1580 ao cenário estudado preserva a opção por medição convencional \cite[tabela~22 e itens~7.20.1 e~7.21]{enel1580}.
+
+O diagrama original apresenta dois módulos tipo III de distribuição e barras de cobre de \(38{,}10\times6{,}35\)~mm para fases, neutro e condutor de proteção. A proteção geral de 500~A precede o barramento e as derivações, conforme o princípio mantido nas duas especificações. Para a seção indicada e as condições da Tabela~10 da 0126, a capacidade de referência é de 544~A. O valor supera a corrente nominal da proteção geral em 44~A, ou 8,8~\% de 500~A \cite[prancha~003]{palatiumpranchas2025}\cite[item~7.7.8.1.1 e tabela~10]{enel0126}\cite[item~7.22.6]{enel1580}.
+
+O resultado de 544~A frente a 500~A caracteriza o confronto nominal sob as condições da tabela anterior. Para o cenário da 1580, a lacuna de detalhamento direto do arranjo convencional no Ceará exige fundamentação nas condições térmicas, de curto-circuito e de montagem do conjunto. As diferenças entre as tabelas examinadas, por si sós, não demonstram necessidade de trocar as barras \cite{abnt5410}\cite[itens~7.19.4 e~7.20.1 e tabelas~22, 23 e~28]{enel1580}.
