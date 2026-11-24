@@ -288,6 +288,44 @@ Na 0126, o item~7.7.10.2 atribui ao consumidor a instalação dos DPS conforme a
 
 A prescrição inclui caixa exclusiva com lacre e visor para inspeção, proteção de retaguarda por disjuntor ou fusível e condições de acesso para manutenção. Como referência construtiva, o Desenho~19 mostra a caixa tipo D de \(300\times500\times250\)~mm, em chapa n.º~20, com visor de policarbonato e dobradiças invioláveis. A indicação de estado deve ser acessível à verificação. A interação com o DR é tratada conforme a posição dos dispositivos e o esquema de ligação. A nota regional para a Enel Rio indica posição a jusante da medição e da proteção geral e tem escopo próprio. A 1580 detalha posição e invólucro e remete às normas técnicas de projeto para selecionar, conforme o caso, \(U_{\mathrm{c}}\), \(U_{\mathrm{p}}\), \(I_{\mathrm{n}}\), \(I_{\mathrm{max}}\) e \(I_{\mathrm{imp}}\) \cite[seção~7.25.4 e Desenho~19]{enel1580}\cite[item~6.3.5.2]{abnt5410}.
 
+\subsection{Identificação, lacração e acesso às medições}
+\label{subsec:resultado-identificacao}
+
+O Quadro~\ref{qua:identificacao-medicoes} distingue os requisitos preservados e os detalhes de montagem e sinalização alterados na 1580.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Identificação, lacração e acesso às medições}
+  \label{qua:identificacao-medicoes}
+  \vspace{0.7\baselineskip}
+  \centering
+  {\small
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.23\linewidth}|>{\raggedright\arraybackslash}p{0.65\linewidth}|}
+    \hline
+    \textbf{Requisito} & \textbf{Resultado da comparação} \\\hline
+    Unidades e fases & Identificação interna e externa e anilhas de fase mantidas (RN-0058). As marcações L/C e R/S/T devem ser lidas no contexto dos arranjos a que se referem. \\\hline
+    Plaquetas e fixação & A 0126 trata de plaquetas de alumínio ou pintura indelével e da apresentação da identificação. A 1580 exige correspondência com o projeto liberado e prevê plaquetas metálicas gravadas, esmaltadas a fogo ou acrílicas gravadas. Em policarbonato, a fixação é por colagem que preserve o invólucro, com resistência térmica e ao desprendimento manual (RN-0059). \\\hline
+    Lacração & Dispositivos para lacre mantidos nos módulos e no CPG, conforme o arranjo (RN-0060). \\\hline
+    Acesso ao cubículo & A 0126 prevê acesso facilitado e espaço livre frontal mínimo de 0,80~m. A 1580 especifica, para o CM abrigado, porta com abertura para fora, trinco com cadeado e placa de advertência que identifica o risco de choque e restringe o acesso a pessoas autorizadas (RN-0061). \\\hline
+    Identificação de incêndio & A 0126 identifica a proteção da bomba. A 1580 acrescenta caixa na cor vermelha, identificação externa do sistema e plaquetas nas proteções correspondentes (RN-0062). \\\hline
+  \end{tabular}
+  \Fonte{Elaborado pelo autor com base nas especificações comparadas.}}
+\end{minipage}
+\par
+
+Os dispositivos correspondentes são os itens~7.7.1.9, 7.7.4.1--7.7.4.3, 7.7.5, 7.7.7 e~7.5.4.2 da 0126 e os itens~7.11.8, 7.18.2--7.18.3, 7.19.3, 7.20.1, 7.22.7 e~7.23.1 da 1580. A sequência de numeração a partir da parte superior esquerda e a redação geral sobre rompimento do lacre da 0126 não foram localizadas de modo equivalente nesses dispositivos da 1580. O lacre permanece obrigatório nas condições indicadas e seu rompimento continua sujeito às regras da distribuidora \cite[seção~7.7 e item~7.5.4.2]{enel0126}\cite[itens~7.18, 7.22.7 e~7.23.1]{enel1580}.
+
+\subsection{Alimentação e medição do sistema de incêndio}
+\label{subsec:resultado-incendio}
+
+O item~7.5.4 da 0126 e o Diagrama~4 do Desenho~003.19 preveem circuito da bomba independente das demais cargas, após a medição e antes da proteção geral do condomínio. A 1580 amplia o tratamento aos sistemas de detecção, alarme, prevenção e combate. Mantém o princípio da alimentação independente que permite desligar as cargas normais sem interromper o sistema e admite medição exclusiva mediante solicitação e nas condições do item~7.11.8 (RN-0063). Se adotada, a derivação deve anteceder a primeira proteção geral da entrada coletiva e ter neutro até a medição (RN-0064). A caixa exclusiva fica junto ao quadro geral de entrada, ou na área destinada à cabine de barramentos nos casos pertinentes (RN-0065) \cite[item~7.5.4 e Desenho~003.19]{enel0126}\cite[item~7.11.8, p.~41--42]{enel1580}.
+
+Há uma divergência interna na 1580. Para rede aérea com CPG no Ceará, o Diagrama~4 do Desenho~69 posiciona a derivação de incêndio a jusante de D1, enquanto o texto do item~7.11.8 a exige a montante da primeira proteção geral. O estudo adota a prescrição textual para o confronto com o Palatium. As notas do Desenho~69 sobre D4 e o limite de percurso de 30~m permanecem como referências do desenho. Os Desenhos~51 e~52 ilustram soluções de São Paulo, com QDC e cabine de barramentos \cite[item~7.11.8 e Desenhos~51, 52 e~69, Diagrama~4]{enel1580}.
+
+O item~7.11.9 acrescenta a possibilidade de considerar separadamente a demanda de incêndio no dimensionamento de transformadores e circuitos secundários (RN-0066). O texto condiciona essa alternativa à soma das demandas normal e de incêndio, com limite de 20~\% da potência nominal do transformador exclusivo ou de 20~\% da capacidade disponível da rede secundária, conforme a modalidade de atendimento \cite[item~7.11.9, p.~42]{enel1580}.
+
 \section{Estudo de caso: Edifício Palatium}
 
 \subsection{Carga instalada e previsão de recarga veicular}
@@ -471,7 +509,7 @@ A capacidade de interrupção indicada no diagrama para as proteções individua
 \subsection{Centro de medição e barramentos no Palatium}
 \label{subsec:impacto-tipologias-barramentos}
 
-A configuração original apresenta 28 medições trifásicas, correspondentes a 26 apartamentos, à administração do condomínio e ao sistema de prevenção e combate a incêndio. O memorial e o diagrama unifilar identificam como trifásico o circuito do quadro de transferência automática do incêndio. O detalhe genérico de módulo monofásico na prancha é distinto da representação desse circuito. A configuração de referência neste confronto preserva a medição convencional trifásica e o total de unidades consumidoras \cite[p.~5 e~7]{palatiummemorial2025}\cite[prancha~003]{palatiumpranchas2025}.
+A configuração original apresenta 28 medições trifásicas, correspondentes a 26 apartamentos, à administração do condomínio e ao sistema de prevenção e combate a incêndio. O memorial e o diagrama unifilar identificam como trifásico o circuito do quadro de transferência automática do incêndio. O detalhe genérico de módulo monofásico na prancha é distinto da representação desse circuito. O cenário de adequação conserva as 28 unidades consumidoras trifásicas. São 27 medições no centro convencional e uma medição de incêndio em caixa independente junto ao CPG, conforme a Seção~\ref{subsec:impacto-incendio} \cite[p.~5 e~7]{palatiummemorial2025}\cite[prancha~003]{palatiumpranchas2025}.
 
 O modelo 195.10 serve de referência para as caixas de medição polifásica e o 195.04 para proteção individual trifásica separada, quando pertinente. A consequência de RN-0047 é especificar componentes aplicáveis ao Ceará e justificar sua integração no arranjo completo (IP-0022). A aprovação dos componentes identificados na tabela tem escopo próprio. A avaliação da montagem completa considera também o conjunto de distribuição, proteção e medição. O cubículo exclusivo integra a adequação já registrada na Seção~\ref{subsec:impacto-cpg-cm} \cite[tabela~22 e item~7.18.3]{enel1580}\cite[tabela~8]{enel1569}.
 
@@ -491,3 +529,17 @@ O memorial indica PE de 185~mm\textsuperscript{2} e conjuntos em paralelo com 15
 O memorial descreve, para o conjunto gerador e sua unidade de supervisão de corrente alternada (USCA), hastes de 5/8~pol. por 2,40~m, condutor de cobre nu de 50~mm\textsuperscript{2}, espaçamento de 3~m e resistência especificada de até 10~\(\Omega\). Esse registro caracteriza o subsistema do gerador. O dimensionamento do aterramento da entrada principal é avaliado no seu próprio escopo \cite{palatiummemorial2025}.
 
 As pranchas~003 e~004 representam DPS no arranjo trifásico com neutro. Os documentos examinados não identificam de forma inequívoca a caixa externa junto ao CPG nem os parâmetros de seleção dos dispositivos. Para o cenário adotado, a adequação consiste em prever o conjunto DPS da entrada geral junto ao CPG reposicionado e ao BEP, com caixa tipo D como referência, proteção de retaguarda e condições de inspeção e manutenção (IP-0025). A seleção deve ser compatível com a rede de 380/220~V e com o esquema de aterramento. Os DPS dos quadros internos continuam a ter função complementar, em coordenação com o conjunto da entrada \cite[pranchas~003 e~004]{palatiumpranchas2025}\cite[seção~7.25.4 e Desenho~19]{enel1580}.
+
+\subsection{Identificação e acesso às medições no Palatium}
+\label{subsec:impacto-identificacao}
+
+A prancha~003 individualiza as 28 unidades consumidoras e identifica o CPG e o CM como selados e aterrados. A numeração e a correspondência entre medidor e circuito são preservadas. A adequação de identificação consiste em especificar plaquetas conforme o projeto liberado e adotar colagem nas caixas de policarbonato, quando utilizadas (IP-0026). Para o cubículo já tratado na Seção~\ref{subsec:impacto-cpg-cm}, a adequação de sinalização e controle de acesso compreende a placa de advertência e os dispositivos de fechamento (IP-0027). A caixa da medição de incêndio deve ser vermelha e identificada com a inscrição \emph{Sistema de Prevenção e Combate a Incêndio}, incluindo a identificação das proteções correspondentes (IP-0028) \cite[prancha~003]{palatiumpranchas2025}\cite[itens~7.11.8, 7.18.2 e~7.23.1]{enel1580}.
+
+\subsection{Alimentação e medição de incêndio no Palatium}
+\label{subsec:impacto-incendio}
+
+O unifilar da prancha~003 mostra a derivação da medição trifásica exclusiva de incêndio antes do disjuntor geral de 500~A. O alimentador tem três fases, neutro e condutor de proteção de 6~mm\textsuperscript{2}, com proteção de 32~A na origem e proteção individual de 32~A. Como a posição da derivação atende ao texto do item~7.11.8, a topologia elétrica é preservada (IP-0029). A prancha~004 mostra a transferência para o grupo gerador \cite[pranchas~003 e~004]{palatiumpranchas2025}\cite[item~7.11.8]{enel1580}.
+
+No projeto original, essa medição integrava o centro convencional. No cenário de adequação, a caixa exclusiva passa para junto do CPG no alinhamento, na posição definida para a nova entrada (IP-0030). O centro de medição convencional passa a reunir 27 medições trifásicas, sendo 26 apartamentos e a administração do condomínio. A medição trifásica de incêndio permanece em caixa independente, totalizando 28 unidades consumidoras no empreendimento. A alteração contabilizada neste ponto corresponde à posição da caixa. A identificação visual e o deslocamento do CPG estão registrados em suas próprias análises \cite[prancha~003]{palatiumpranchas2025}\cite[item~7.11.8]{enel1580}.
+
+O memorial já inclui os 7,36~kVA do sistema de incêndio na demanda total de 291,33~kVA. O tratamento separado previsto na 1580 é condicionado à verificação do atendimento e da transformação ou da capacidade disponível. Como essa condição não está demonstrada no acervo, os 7,36~kVA permanecem no total documentado adotado neste trabalho \cite[p.~7]{palatiummemorial2025}\cite[item~7.11.9]{enel1580}.
