@@ -125,6 +125,71 @@ O vão, os critérios do poste e a definição dos circuitos foram classificados
 
 A alínea~k do item~7.16.2 da 1580 exige termo que ateste a resistência mecânica para ramal de entrada com seção superior a 35~mm², acompanhado de especificações técnicas e do documento de responsabilidade técnica de projeto e execução. A 0126 prevê critérios de dimensionamento do poste e documentação geral de responsabilidade técnica, sem termo equivalente vinculado a esse limiar nos dispositivos confrontados. A exigência específica foi classificada como acrescentada (RN-0017) \cite[item~7.12.2.3 e tabela~8]{enel0126}\cite[item~7.16.2, alínea~k]{enel1580}.
 
+\subsection{Eletrodutos, inclinação e drenagem}
+\label{subsec:resultado-eletrodutos-drenagem}
+
+Para entrada derivada da rede aérea, a 0126 admite fibrocimento, polietileno de alta densidade (PEAD), cloreto de polivinila (PVC) rígido e aço zincado. A 1580 relaciona PVC rígido rosqueável, aço e PEAD corrugado. O fibrocimento não foi localizado nessa lista. A 1580 restringe a indicação de PVC rígido rosqueável para ramal de entrada subterrâneo à linha de dutos diretamente derivada de câmara transformadora ou poço de inspeção. O alcance dessa restrição ao trecho enterrado derivado de rede aérea requer confirmação. A mudança no critério de materiais foi classificada como alterada (RN-0018) \cite[item~7.6.1.4, alínea~c e Desenho~003.15]{enel0126}\cite[item~7.19.7]{enel1580}.
+
+No Desenho~003.15 da 0126, os cortes para PVC e fibrocimento mostram 250~mm de cobertura sobre o concreto, mais 50~mm de concreto acima dos dutos. A leitura das cotas resulta em 300~mm até o topo do duto. No corte para ferro galvanizado, a cota de 250~mm termina acima da camada superior de concreto, com 50~mm de espessura, e o desenho mostra areia em torno dos dutos. Para PEAD, o corte indica 600~mm até a transição entre as camadas de areia e mais 50~mm até o topo do duto. A 1580 indica, no bloco para rede aérea, profundidade de 300 a 500~mm em relação ao piso acabado, com 600~mm em passagem de veículos pesados, e envelopamento em concreto em ambas as situações. O critério de profundidade mudou (RN-0019). O envelopamento em concreto para PVC foi mantido onde o material é admitido (RN-0020). Para PEAD, houve mudança da proteção em areia para concreto (RN-0021) \cite[item~7.6.1.4, alínea~d e Desenho~003.15]{enel0126}\cite[item~7.19.7]{enel1580}.
+
+Na descida do poste, a 0126 prevê aço zincado ou PVC rígido com proteção mecânica e contra radiação ultravioleta, com referência de 2,5~m em relação ao piso, e representa abraçadeiras no Desenho~003.02. A 1580 explicita três pontos equidistantes de fixação externa, com braçadeiras ou cintas de aço carbono zincado a quente ou liga de alumínio. A especificação da fixação foi classificada como alterada (RN-0022). A correspondência quanto à proteção mecânica e contra radiação ultravioleta permanece inconclusiva (RN-0023). A nota~3 do Desenho~003.15 da 0126 prevê um duto reserva por circuito. A permanência da exigência na 1580 é inconclusiva (RN-0024) \cite[item~7.6.1.4, alínea~b e Desenhos~003.02 e~003.15]{enel0126}\cite[item~7.19.7 e Anexo~8.101]{enel1580}.
+
+As notas~4 e~5 do Desenho~003.15 da 0126 indicam inclinação de 1~\% para ferro, fibrocimento e PVC e vedação das extremidades dos dutos de PEAD, representados sem inclinação. A nota não qualifica 1~\% como mínimo. A permanência dessas prescrições na configuração examinada é inconclusiva (RN-0025 e RN-0026). A drenagem da caixa, por sua vez, foi classificada como alterada (RN-0027). O Desenho~003.17 da 0126 representa fundo vazado com camada de brita de 100~mm no corte. O item~7.19.1 da 1580 exige ligação direta do dreno ao sistema pluvial da edificação. A Figura~\ref{fig:principios-drenagem} ilustra os dois princípios \cite[Desenhos~003.15 e~003.17]{enel0126}\cite[itens~7.19.1 e~7.19.7]{enel1580}.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{figure}{Princípios de drenagem das caixas de passagem}
+  \label{fig:principios-drenagem}
+  \vspace{0.7\baselineskip}
+  {\centering
+  \begin{tikzpicture}[font=\small, line width=0.65pt, >={Latex}]
+    \node at (0,1.85) {\textbf{0126}};
+    \node at (6.1,1.85) {\textbf{1580}};
+    \draw (-1.05,0.18) -- (-1.05,1.32) -- (1.05,1.32) -- (1.05,0.18);
+    \fill[gray!23] (-1.05,0.17) rectangle (1.05,0.51);
+    \node at (0,0.33) {Brita};
+    \draw[->] (0,0.11) -- (0,-0.49);
+    \node at (0,-0.81) {Fundo vazado};
+    \draw (5.05,1.32) rectangle (7.15,0.18);
+    \node at (6.1,0.78) {Caixa};
+    \draw[->] (6.1,0.18) -- (6.1,-0.55) -- (7.01,-0.55);
+    \node[anchor=west,align=left] at (7.09,-0.55) {Sistema pluvial};
+    \node[anchor=east] at (6.02,-0.32) {Dreno};
+  \end{tikzpicture}\par}
+  \Fonte{Elaborado pelo autor com base no Desenho~003.17 da 0126 e no item~7.19.1 da 1580. Esquema sem escala.}
+\end{minipage}
+\par
+
+\subsection{Caixas de passagem enterradas e sob laje}
+\label{subsec:resultado-caixas-passagem}
+
+O Desenho~003.17 da 0126 apresenta caixa convencional com tampa de concreto e subtampa de policarbonato. A dimensão interna de referência é de pelo menos 300~mm para circuitos monofásicos com condutores de até 16~mm\textsuperscript{2} e de 500~mm nos demais casos. Na 1580, a seleção das caixas enterradas padronizadas depende do número de eletrodutos e da localização. A mudança de modelo e de critério de seleção foi classificada como alterada (RN-0028). O Quadro~\ref{qua:dimensoes-caixas-1580} sintetiza as dimensões \cite[item~7.6.1.4, alínea~e e Desenho~003.17]{enel0126}\cite[item~7.19.1 e Desenho~18]{enel1580}.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Dimensões dos modelos de caixa de passagem do Desenho 18}
+  \label{qua:dimensoes-caixas-1580}
+  \vspace{0.7\baselineskip}
+  \centering
+  {\small
+  \renewcommand{\arraystretch}{1.17}
+  \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Modelo} & \textbf{Planta interna (mm)} & \textbf{Dimensões externas (mm)} \\\hline
+    PP tipo 1 & \(300\times300\) & \(360\times360\times375\) \\\hline
+    PP tipo 2 & \(400\times400\) & \(460\times460\times375\) \\\hline
+    PP tipo 3 & \(600\times400\) & \(660\times460\times375\) \\\hline
+    PP tipo 4 & \(600\times600\) & \(660\times660\times375\) \\\hline
+    CS2 & Não indicada & \(1\,200\times700\times950\) \\\hline
+  \end{tabular}
+  \Fonte{Elaborado pelo autor com base na tabela e nas vistas do Desenho~18 da 1580. Para os tipos~2 a~4, as vistas indicam 370~mm de altura e a tabela indica 375~mm.}}
+\end{minipage}
+\par
+
+As notas do Desenho~18 indicam polipropileno (PP), classificação V2, resistência à compressão de 12,5 toneladas e fornecimento por fabricante homologado, com remissão à PM-Br 199.39. O item~7.19.1 da 1580 também especifica 15~m como extensão máxima retilínea sem caixa de passagem e redução de 3~m por curva de 90 graus. Sem correspondente equivalente nos dispositivos e desenhos da 0126 examinados, esse critério foi classificado como acrescentado (RN-0029). O máximo de três curvas de 90 graus foi mantido nas condições comparáveis (RN-0030). A permanência da referência de 0,70~m entre a caixa e a base do poste não pôde ser estabelecida (RN-0031) \cite[item~7.6.1.4, alíneas~e--g e Desenho~003.17]{enel0126}\cite[item~7.19.1 e Desenho~18]{enel1580}.
+
+Para instalação aparente sob laje, a 1580 admite excepcionalmente caixa metálica de \(1\,000\times1\,000\times250\)~mm, com chapa mínima de 14~USG (1,90~mm) e até quatro eletrodutos. Para mais de quatro, prevê cubículo segundo o Desenho~17. São exigidos dispositivos para lacre e dobradiças invioláveis, além de fixação interna à laje por perfilados e ferragens e altura livre mínima de 2\,300~mm entre a face inferior e o piso acabado. A 0126 admite instalação aparente e traz padrões de caixas para outras situações. Nos dispositivos e desenhos confrontados, não foi localizado padrão equivalente para a caixa metálica sob laje do ramal de entrada. A prescrição específica foi classificada como acrescentada (RN-0032) \cite[item~7.6.1.4 e Desenhos~003.02 e~003.17]{enel0126}\cite[item~7.19.1 e Desenho~17]{enel1580}.
+
 \section{Estudo de caso: Edifício Palatium}
 
 \subsection{Carga instalada e previsão de recarga veicular}
@@ -200,3 +265,41 @@ O projeto indica poste auxiliar 300/9 e um ramal de entrada geral com dois conju
 A verificação do poste depende dos esforços reais, das condições de instalação, da aplicação da nota~2 da Tabela~18 e da avaliação da Enel (IP-0004). Pelo mesmo motivo, a configuração do ramal aéreo depende da potência efetiva do transformador, da disponibilidade da rede e da avaliação da Enel (IP-0005). A seção dos condutores de entrada corresponde ao trecho subterrâneo do projeto. O paralelismo desse trecho será examinado na análise do ramal de entrada, considerando que a alínea~l do item~7.19.6 integra as prescrições para rede de distribuição subterrânea \cite[itens~7.16.2 e~7.19.6 e tabelas~17--18]{enel1580}.
 
 A seção de 150~mm² do ramal de entrada atende à condição de incidência da alínea~k do item~7.16.2. No acervo examinado, não foi identificado termo específico que ateste a resistência mecânica requerida. Sua apresentação foi classificada como adequação potencialmente necessária de natureza documental (IP-0006). A eventual necessidade de substituição do poste depende da avaliação de IP-0004 \cite[p.~1 e~7]{palatiummemorial2025}\cite[item~7.16.2, alínea~k]{enel1580}.
+
+\subsection{Eletrodutos e drenagem no Palatium}
+\label{subsec:impacto-eletrodutos-drenagem}
+
+O memorial e a prancha~001 indicam dois eletrodutos rígidos de PVC de 4~polegadas em concreto para os dois conjuntos em paralelo, com cobertura mínima de 250~mm acima do concreto. A avaliação do material depende da interpretação do alcance da restrição do item~7.19.7 sobre o trecho enterrado derivado da rede aérea. A eventual troca do material constitui adequação potencialmente necessária (IP-0007). O concreto já consta do projeto. Para as profundidades, as cotas precisam ser confrontadas a partir da mesma superfície de referência e conforme a circulação prevista acima dos dutos (IP-0008). As cotas analisadas não demonstram aumento automático da profundidade exigida. O Anexo~8.101 relaciona PVC até DN~85, que corresponde à referência de 3~polegadas. A distância entre a indicação de 4~polegadas do projeto e a lista do anexo requer confronto com as dimensões reais e a ocupação dos eletrodutos \cite[p.~1]{palatiummemorial2025}\cite[prancha~001]{palatiumpranchas2025}\cite[item~7.19.7 e Anexos~8.100 e~8.101]{enel1580}.
+
+O acervo não confirma a quantidade e o espaçamento das fixações da descida, nem o material de cada braçadeira (IP-0009). A previsão de um duto reserva para cada conjunto paralelo seria uma interpretação conservadora da nota da 0126 e depende da leitura do que constitui circuito no arranjo com ramal único. A prancha indica inclinação de 2~\% nos trechos assinalados em direção à primeira caixa junto ao poste. A comparação não demonstrou necessidade de alterar essa inclinação \cite[prancha~001]{palatiumpranchas2025}\cite[Desenho~003.15]{enel0126}.
+
+A prancha~001 mostra caixas com fundo vazado e brita, sem representar a interligação ao sistema pluvial. A compatibilização da drenagem foi classificada como adequação potencialmente necessária de natureza física e documental (IP-0010). A verificação depende do projeto pluvial, indisponível no acervo, para conferir cotas, percurso, condições de escoamento e eventual refluxo \cite[prancha~001]{palatiumpranchas2025}\cite[item~7.19.1]{enel1580}.
+
+\subsection{Caixas de passagem no Palatium}
+\label{subsec:impacto-caixas-passagem}
+
+A prancha~001 identifica duas caixas enterradas de \(500\times500\times500\)~mm e dois eletrodutos de 4~polegadas por trecho. A eventual substituição dos modelos foi classificada como adequação potencialmente necessária (IP-0011). A escolha depende da posição das entradas, dos diâmetros efetivos, dos raios de curvatura e do espaço para instalação e manutenção. No trecho com mudança de direção de aproximadamente 90 graus, 12~m é a referência se houver uma curva equivalente de 90 graus. O percurso efetivo não foi identificado e a repercussão continua indeterminada (IP-0012) \cite[prancha~001]{palatiumpranchas2025}\cite[item~7.19.1 e Desenho~18]{enel1580}.
+
+A prancha~002 representa duas caixas metálicas seladas de \(500\times500\times200\)~mm fixadas no teto. A primeira está antes do centro de proteção geral (CPG), no ramal de entrada. A segunda está depois do CPG, no percurso até o centro de medição. O padrão do item~7.19.1 é pertinente à primeira caixa. Seu alcance sobre a segunda, no ramal de distribuição principal, permanece em aberto. A Figura~\ref{fig:comparacao-caixas-metalicas} compara as dimensões nominais. Da caixa prevista para a referência da 1580, a área em planta passa de 0,25 para 1,00~m\textsuperscript{2}, e o volume geométrico, de 0,05 para 0,25~m\textsuperscript{3} \cite[pranchas~002, 003 e~005]{palatiumpranchas2025}\cite[item~7.19.1]{enel1580}.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{figure}{Comparação proporcional em planta da caixa metálica sob laje}
+  \label{fig:comparacao-caixas-metalicas}
+  \vspace{0.7\baselineskip}
+  {\centering
+  \begin{tikzpicture}[font=\small, line width=0.7pt]
+    \node at (0,3.22) {\textbf{Projeto}};
+    \node at (5.2,3.22) {\textbf{1580}};
+    \draw[fill=gray!12] (-0.65,0.65) rectangle (0.65,1.95);
+    \draw[fill=gray!12] (3.9,0) rectangle (6.5,2.6);
+    \node at (0,1.30) {500 mm};
+    \node at (5.2,1.30) {1\,000 mm};
+    \node at (0,-0.42) {Altura nominal de 200 mm};
+    \node at (5.2,-0.42) {Altura nominal de 250 mm};
+  \end{tikzpicture}\par}
+  \Fonte{Elaborado pelo autor com base nas dimensões nominais da prancha~002 e do item~7.19.1 da 1580.}
+\end{minipage}
+\par
+
+A diferença dimensional da primeira caixa configura adequação potencialmente necessária (IP-0013). Dois eletrodutos de entrada e dois de saída somam, preliminarmente, quatro conexões por caixa. O lacre consta da indicação do projeto. Permanecem a conferir a configuração final, a chapa, as dobradiças, a fixação à laje e a altura livre sob a caixa, inclusive nas proximidades de vigas. As dimensões comparadas não permitem estimar volume útil, quantidade de chapa ou custo \cite[prancha~002]{palatiumpranchas2025}\cite[item~7.19.1]{enel1580}.
