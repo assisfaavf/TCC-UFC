@@ -326,6 +326,36 @@ Há uma divergência interna na 1580. Para rede aérea com CPG no Ceará, o Diag
 
 O item~7.11.9 acrescenta a possibilidade de considerar separadamente a demanda de incêndio no dimensionamento de transformadores e circuitos secundários (RN-0066). O texto condiciona essa alternativa à soma das demandas normal e de incêndio, com limite de 20~\% da potência nominal do transformador exclusivo ou de 20~\% da capacidade disponível da rede secundária, conforme a modalidade de atendimento \cite[item~7.11.9, p.~42]{enel1580}.
 
+\subsection{Grupo gerador, transferência e cargas de emergência}
+\label{subsec:resultado-grupo-gerador}
+
+A 0126 identifica a instrução WKI-OMBR-MAT-18-0072-EDCE para gerador particular sem paralelismo e prevê seccionamento sem realimentação inadvertida. A 1580 mantém o princípio de segurança do arranjo sem paralelismo. Para consumidores em baixa tensão, explicita a comunicação escrita, a autorização prévia, a análise da conexão e as condições de inspeção, ensaios e liberação. A Tabela~5 detalha quantidade e potência, filosofia de operação, intertravamento, responsabilidade técnica, projeto quando aplicável e previsão de conexão. O detalhamento documental foi classificado como alterado (RN-0067). O item~7.11.13 remete genericamente às normas específicas da distribuidora, sem identificar nesse item o código aplicável ao Ceará \cite[itens~7.4.1.3 e~7.4.1.5]{enel0126}\cite[itens~7.3.2 e~7.11.13 e tabela~5]{enel1580}.
+
+O Quadro~\ref{qua:comparacao-gerador} sintetiza as demais diferenças pertinentes ao caso.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Gerador, transferência e cargas de emergência}
+  \label{qua:comparacao-gerador}
+  \vspace{0.7\baselineskip}
+  \centering
+  {\small
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.23\linewidth}|>{\raggedright\arraybackslash}p{0.65\linewidth}|}
+    \hline
+    \textbf{Aspecto} & \textbf{Resultado da comparação} \\\hline
+    Localização & A 1580 explicita a separação da área do padrão de entrada em relação ao gerador e ao painel de transferência (RN-0068). \\\hline
+    Sinalização & Para conexão nova, a 1580 prevê placa de fonte geradora junto ao padrão, conforme a Figura~15 (RN-0069). \\\hline
+    Transferência & O princípio de evitar realimentação e paralelismo no arranjo sem operação simultânea é mantido (RN-0070). Na 0126, o diagrama detalhado de intertravamento é expresso quando aplicável. Na 1580, a informação passa a integrar a filosofia de operação e a descrição do sistema, com menor precisão textual sobre o diagrama (RN-0071). \\\hline
+    Cargas e ensaios & A 1580 amplia a menção à motobomba para os sistemas de detecção, alarme, prevenção e combate (RN-0072) e explicita ensaios que preservem a alimentação das cargas normais (RN-0073). Os dispositivos comparados tratam da segurança do sistema, sem fixar uma lista universal de cargas comuns a alimentar pelo gerador. \\\hline
+  \end{tabular}
+  \Fonte{Elaborado pelo autor com base nas especificações 0126 e 1580.}}
+\end{minipage}
+\par
+
+As referências do quadro são os itens~7.4.1.3, 7.4.1.5, 7.5.4 e~7.12.2.3, alínea~h, da 0126 e os itens~7.1, alínea~g, 7.3.2, alínea~l, 7.11.8--7.11.9 e~7.11.13, a Tabela~5 e a Figura~15 da 1580. A exigência de intertravamento decorre das condições de operação e dos documentos complementares aplicáveis \cite{enel0126,enel1580}.
+
 \section{Estudo de caso: Edifício Palatium}
 
 \subsection{Carga instalada e previsão de recarga veicular}
@@ -543,3 +573,16 @@ O unifilar da prancha~003 mostra a derivação da medição trifásica exclusiva
 No projeto original, essa medição integrava o centro convencional. No cenário de adequação, a caixa exclusiva passa para junto do CPG no alinhamento, na posição definida para a nova entrada (IP-0030). O centro de medição convencional passa a reunir 27 medições trifásicas, sendo 26 apartamentos e a administração do condomínio. A medição trifásica de incêndio permanece em caixa independente, totalizando 28 unidades consumidoras no empreendimento. A alteração contabilizada neste ponto corresponde à posição da caixa. A identificação visual e o deslocamento do CPG estão registrados em suas próprias análises \cite[prancha~003]{palatiumpranchas2025}\cite[item~7.11.8]{enel1580}.
 
 O memorial já inclui os 7,36~kVA do sistema de incêndio na demanda total de 291,33~kVA. O tratamento separado previsto na 1580 é condicionado à verificação do atendimento e da transformação ou da capacidade disponível. Como essa condição não está demonstrada no acervo, os 7,36~kVA permanecem no total documentado adotado neste trabalho \cite[p.~7]{palatiummemorial2025}\cite[item~7.11.9]{enel1580}.
+
+\subsection{Grupo gerador e cargas de emergência no Palatium}
+\label{subsec:impacto-grupo-gerador}
+
+O memorial especifica grupo de emergência de 81~kVA e 60~kWe, em 380/220~V e 60~Hz, com autonomia declarada de 2~h e operação sem paralelismo com a rede. Registra corrente de projeto de 123,10~A e proteção geral de 125~A, com fases de 50~mm\textsuperscript{2}, neutro e condutor de proteção de 25~mm\textsuperscript{2}. O grupo ocupa área própria na prancha~004, compatível com a separação indicada para o padrão de entrada (IP-0034). Memorial, unifilares e documento de responsabilidade técnica integram o acervo do projeto do gerador. Esses documentos fundamentam a adequação da apresentação das informações da Tabela~5 (IP-0031). A realização dos ensaios e a liberação específica do gerador pela distribuidora não estão demonstradas nesse acervo \cite[p.~9--11]{palatiummemorial2025}\cite[prancha~004]{palatiumpranchas2025}\cite{palatiumart2025}\cite[tabela~5 e item~7.11.13]{enel1580}.
+
+No cenário de adequação, a intervenção física vinculada ao gerador é acrescentar, junto ao padrão de conexão, a advertência específica de retorno da fonte geradora. A Figura~15 indica placa de 150 por 150~mm, espessura mínima de 1~mm, em material metálico gravado ou esmaltado, ou acrílico gravado em relevo, com fixação por parafusos ou rebites. O aviso genérico do ambiente do gerador tem finalidade distinta (IP-0032) \cite[prancha~004]{palatiumpranchas2025}\cite[item~7.11.13 e Figura~15]{enel1580}.
+
+A prancha~004 apresenta quadros de transferência separados para os serviços comuns e para o incêndio, com dispositivos de 125~A e 32~A, respectivamente, e supervisão por USCA. Seus diagramas simplificados descrevem a configuração geral. A expressão \emph{Quadro Gerador em Sincronismo} difere da descrição do memorial de funcionamento sem paralelismo e constitui uma inconsistência terminológica a esclarecer no detalhamento documental. A comparação preserva os dois quadros e suas correntes nominais, com alimentação normal e alternativa separadas por função (IP-0031) \cite[prancha~004]{palatiumpranchas2025}\cite{palatiummemorial2025}\cite[tabela~5]{enel1580}.
+
+O memorial registra 99,59~kW de carga instalada no quadro de cálculo do gerador e demanda estimada de 58,61~kVA. A relação contempla iluminação e tomadas das áreas comuns, bombas, dois elevadores e a carga de incêndio, com as exclusões descritas no memorial. As tabelas registram 9,60~kW por elevador no QDC e 24,50~kW por elevador no cálculo do gerador, em que consta observação de partida. Essa diferença pertence ao critério de cálculo do projeto original. A demanda declarada caracteriza o cálculo apresentado, sem demonstrar isoladamente o comportamento do conjunto durante as partidas \cite[p.~9--11]{palatiummemorial2025}.
+
+A aplicação comparativa preserva a relação de cargas documentada e o grupo de 81~kVA (IP-0035). A adequação de funcionamento identificada é prever, na especificação funcional, ensaios do sistema de incêndio com preservação da alimentação das cargas normais (IP-0033). A alimentação independente de incêndio e a posição do medidor foram analisadas na Seção~\ref{subsec:impacto-incendio} \cite[itens~7.11.8--7.11.9]{enel1580}.
