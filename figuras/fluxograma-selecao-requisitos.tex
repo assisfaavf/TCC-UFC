@@ -1,0 +1,15 @@
+\begin{tikzpicture}[
+  criterio/.style={draw,line width=0.6pt,align=center,text width=36mm,
+    minimum height=13mm,inner sep=2mm,font=\small},
+  resultado/.style={criterio,text width=49mm},
+  seta/.style={-{Latex[length=2mm,width=1.5mm]},line width=0.6pt}
+]
+  \node[criterio] (mudanca) {Mudança demonstrada};
+  \node[criterio,left=5mm of mudanca] (territorio) {Aplicabilidade ao Ceará};
+  \node[criterio,right=5mm of mudanca] (projeto) {Relação com o projeto documentado};
+  \node[resultado,below=8mm of mudanca] (selecao) {\textbf{Selecionar para o estudo de caso}};
+  \coordinate[below=4mm of mudanca] (juncao);
+  \draw[line width=0.6pt] (territorio.south) |- (juncao) -| (projeto.south);
+  \draw[line width=0.6pt] (mudanca.south) -- (juncao);
+  \draw[seta] (juncao) -- (selecao.north);
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[
+  etapa/.style={draw,line width=0.6pt,align=center,text width=36mm,
+    minimum height=16mm,inner sep=2mm,font=\small},
+  seta/.style={-{Latex[length=2mm,width=1.5mm]},line width=0.6pt}
+]
+  \node[etapa] (temas) {\textbf{Identificar}\\Requisitos e temas};
+  \node[etapa,right=5mm of temas] (territorio)
+    {\textbf{Delimitar}\\Aplicabilidade ao Ceará};
+  \node[etapa,right=5mm of territorio] (evidencias)
+    {\textbf{Localizar}\\Dispositivos e remissões};
+  \draw[seta] (temas) -- (territorio);
+  \draw[seta] (territorio) -- (evidencias);
+\end{tikzpicture}
