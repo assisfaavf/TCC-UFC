@@ -356,6 +356,41 @@ O Quadro~\ref{qua:comparacao-gerador} sintetiza as demais diferenças pertinente
 
 As referências do quadro são os itens~7.4.1.3, 7.4.1.5, 7.5.4 e~7.12.2.3, alínea~h, da 0126 e os itens~7.1, alínea~g, 7.3.2, alínea~l, 7.11.8--7.11.9 e~7.11.13, a Tabela~5 e a Figura~15 da 1580. A exigência de intertravamento decorre das condições de operação e dos documentos complementares aplicáveis \cite{enel0126,enel1580}.
 
+\subsection{Infraestrutura de recarga veicular}
+\label{subsec:resultado-recarga}
+
+A 0126 aplicava critérios gerais à recarga. A 1580 passou a remeter expressamente à 0280, de 2023, e a exigir na Tabela~4 dados de finalidade, potência, operação, harmônicas e filtros (RN-0074). A 0280 disciplina proteção, comunicação e documentação, com medição pela própria UC no uso exclusivo (RN-0075). Sua tabela de tensões cobre RJ e SP. Os 380/220~V do Ceará constam na Tabela~7 da 1580 (RN-0076) \cite[item~7.11.11 e Tabelas~4 e~7]{enel1580}\cite[Tabelas~1--2 e itens~7.1.5--7.1.12]{enel0280}.
+
+\subsection{Selagem corta-fogo das passagens elétricas}
+\label{subsec:resultado-selagem}
+
+A 0126 admite eletrodutos e linhas pré-fabricadas. Para barramento blindado, a 1580 detalha barreira interna nas travessias para barras espaçadas em invólucro IP54 e obturação das passagens verticais (RN-0077). Para eletrodutos convencionais, a 1580 não apresenta procedimento equivalente. A obturação de passagens segue os critérios e exceções da NBR~5410 \cite[item~7.6.1.4, p.~22--23]{enel0126}\cite[item~7.22.9, p.~107]{enel1580}\cite[item~6.2.9.6]{abnt5410}.
+
+\subsection{Documentação e aprovação do projeto}
+\label{subsec:resultado-documentacao}
+
+O Quadro~\ref{qua:documentacao-aprovacao} trata da aprovação prévia. A solicitação de conexão segue a relação documental própria do Anexo~IX da 1580 (RN-0082).
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Documentação e aprovação de projetos de conexão coletiva}
+  \label{qua:documentacao-aprovacao}
+  \vspace{0.7\baselineskip}
+  \centering
+  {\small
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.20\linewidth}|>{\raggedright\arraybackslash}p{0.74\linewidth}|}
+    \hline
+    \textbf{Aspecto} & \textbf{Resultado da comparação} \\\hline
+    Enquadramento & A 0126 admitia dispensa para até seis UCs e carga total de até 15~kW. Para conexão nova no Ceará, a nota~8 da Tabela~2 da 1580 requer projeto acima de três UCs bifásicas ou trifásicas e ressalva os casos de aprovação obrigatória previstos nos itens~7.3 e~7.11.10 (RN-0078). \\\hline
+    Apresentação & Memorial, desenhos e responsabilidade técnica permanecem. A 0126 previa duas vias impressas, ou três para demanda superior a 300~kVA. O item~7.3.2 da 1580 indica nomenclatura sequencial ou hierárquica de arquivos, com canais de atendimento indicados no item~7.3.1 (RN-0079). \\\hline
+    Conteúdo & A 1580 explicita cargas por UC e detalha a demanda por elemento (RN-0005) e os dados de recarga e geração (RN-0074 e RN-0067). Os documentos de medição eletrônica centralizada e barramento blindado se aplicam quando essas tecnologias integram a solução (RN-0080). \\\hline
+    Validade & A 0126 previa solicitação de ligação em até 60 meses da aprovação para obras iniciadas em até 24 meses. A 1580 indica 36 meses para execução e solicitação de ligação. A Tabela~6 prevê redução em condições específicas para projeto sem orçamento de conexão aprovado em caso de revisão técnica pertinente, e nova análise após o prazo (RN-0081). \\\hline
+  \end{tabular}
+  \Fonte{Elaborado pelo autor com base em \cite[itens~7.12.1.6 e~7.12.2.1--7.12.2.5, p.~41--43]{enel0126} e \cite[seções~7.2--7.4, Tabelas~2--6 e Anexo~IX, p.~18--23 e~215]{enel1580}.}}
+\end{minipage}
+\par
+
 \section{Estudo de caso: Edifício Palatium}
 
 \subsection{Carga instalada e previsão de recarga veicular}
@@ -366,6 +401,8 @@ O conceito de carga instalada é mantido (RN-0010) nas duas especificações e c
 O dimensionamento associado à medição de cada apartamento inclui a recarga e indica 26,940~kW por unidade. A diferença de 3,70~kW por apartamento totaliza 96,20~kW de recarga prevista. Mantidas as parcelas do condomínio e de incêndio, a reconstituição \(26\times26{,}940+95{,}713+7{,}360\) resulta em 803,513~kW, cerca de 13,60~\% acima do total reconstituído sem recarga \cite[p.~12--13]{palatiummemorial2025}\cite[prancha~003]{palatiumpranchas2025}.
 
 A diferença de 96,20~kW já está presente nos dados do projeto original. Para a comparação, adotam-se 707,31~kW como carga instalada declarada e 803,51~kW como carga instalada reconstituída com a previsão de recarga. A demanda declarada de 291,33~kVA permanece como referência do estudo de caso.
+
+A prancha~003 vincula a recarga à medição de cada apartamento, com proteção de 25~A no circuito de recarga e de 50~A na medição. O cenário mantém os 26 pontos de 3,70~kW e as 28 UCs do edifício (IP-0036). Os valores típicos de potência da 0280 são referências de mercado. A adequação identificada é documental (IP-0037): discriminar as estações e suas características na relação de cargas e no formulário aplicável, com dados dos equipamentos selecionados \cite[prancha~003]{palatiumpranchas2025}\cite[Tabelas~2 e~4 e item~7.1.12]{enel0280}\cite[Tabela~4]{enel1580}.
 
 \subsection{Implicações dos critérios de cálculo de demanda (REVISAR)}
 \label{subsec:impacto-demanda}
@@ -586,3 +623,15 @@ A prancha~004 apresenta quadros de transferência separados para os serviços co
 O memorial registra 99,59~kW de carga instalada no quadro de cálculo do gerador e demanda estimada de 58,61~kVA. A relação contempla iluminação e tomadas das áreas comuns, bombas, dois elevadores e a carga de incêndio, com as exclusões descritas no memorial. As tabelas registram 9,60~kW por elevador no QDC e 24,50~kW por elevador no cálculo do gerador, em que consta observação de partida. Essa diferença pertence ao critério de cálculo do projeto original. A demanda declarada caracteriza o cálculo apresentado, sem demonstrar isoladamente o comportamento do conjunto durante as partidas \cite[p.~9--11]{palatiummemorial2025}.
 
 A aplicação comparativa preserva a relação de cargas documentada e o grupo de 81~kVA (IP-0035). A adequação de funcionamento identificada é prever, na especificação funcional, ensaios do sistema de incêndio com preservação da alimentação das cargas normais (IP-0033). A alimentação independente de incêndio e a posição do medidor foram analisadas na Seção~\ref{subsec:impacto-incendio} \cite[itens~7.11.8--7.11.9]{enel1580}.
+
+\subsection{Selagem corta-fogo no Palatium}
+\label{subsec:impacto-selagem}
+
+O detalhe de selagem vertical nas pranchas~001 e~002 (p.~1--2 do conjunto) indica fita intumescente PROMASTOP, TRF de 2~h e comprimentos por diâmetro para eletrodutos de 40 a 160~mm em travessias de laje. A solução convencional documentada é preservada no comparativo (IP-0038). A indicação de TRF caracteriza o detalhe de projeto e o desempenho instalado depende da solução executada \cite[pranchas~001--002]{palatiumpranchas2025}\cite[item~6.2.9.6]{abnt5410}.
+
+\subsection{Documentação e aprovação no Palatium}
+\label{subsec:impacto-documentacao}
+
+As 28 UCs trifásicas mantêm a exigência de análise prévia. O acervo reúne memorial R04 de 13 páginas, cinco pranchas, ART de projeto para baixa tensão e gerador de 81~kVA e carta de aprovação de 25/10/2025 (IP-0039). A execução, sua ART e a incidência das regras de transição dependem de evidências próprias \cite{palatiummemorial2025,palatiumpranchas2025,palatiumart2025,enelaprovacao2025}\cite[Tabela~2, nota~8]{enel1580}.
+
+O efeito próprio é documental: organizar os arquivos e compatibilizar memorial e plantas do arranjo convencional (IP-0040). A demanda, a recarga e o gerador são tratados nas Seções~\ref{subsec:impacto-discriminacao-demanda}, \ref{subsec:impacto-carga-instalada} e~\ref{subsec:impacto-grupo-gerador} \cite[item~7.3.2]{enel1580}.
