@@ -317,14 +317,28 @@ Uma falta pode produzir diferenças de potencial entre massas metálicas e o sol
 
 O barramento de equipotencialização principal (BEP) é o ponto de interligação dos elementos da equipotencialização principal, junto ou próximo da entrada da alimentação. A equipotencialização suplementar reúne, em uma área determinada, massas e outros elementos condutivos simultaneamente acessíveis. Quando usada uma via comum para essas interligações locais, a ABNT NBR 5410 a denomina barramento de equipotencialização local (BEL). A sigla BEL não foi identificada nas seções de aterramento examinadas da 0126 e da 1580 \cite[itens~3.3.2--3.3.3 e~6.4.2]{abnt5410}\cite[seção~7.9]{enel0126}\cite[seção~7.24]{enel1580}.
 
-O neutro (N) participa da alimentação das cargas. O condutor de proteção (PE) liga as massas ao sistema de proteção e integra o percurso da corrente de falta. O PEN reúne as funções de neutro e proteção onde o esquema admite essa combinação. Após a separação em N e PE, os dois condutores seguem separados, sem novas interligações a jusante do ponto de separação. No esquema TN, as massas se ligam ao ponto aterrado da alimentação por meio de condutores de proteção. No TT, as massas se ligam a eletrodo da instalação, eletricamente independente do aterramento da alimentação. No IT, a alimentação é isolada da terra ou ligada a ela por impedância, e as massas são aterradas. A tensão nominal de fornecimento é um dado distinto do esquema de aterramento \cite[itens~4.2.2.2 e~6.4.3]{abnt5410}.
+O neutro (N) participa da alimentação das cargas. O condutor de proteção (PE) liga as massas ao sistema de proteção e integra o percurso da corrente de falta. O PEN reúne as funções de neutro e proteção onde o esquema admite essa combinação. Após a separação em N e PE, os dois condutores seguem separados, sem novas interligações a jusante do ponto de separação. No esquema TN, as massas se ligam ao ponto aterrado da alimentação por meio de condutores de proteção. No TT, as massas se ligam a eletrodo da instalação, eletricamente independente do aterramento da alimentação. A tensão nominal de fornecimento é um dado distinto do esquema de aterramento \cite[itens~4.2.2.2 e~6.4.3]{abnt5410}.
 
-O seccionamento automático limita a duração de uma tensão de contato perigosa mediante a interrupção da alimentação em caso de falta. A coordenação entre o esquema, o percurso da falta e o dispositivo de proteção determina a capacidade de interrupção no tempo requerido. No esquema IT, o tratamento da primeira falta envolve supervisão de isolamento e difere do tratamento de uma segunda falta. Esses conceitos fundamentam a comparação entre os critérios de eletrodos, resistência e tensão de contato das duas especificações da Enel \cite[item~5.1.2.2.4]{abnt5410}\cite[seção~7.9]{enel0126}\cite[seção~7.24]{enel1580}.
+O seccionamento automático limita a duração de uma tensão de contato perigosa mediante a interrupção da alimentação em caso de falta. A coordenação entre o esquema, o percurso da falta e o dispositivo de proteção determina a capacidade de interrupção no tempo requerido. Esses conceitos fundamentam a comparação entre os critérios de eletrodos, resistência e tensão de contato das duas especificações da Enel \cite[item~5.1.2.2.4]{abnt5410}\cite[seção~7.9]{enel0126}\cite[seção~7.24]{enel1580}.
 
 \subsection{Dispositivos de proteção contra surtos}
 \label{subsec:fund-dps}
 
-Sobretensões transitórias podem decorrer de descargas atmosféricas ou de manobras elétricas. O dispositivo de proteção contra surtos (DPS) limita a sobretensão e desvia corrente transitória. A classe de ensaio I considera corrente de impulso, associada à forma de onda 10/350~\(\mu\mathrm{s}\). A classe II usa corrente de forma de onda 8/20~\(\mu\mathrm{s}\). Para a classe III, o ensaio de onda combinada associa tensão em circuito aberto de 1,2/50~\(\mu\mathrm{s}\) e corrente em curto-circuito de 8/20~\(\mu\mathrm{s}\). A seleção considera a exposição aos surtos e a posição na instalação \cite[itens~5.4.2 e~6.3.5.2.4]{abnt5410}\cite[seção~7.25.4]{enel1580}\cite[capítulo~3]{schneiderdps}.
+Sobretensões transitórias podem decorrer de descargas atmosféricas ou de manobras elétricas. O dispositivo de proteção contra surtos (DPS) limita a sobretensão e desvia corrente transitória. O Quadro~\ref{qua:classes-dps} apresenta as classes de ensaio. A seleção considera a exposição aos surtos e a posição do dispositivo na instalação \cite[itens~5.4.2 e~6.3.5.2.4]{abnt5410}\cite[seção~7.25.4]{enel1580}.
+
+\begin{quadro}[!htbp]
+\centering
+\caption{Classes de ensaio dos dispositivos de proteção contra surtos}
+\label{qua:classes-dps}
+{\small\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|p{0.16\linewidth}|p{0.30\linewidth}|p{0.44\linewidth}|}\hline
+\textbf{Classe de ensaio} & \textbf{Ensaio} & \textbf{Forma de onda} \\\hline
+I & Corrente de impulso (\(I_{\mathrm{imp}}\)) & 10/350~\(\mu\mathrm{s}\) \\\hline
+II & Corrente nominal de descarga (\(I_{\mathrm{n}}\)) & 8/20~\(\mu\mathrm{s}\) \\\hline
+III & Onda combinada & Tensão de 1,2/50~\(\mu\mathrm{s}\) em circuito aberto e corrente de 8/20~\(\mu\mathrm{s}\) em curto-circuito \\\hline
+\end{tabular}}
+\Fonte{Elaborado pelo autor com base na ABNT NBR 5410 \cite[item~6.3.5.2.4]{abnt5410} e em \citeonline[capítulo~3]{schneiderdps}.}
+\end{quadro}
 
 A tensão máxima de operação contínua \(U_{\mathrm{c}}\) depende da tensão do circuito e do modo de conexão do DPS. O nível de proteção \(U_{\mathrm{p}}\) caracteriza a limitação de tensão nos terminais sob as condições de ensaio. A corrente nominal de descarga \(I_{\mathrm{n}}\) e a corrente máxima de descarga \(I_{\mathrm{max}}\) são associadas à forma de onda 8/20~\(\mu\mathrm{s}\), com finalidades distintas de ensaio. A corrente de impulso \(I_{\mathrm{imp}}\) caracteriza a capacidade de conduzir corrente de impulso em ensaio de classe~I. Esses parâmetros e a suportabilidade dos equipamentos orientam a seleção \cite[item~6.3.5.2.4]{abnt5410}\cite[capítulo~3]{schneiderdps}.
 
@@ -341,9 +355,11 @@ O intertravamento elétrico usa sinais de estado e bloqueios de comando. Contato
 
 A seleção das cargas de emergência considera quais serviços devem permanecer disponíveis e quais cargas podem funcionar ao mesmo tempo. Além da demanda em regime, a partida de motores pode elevar a corrente e provocar variações de tensão e frequência. A potência do gerador, a sequência de partida e a tolerância dos equipamentos a esses transitórios integram a avaliação. A demanda estimada em regime descreve uma condição de carga e, isoladamente, não demonstra o desempenho durante partidas \cite[seção~6.6]{abnt5410}\cite{schneiderats}.
 
-\subsection{Recarga veicular e proteção das passagens elétricas}
+\subsection{Recarga veicular}
 
 Na recarga condutiva, os modos 1 e 2 usam tomada em corrente alternada (CA), com controle e proteção no cabo no modo 2. No modo 3, a estação dedicada fornece CA e controla a recarga. No modo 4, o equipamento externo fornece corrente contínua (CC) ao veículo. A seleção da proteção diferencial considera o modo de recarga e as características do equipamento. A gestão da demanda pode limitar a potência simultânea das estações \cite[itens~7.1.5--7.1.7 e Tabela~3]{enel0280}.
+
+\subsection{Selagem corta-fogo em passagens elétricas}
 
 A selagem corta-fogo preserva a compartimentação nas travessias de linhas elétricas por elementos com resistência ao fogo especificada. Materiais intumescentes expandem sob calor e ajudam a fechar as aberturas. O tempo de resistência ao fogo (TRF) se refere ao desempenho do conjunto, conforme sua configuração e ensaio. A lacração de invólucros tem a finalidade de controlar o acesso \cite[item~6.2.9.6]{abnt5410}\cite[item~7.22.9]{enel1580}.
 
