@@ -189,34 +189,23 @@ A corrente de projeto constitui um dos parâmetros para a seleção dos condutor
 
 \subsection{Fatores empregados na estimativa de demanda}
 
-O fator de demanda expressa a relação entre a demanda máxima e a carga instalada. Para grandezas ativas referidas ao mesmo conjunto de cargas, a definição do art.~2º, inciso~XX, da Resolução Normativa ANEEL nº~1.000/2021 e do item~7.1.11 da especificação 0126 \cite[art.~2º, inciso~XX]{aneel1000}\cite[item~7.1.11]{enel0126} pode ser expressa por
-\begin{equation}
- F_d=\frac{D_{\max}}{P_{\mathrm{inst}}},
- \label{eq:fator-demanda}
-\end{equation}
-em que $F_d$ é o fator de demanda, $D_{\max}$ é a demanda ativa máxima e $P_{\mathrm{inst}}$ é a carga instalada, expressas na mesma unidade. Trata-se de um fator adimensional que, nas condições usuais de estimativa de demanda, é inferior ou igual à unidade. A adoção de fatores menores que a unidade considera que nem todos os equipamentos operam simultaneamente em sua potência nominal \cite[seção~1.8.1.1]{mamede2017}.
+O Quadro~\ref{qua:fatores-demanda} distingue quatro fatores adimensionais. As demandas comparadas devem ter a mesma natureza, unidade e intervalo de integração. Nas razões indicadas, pressupõe-se denominador positivo.
 
-O fator de utilização representa a relação entre a potência média absorvida por um equipamento nas condições de utilização consideradas e sua potência nominal elétrica \cite[seção~1.8.1.5]{mamede2017}:
-\begin{equation}
- F_u=\frac{P_{\mathrm{util}}}{P_{\mathrm{n}}},
- \label{eq:fator-utilizacao}
-\end{equation}
-em que $F_u$ é o fator de utilização, $P_{\mathrm{util}}$ é a potência média absorvida nas condições de utilização adotadas e $P_{\mathrm{n}}$ é a potência nominal elétrica do equipamento. Esse fator caracteriza o nível de utilização da capacidade nominal do equipamento, distinguindo-se da coincidência temporal entre as solicitações de diferentes cargas.
+\begin{quadro}[!htbp]
+\centering
+\caption{Fatores empregados na estimativa de demanda}\label{qua:fatores-demanda}
+{\small\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|p{0.22\linewidth}|p{0.24\linewidth}|p{0.43\linewidth}|}\hline
+\textbf{Fator} & \textbf{Relação} & \textbf{Interpretação} \\\hline
+Demanda & $F_d=D_{\max}/P_{\mathrm{inst}}$ & Fração da carga ativa instalada solicitada na demanda ativa máxima do conjunto. \\\hline
+Utilização & $F_u=P_{\mathrm{util}}/P_{\mathrm n}$ & Razão entre a potência média absorvida pelo equipamento nas condições consideradas e sua potência nominal elétrica. \\\hline
+Simultaneidade & $F_s=D_{\max,\mathrm{conj}}/\sum_i D_{\max,i}$ & Compara o máximo do conjunto à soma dos máximos individuais. Chega à unidade quando os máximos coincidem. \\\hline
+Diversidade & $F_{\mathrm{div}}=1/F_s$ & Inverso da simultaneidade. Para demandas ativas de cargas consumidoras, é igual ou superior à unidade. \\\hline
+\end{tabular}}
+\Fonte{Elaborado pelo autor com base na definição regulatória de fator de demanda \cite[art.~2º, inciso~XX]{aneel1000}, na 0126 \cite[item~7.1.11]{enel0126} e em \citeonline[seção~1.8.1]{mamede2017}.}
+\end{quadro}
 
-O fator de simultaneidade considera a coincidência das demandas individuais máximas de um conjunto de cargas. Conforme \citeonline[seção~1.8.1.4]{mamede2017}, relaciona a demanda máxima do conjunto à soma das demandas máximas individuais:
-\begin{equation}
- F_s=\frac{D_{\max,\mathrm{conj}}}{\displaystyle\sum_{i=1}^{n}D_{\max,i}},
- \label{eq:fator-simultaneidade}
-\end{equation}
-em que $F_s$ é o fator de simultaneidade, $D_{\max,\mathrm{conj}}$ representa a demanda máxima do conjunto e $D_{\max,i}$ a demanda máxima individual da carga $i$. As grandezas devem ser da mesma natureza, obtidas com intervalos de integração e período de observação compatíveis. Considerando demandas ativas de cargas consumidoras e denominador não nulo, $F_s$ é menor ou igual à unidade, atingindo-a quando as demandas máximas individuais ocorrem no mesmo intervalo.
-
-O fator de diversidade, na definição geral apresentada por \citeonline[seção~1.8.1.4]{mamede2017}, corresponde ao inverso do fator de simultaneidade:
-\begin{equation}
- F_{\mathrm{div}}=\frac{1}{F_s}=
- \frac{\displaystyle\sum_{i=1}^{n}D_{\max,i}}{D_{\max,\mathrm{conj}}},
- \label{eq:fator-diversidade}
-\end{equation}
-em que $F_{\mathrm{div}}$ é o fator de diversidade, adimensional, definido para demanda máxima do conjunto positiva. Seu valor, nessas condições, é maior ou igual à unidade. A diversidade das cargas permite que a demanda máxima do conjunto seja inferior à soma das demandas máximas individuais. Esses fatores descrevem relações distintas e não devem ser aplicados cumulativamente sem que o método de cálculo estabeleça essa combinação, pois um fator de demanda pode já incorporar efeitos de utilização e simultaneidade.
+O coeficiente de diversificação da Tabela~16 da 0126 tem outra função. No método da área útil, ele multiplica a demanda estimada por apartamento em função do número de unidades. Os fatores do quadro só devem ser combinados quando o procedimento de cálculo previr essa operação, pois o fator de demanda pode já incorporar efeitos de utilização e simultaneidade.
 
 \subsection{Critérios de estimativa da demanda em empreendimentos de conexão coletiva}
 
@@ -238,7 +227,7 @@ A demanda do conjunto de apartamentos, correspondente à Equação~5 da especifi
  D_{\mathrm{ap}}=d_{\mathrm{area}}\,C_{\mathrm{div}}(n),
  \label{eq:demanda-apartamentos}
 \end{equation}
-em que $D_{\mathrm{ap}}$ é a demanda estimada do conjunto, em kVA, e $C_{\mathrm{div}}(n)$ é o fator de diversificação de carga associado à quantidade $n$ de apartamentos, obtido na Tabela~16 da especificação, aplicável a edifícios com até 300 apartamentos. Adota-se a notação $C_{\mathrm{div}}$ para distinguir esse coeficiente, denominado $F_{\mathrm{div}}$ na 0126, do fator de diversidade da Equação~\ref{eq:fator-diversidade} \cite[itens~7.11.2.7 e~7.11.2.8]{enel0126}.
+em que $D_{\mathrm{ap}}$ é a demanda estimada do conjunto, em kVA, e $C_{\mathrm{div}}(n)$ é o fator de diversificação de carga associado à quantidade $n$ de apartamentos, obtido na Tabela~16 da especificação, aplicável a edifícios com até 300 apartamentos. Adota-se a notação $C_{\mathrm{div}}$ para distinguir esse coeficiente, denominado $F_{\mathrm{div}}$ na 0126, do fator de diversidade do Quadro~\ref{qua:fatores-demanda} \cite[itens~7.11.2.7 e~7.11.2.8]{enel0126}.
 
 A demanda total da instalação residencial coletiva é determinada pela Equação~4 da especificação:
 \begin{equation}
