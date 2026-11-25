@@ -322,7 +322,7 @@ Os dispositivos correspondentes são os itens~7.7.1.9, 7.7.4.1--7.7.4.3, 7.7.5, 
 
 O item~7.5.4 da 0126 e o Diagrama~4 do Desenho~003.19 preveem circuito da bomba independente das demais cargas, após a medição e antes da proteção geral do condomínio. A 1580 amplia o tratamento aos sistemas de detecção, alarme, prevenção e combate. Mantém o princípio da alimentação independente que permite desligar as cargas normais sem interromper o sistema e admite medição exclusiva mediante solicitação e nas condições do item~7.11.8 (RN-0063). Se adotada, a derivação deve anteceder a primeira proteção geral da entrada coletiva e ter neutro até a medição (RN-0064). A caixa exclusiva fica junto ao quadro geral de entrada, ou na área destinada à cabine de barramentos nos casos pertinentes (RN-0065) \cite[item~7.5.4 e Desenho~003.19]{enel0126}\cite[item~7.11.8, p.~41--42]{enel1580}.
 
-Há uma divergência interna na 1580. Para rede aérea com CPG no Ceará, o Diagrama~4 do Desenho~69 posiciona a derivação de incêndio a jusante de D1, enquanto o texto do item~7.11.8 a exige a montante da primeira proteção geral. O estudo adota a prescrição textual para o confronto com o Palatium. As notas do Desenho~69 sobre D4 e o limite de percurso de 30~m permanecem como referências do desenho. Os Desenhos~51 e~52 ilustram soluções de São Paulo, com QDC e cabine de barramentos \cite[item~7.11.8 e Desenhos~51, 52 e~69, Diagrama~4]{enel1580}.
+O Diagrama~4 do Desenho~69, aplicável à rede aérea com CPG no Ceará, mostra a derivação de incêndio a montante de D1, em acordo com o item~7.11.8 \cite[item~7.11.8 e Desenho~69, sequência~4 de~4]{enel1580}.
 
 O item~7.11.9 acrescenta a possibilidade de considerar separadamente a demanda de incêndio no dimensionamento de transformadores e circuitos secundários (RN-0066). O texto condiciona essa alternativa à soma das demandas normal e de incêndio, com limite de 20~\% da potência nominal do transformador exclusivo ou de 20~\% da capacidade disponível da rede secundária, conforme a modalidade de atendimento \cite[item~7.11.9, p.~42]{enel1580}.
 
@@ -635,3 +635,83 @@ O detalhe de selagem vertical nas pranchas~001 e~002 (p.~1--2 do conjunto) indic
 As 28 UCs trifásicas mantêm a exigência de análise prévia. O acervo reúne memorial R04 de 13 páginas, cinco pranchas, ART de projeto para baixa tensão e gerador de 81~kVA e carta de aprovação de 25/10/2025 (IP-0039). A execução, sua ART e a incidência das regras de transição dependem de evidências próprias \cite{palatiummemorial2025,palatiumpranchas2025,palatiumart2025,enelaprovacao2025}\cite[Tabela~2, nota~8]{enel1580}.
 
 O efeito próprio é documental: organizar os arquivos e compatibilizar memorial e plantas do arranjo convencional (IP-0040). A demanda, a recarga e o gerador são tratados nas Seções~\ref{subsec:impacto-discriminacao-demanda}, \ref{subsec:impacto-carga-instalada} e~\ref{subsec:impacto-grupo-gerador} \cite[item~7.3.2]{enel1580}.
+
+\section{Síntese dos impactos no Palatium}
+\label{sec:sintese-palatium}
+
+O Quadro~\ref{qua:sintese-palatium} reúne cinco frentes de intervenção física no cenário de aplicação da 1580. Os serviços associados integram a frente correspondente. A configuração de referência tem rede aérea de 380/220~V, ramal de entrada enterrado e demanda declarada de 291,33~kVA, incluindo 7,36~kVA de incêndio. O cenário serve à comparação acadêmica. A incidência das regras de transição depende da situação do projeto e da conexão.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Frentes de intervenção no cenário de aplicação da 1580 ao Palatium}
+  \label{qua:sintese-palatium}
+  \vspace{0.55\baselineskip}
+  \centering
+  \begin{Spacing}{1.0}
+  {\small
+  \renewcommand{\arraystretch}{1.12}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.19\linewidth}|>{\raggedright\arraybackslash}p{0.21\linewidth}|>{\raggedright\arraybackslash}p{0.21\linewidth}|>{\raggedright\arraybackslash}p{0.30\linewidth}|}
+    \hline
+    \textbf{0126} & \textbf{1580} & \textbf{Palatium documentado} & \textbf{Desfecho no cenário} \\\hline
+    CPG no percurso do ramal, até 30~m do ponto de entrega. & CPG junto ao alinhamento, na configuração aplicável. & CPG de 500~A no subsolo. & Reposicionar o CPG e compatibilizar a infraestrutura associada (IP-0014). \\\hline
+    CM no térreo ou subsolo, com acesso facilitado. & Cubículo exclusivo de alvenaria no arranjo convencional analisado. & CM convencional, sem cubículo exclusivo representado. & Prever o cubículo com dimensões, acesso e condições de segurança (IP-0015). \\\hline
+    Circuito de incêndio independente das demais cargas. & Medição exclusiva junto ao quadro geral, com derivação a montante da proteção geral. & Medição trifásica de incêndio no CM e derivação a montante. & Reposicionar a caixa junto ao CPG. Manter a derivação e o total de 28~UCs, com 27 no CM e uma em caixa independente (IP-0029 e IP-0030). \\\hline
+    DPS conforme a NBR~5410. & Conjunto DPS junto ao quadro geral, tão próximo do BEP quanto possível. & DPS nos esquemas, sem caixa externa junto ao CPG claramente identificada. & Prever conjunto externo junto ao CPG e ao BEP, com caixa tipo D como referência e proteção de retaguarda (IP-0025). \\\hline
+    Identificação, lacração e acesso ao CM. & Detalhes de plaquetas, acesso, identificação de incêndio e aviso de fonte geradora. & Medições identificadas, com aviso genérico no ambiente do gerador. & Adequar plaquetas e fechamento do cubículo, sinalizar a caixa vermelha de incêndio e a fonte geradora (IP-0026--0028 e IP-0032). \\\hline
+  \end{tabular}}
+  \end{Spacing}
+  \Fonte{Elaborado pelo autor com base na matriz de impactos e nas Seções~\ref{subsec:impacto-cpg-cm}, \ref{subsec:impacto-aterramento-dps} a~\ref{subsec:impacto-grupo-gerador}.}
+\end{minipage}
+\par
+
+Vão, poste e material dos eletrodutos dependem das verificações indicadas nas Seções~\ref{subsec:impacto-ramal-poste} e~\ref{subsec:impacto-eletrodutos-drenagem}. A ligação à rede pluvial e a adequação das caixas enterradas e da caixa sob laje anterior ao CPG permanecem potenciais (IP-0010, IP-0011 e IP-0013). A entrada externa requer coordenação do eletrodo com o BEP (IP-0023). A capacidade de interrupção depende da transformação efetiva (IP-0016), e a função de proteção contra fuga ou falta à terra integra a especificação (IP-0017). Terminais, comprimento disponível para conexão, proteção individual e barreiras correspondem a condições de montagem (IP-0019--0022). Os ensaios de incêndio devem preservar as cargas normais (IP-0033).
+
+No cenário de referência, preservam-se os condutores em paralelo do ramal, os alimentadores de 10~mm\textsuperscript{2} e as proteções individuais de 40/50~A. As barras de cobre de \(38{,}10\times6{,}35\)~mm têm capacidade tabelada de 544~A na 0126. Mantêm-se ainda o gerador de 81~kVA com QTAs de 125/32~A, os 26 pontos de recarga de 3,70~kW e a selagem vertical indicada nas pranchas. A compatibilidade se refere aos aspectos cotejados.
+
+As adequações documentais incluem a apresentação do termo de resistência mecânica quando aplicável, a memória de cálculo, a descrição da recarga e do gerador e a organização de memorial e plantas (IP-0002, IP-0006, IP-0031, IP-0037 e IP-0040). A consulta à Enel admite a 0126 como referência técnica em conjunto com a NBR~5410, com metodologia e fatores explicitados (Seção~\ref{subsec:resultado-demanda}). A diferença entre 707,31~kW declarados e 803,51~kW reconstituídos com recarga pertence ao memorial original. São valores de carga instalada, e a demanda documentada permanece como base do estudo (Seção~\ref{subsec:impacto-carga-instalada}).
+
+A Figura~\ref{fig:contagem-resultados} conta uma vez cada código da matriz correspondente. Os registros de adequação incluem efeitos físicos, funcionais e documentais. As cinco frentes do quadro representam agrupamentos de intervenções físicas.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{figure}{Distribuição dos requisitos comparados e dos impactos registrados}
+  \label{fig:contagem-resultados}
+  \vspace{0.4\baselineskip}
+  \centering
+  \input{figuras/distribuicao-resultados}
+  \Fonte{Elaborado pelo autor com base nas matrizes de requisitos (RN) e de impactos (IP).}
+\end{minipage}
+\par
+
+\section{Lacunas e particularidades de aplicação da 1580}
+\label{sec:critica-1580}
+
+A 1580 tem estrutura nacional e critérios que variam entre Ceará, Rio de Janeiro e São Paulo. O Quadro~\ref{qua:leitura-1580} reúne os pontos relevantes para o estudo.
+
+\par\noindent
+\begin{minipage}{\linewidth}
+  \captionof{quadro}{Pontos de atenção na aplicação da 1580 ao Ceará}
+  \label{qua:leitura-1580}
+  \vspace{0.55\baselineskip}
+  \centering
+  \begin{Spacing}{1.0}
+  {\small
+  \renewcommand{\arraystretch}{1.12}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.16\linewidth}|>{\raggedright\arraybackslash}p{0.29\linewidth}|>{\raggedright\arraybackslash}p{0.46\linewidth}|}
+    \hline
+    \textbf{Natureza} & \textbf{Achado e referência} & \textbf{Implicação para a leitura} \\\hline
+    Erro de remissão & Aterramento. Item~7.24.2 (p.~117), Desenhos~49 e~53. & O Desenho~49 mostra tela de cabine de barramentos em SP. O Desenho~53 mostra aterramento no CE, RJ e SP e consta do item~7.24.3. \\\hline
+    Lacuna de faixa & Seção de fase de 35~mm\textsuperscript{2}. Tabela~43 (p.~116). & As duas faixas adjacentes excluem o valor exato. Continua disponível o cálculo do PE conforme a NBR~5410. As fases do ramal analisado são de 150~mm\textsuperscript{2}. \\\hline
+    Detalhamento e redação & Demanda. Notas do item~7.3.2 (p.~22) e após o item~7.11.9 (p.~43). & A 1580 remete a metodologias externas com redações de força distinta, sem indicar documento específico do CE. A resposta da Loja Clientes Corporativos esclarece o uso da 0126 como referência (Seção~\ref{subsec:resultado-demanda}). \\\hline
+    Regra condicional & Demanda de incêndio. Item~7.11.9 (p.~42). & O limite de 20~\% considera a soma das demandas frente à potência nominal do transformador exclusivo ou à capacidade disponível da rede secundária. Mantiveram-se os 7,36~kVA no total documentado. \\\hline
+    Escopo regional & Medição de incêndio. Item~7.11.8 (p.~41--42), Desenhos~51, 52 e~69. & Os Desenhos~51 e~52 são de SP. No Diagrama~4 da sequência CE do Desenho~69 (p.~296 do PDF), a derivação de incêndio está a montante de D1, em acordo com o texto. \\\hline
+    Detalhamento regional e por tecnologia & Barras do CM. Item~7.19.4 e Tabelas~22, 23 e~28. & A Tabela~23 trata de SP e a 28, do tipo P. A Tabela~22 lista caixas no CE. As barras do CM convencional de 500~A exigem justificativa de dimensionamento própria. \\\hline
+    Cobertura de tabela & Recarga. 0280 v02, seção~2 e Tabela~1. & A 0280 é nacional, mas a tabela de tensões lista RJ e SP. Para o CE vale a Tabela~7 da 1580. O histórico da 0280 registra o cancelamento do CT~74. \\\hline
+    Escopo da rede & Ramal enterrado. Itens~7.19.6 e~7.19.7. & O Palatium deriva de rede aérea. As restrições de paralelismo e de seção do neutro do bloco de rede subterrânea têm escopo próprio. A redação sobre PVC exige avaliação específica do trecho enterrado. \\\hline
+  \end{tabular}}
+  \end{Spacing}
+  \Fonte{Elaborado pelo autor com base em \cite{enel1580,enel0280,abnt5410} e na consulta descrita na Seção~\ref{sec:procedimento}.}
+\end{minipage}
+\par
