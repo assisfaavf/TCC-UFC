@@ -82,7 +82,31 @@ A identificação pública do estudo de caso restringe-se à denominação Edif�
 
 O Edifício Palatium é um empreendimento residencial multifamiliar vertical localizado em Sobral, Ceará. O projeto original contempla 26 apartamentos de 163~\(\mathrm{m}^2\), distribuídos em 13 pavimentos-tipo, com duas unidades por pavimento. O centro de medição único reúne 28 medições: 26 destinadas aos apartamentos, uma ao quadro de distribuição do condomínio (QDC) e uma ao quadro do sistema de bombeamento de incêndio \cite[p.~1 e~5]{palatiummemorial2025}.
 
-A alimentação prevista consiste em uma entrada coletiva em baixa tensão trifásica de 380/220~V, com ramal de entrada subterrâneo. O memorial declara, para o centro de proteção geral (CPG), carga instalada total de 707,31~kW e demanda de 291,33~kVA, com proteção geral por disjuntor termomagnético de 500~A. O projeto inclui um gerador de emergência de 81~kVA, trifásico, sem operação em paralelo com a rede da distribuidora \cite[p.~1 e~7]{palatiummemorial2025}\cite[pranchas~003 e~004]{palatiumpranchas2025}. Esses parâmetros descrevem a configuração projetada, não o estado das instalações executadas.
+A alimentação prevista consiste em uma entrada coletiva em baixa tensão trifásica de 380/220~V, derivada de rede aérea, com ramal de entrada subterrâneo. O memorial declara, para o centro de proteção geral (CPG), carga instalada total de 707,31~kW e demanda de 291,33~kVA, com proteção geral por disjuntor termomagnético de 500~A. O projeto inclui um gerador de emergência de 81~kVA, trifásico, sem operação em paralelo com a rede da distribuidora \cite[p.~1 e~7]{palatiummemorial2025}\cite[pranchas~003 e~004]{palatiumpranchas2025}. Esses parâmetros descrevem a configuração projetada, não o estado das instalações executadas.
+
+A Figura~\ref{fig:entrada-original} acompanha o percurso da alimentação até as medições. O ramal de incêndio deriva antes do disjuntor geral, embora seu medidor integre o mesmo centro que os demais no projeto original.
+
+\begin{figure}[!htbp]
+\centering
+\caption{Percurso da alimentação no projeto original do Palatium}\label{fig:entrada-original}
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\small},bl/.style={draw,rounded corners=2pt,align=center,inner sep=4pt},via/.style={->,thick}]
+\node[bl] (rede) at (0,0) {Rede aérea\\380/220 V};
+\node[bl] (poste) at (3,0) {Poste\\auxiliar};
+\draw[via] (rede)--(poste);
+\coordinate (ramo) at (3,-1.6);
+\draw[thick] (poste)--node[right]{Ramal de entrada enterrado}(ramo);
+\fill (ramo) circle (1.6pt);
+\node[bl] (geral) at (0,-2.6) {CPG no subsolo\\Disjuntor de 500 A};
+\node[bl] (inc) at (7,-3.9) {Medição exclusiva\\de incêndio};
+\node[bl] (med) at (0,-3.9) {26 apartamentos e\\serviços comuns};
+\draw[via] (ramo)-|(geral);
+\draw[via] (ramo)-|(inc);
+\draw[via] (geral)--(med);
+\draw[dashed] (-2.15,-4.48) rectangle (9.1,-3.34);
+\node at (3.45,-4.83) {Centro de medição original com 28 medições trifásicas};
+\end{tikzpicture}
+\Fonte{Elaborado pelo autor com base nas pranchas~001, 002, 003 e~005 \cite{palatiumpranchas2025}. Esquema funcional simplificado.}
+\end{figure}
 
 A carta da Enel Distribuição Ceará e os carimbos de aprovação do memorial e das pranchas comprovam a aprovação do projeto em 25 de outubro de 2025 \cite{enelaprovacao2025}\cite[p.~1]{palatiummemorial2025}\cite[pranchas~001--005]{palatiumpranchas2025}. Adota-se como premissa do estudo de caso que a aprovação ocorreu com base na especificação 0126, conforme as informações relativas ao projeto, uma vez que a carta e os carimbos não identificam expressamente o código da norma adotada. A escolha do empreendimento decorre da disponibilidade da documentação aprovada e da existência de soluções de conexão coletiva que permitem examinar, de forma documentada, as consequências técnicas da aplicação hipotética da 1580. Essa caracterização constitui a base de referência da análise; a comparação dos requisitos, os cálculos demonstrativos e a avaliação dos impactos são apresentados no Capítulo~\ref{cap:resultados}.
 
