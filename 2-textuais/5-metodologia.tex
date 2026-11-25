@@ -231,27 +231,25 @@ Nos cálculos demonstrativos, identificaram-se os dados do memorial, as grandeza
 \section{Tratamento dos resultados e limitações}
 \label{sec:limitacoes}
 
-A sistematização dos resultados baseia-se em uma matriz comparativa organizada por tema, na qual cada requisito é identificado por um código único. O Quadro~\ref{qua:campos-matriz} apresenta a estrutura das informações utilizadas na comparação normativa e na avaliação dos impactos técnicos.
+A matriz comparativa identifica cada requisito pelo código RN. A matriz de impactos registra, sob o código IP, a consequência observada para o Palatium e sua ligação com os requisitos de origem. O Quadro~\ref{qua:campos-matriz} apresenta a estrutura das informações utilizadas na comparação normativa e na avaliação dos impactos técnicos.
 
 \begin{quadro}[htbp]
   \centering
   \begin{Spacing}{1.}
-    \caption{Estrutura da matriz comparativa}
+    \caption{Estrutura das matrizes de requisitos e de impactos}
     \label{qua:campos-matriz}
   \end{Spacing}
   {\small
   \renewcommand{\arraystretch}{1.2}
   \setlength{\tabcolsep}{4pt}
-  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.29\linewidth}|>{\raggedright\arraybackslash}p{0.63\linewidth}|}
+  \begin{tabular}{|>{\raggedright\arraybackslash}p{0.16\linewidth}|>{\raggedright\arraybackslash}p{0.24\linewidth}|>{\raggedright\arraybackslash}p{0.49\linewidth}|}
     \hline
-    \textbf{Grupo de campos} & \textbf{Informações registradas} \\\hline
-    Identificação & Código do requisito e tema. \\\hline
-    Especificação 0126 & Dispositivo de referência e descrição do requisito, incluindo condições de aplicação. \\\hline
-    Especificação 1580 & Dispositivo correspondente e descrição do requisito, incluindo condições de aplicação. \\\hline
-    Comparação normativa & Categoria definida no Quadro~\ref{qua:classificacao-normativa}, aplicabilidade ao Ceará e justificativa da classificação ou da exclusão. \\\hline
-    Seleção para o estudo de caso & Decisão de seleção e justificativa, segundo os critérios da Seção~\ref{sec:impactos}; identificação dos registros de impacto associados. \\\hline
-    Impacto no empreendimento & Solução documentada, consequência técnica, categoria de impacto definida no Quadro~\ref{qua:classificacao-impactos} e referência documental do projeto. \\\hline
-    Sustentação da análise & Evidências normativas, hipóteses e incertezas, distintas das interpretações registradas na justificativa. \\\hline
+    \textbf{Matriz} & \textbf{Campos} & \textbf{Informações registradas} \\\hline
+    Requisitos & Identificação e fontes & Código RN, tema, dispositivos das especificações 0126 e 1580, requisitos e evidências normativas. \\\hline
+    Requisitos & Comparação e seleção & Categoria normativa (Quadro~\ref{qua:classificacao-normativa}), aplicabilidade ao Ceará, seleção para o Palatium, justificativas e códigos IP vinculados. \\\hline
+    Impactos & Vínculo e evidências & Código IP, código ou códigos RN de origem, solução documentada e evidências do projeto. \\\hline
+    Impactos & Consequência no projeto & Consequência técnica, categoria de impacto (Quadro~\ref{qua:classificacao-impactos}) e justificativa. \\\hline
+    Ambas & Limitações e conferência & Hipóteses e incertezas, estado da conferência e registro da leitura realizada. \\\hline
   \end{tabular}}
   \Fonte{Elaborado pelo autor.}
 \end{quadro}

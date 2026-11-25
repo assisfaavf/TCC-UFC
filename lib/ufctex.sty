@@ -1287,12 +1287,11 @@
 
 % O nome "APÊNDICES" nao deve vir em pagina distinta, redigido em letras maiusculas, centralizado, negritado, tamanho da fonte 12.
 \newcommand{\imprimirpaginaapendices}{ %
-	\newpage %
-	\addcontentsline{toc}{chapter}{AP\^ENDICES} %
-	%\begin{vplace}[0.7] %
-	%	\centering\textbf{AP\^ENDICESteste2} %
-	%\end{vplace} %
-	%\clearpage
+	% Registra a entrada geral na abertura do primeiro capitulo de apendice.
+	\AddToHookNext{cmd/clearforchapter/after}{%
+		\phantomsection
+		\addcontentsline{toc}{chapter}{AP\^ENDICES}%
+	}%
 }
 
 % Altera a fonte da letra titulo do apendice nao negrito
