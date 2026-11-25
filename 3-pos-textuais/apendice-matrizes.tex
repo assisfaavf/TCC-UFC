@@ -1,0 +1,23 @@
+\apendice{Consulta às matrizes da comparação normativa e do estudo de caso}
+\label{ap:matrizes}
+
+As duas matrizes integrais acompanham este PDF como arquivos CSV incorporados. Para consultá-las, abra o painel de anexos de um leitor de PDF e importe o arquivo em uma planilha utilizando a codificação UTF-8 e o ponto e vírgula como separador. No projeto LaTeX, os mesmos arquivos estão no diretório \emph{dados/}.
+
+\textbf{Comparação normativa.} O arquivo \emph{matriz-comparativa.csv} contém os 82 requisitos, identificados pelo prefixo RN. Cada linha reúne os dispositivos da 0126 e da 1580, as condições de aplicação, a categoria da mudança e a decisão de seleção para o Palatium. A coluna de justificativa registra por que o requisito foi selecionado, excluído do caso ou permaneceu com seleção indeterminada.
+
+\textbf{Impactos no Palatium.} O arquivo \emph{impactos-palatium.csv} reúne 39 consequências com o prefixo IP. Para seguir a análise, localize um requisito na primeira matriz e procure seu código de impacto na segunda. Os requisitos RN-0079 e RN-0080 compartilham o registro documental IP-0040. Esse vínculo explica a diferença entre os 40 requisitos selecionados e os 39 impactos.
+
+\textbf{Exemplo de adequação.} RN-0035 registra a exigência do cubículo exclusivo para o centro de medição nas condições estudadas (1580, itens~7.18.1 e~7.18.2). As pranchas~002, 003 e~005 mostram a configuração convencional do empreendimento. O cubículo não está representado. IP-0015 registra a necessidade de prever o recinto e compatibilizar o acesso com a arquitetura.
+
+\textbf{Exemplo de insuficiência documental.} RN-0012 registra a redução do vão aéreo máximo de 40~m para 30~m (0126, item~7.6.1.3, e 1580, item~7.16.3). As pranchas~001 e~005 identificam o poste, mas não fornecem a medida do vão. IP-0003 registra o dado necessário para decidir se a alteração repercute no projeto.
+
+% Embute os próprios CSV no PDF gerado pelo pdfLaTeX.
+\newcommand{\incorporarmatriz}[2]{%
+  \immediate\pdfobj stream attr {/Type /EmbeddedFile} file {dados/#1}%
+  \edef\objetomatriz{\the\pdflastobj}%
+  \immediate\pdfobj{<< /Type /Filespec /F (#1) /EF << /F \objetomatriz\space 0 R >> >>}%
+  \edef#2{\the\pdflastobj}%
+}
+\incorporarmatriz{impactos-palatium.csv}{\impactospdf}
+\incorporarmatriz{matriz-comparativa.csv}{\requisitospdf}
+\pdfnames{/EmbeddedFiles << /Names [(impactos-palatium.csv) \impactospdf\space 0 R (matriz-comparativa.csv) \requisitospdf\space 0 R] >>}

@@ -32,8 +32,11 @@
 \pretextual
 \imprimircapa
 \imprimirfolhaderosto{}
-% Os elementos seguintes dependem da conclusão do TCC:
-% ficha catalográfica, folha de aprovação, resumo, abstract e listas de ilustrações/tabelas.
+\imprimirresumo{1-pre-textuais/resumo}
+\imprimirabstract{1-pre-textuais/abstract}
+\imprimirlistadeilustracoes
+\imprimirlistadequadros
+\imprimirlistadetabelas
 \input{1-pre-textuais/lista-de-abreviaturas-e-siglas-impressao}
 \imprimirlistadesimbolos{1-pre-textuais/lista-de-simbolos}
 \imprimirsumario
@@ -47,4 +50,6 @@
 \input{2-textuais/7-conclusoes-e-trabalhos-futuros}
 \postextual
 \bibliography{3-pos-textuais/referencias}
+\imprimirapendices
+\input{3-pos-textuais/apendice-matrizes}
 \end{document}
